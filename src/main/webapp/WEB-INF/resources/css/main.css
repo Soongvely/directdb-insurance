@@ -1,0 +1,579 @@
+    #wrap {
+        background-image: none; height: 800px;
+        width: 100%;
+        min-width: 1200px;
+    }
+    .wrap_main {
+        min-height: 800px;
+    }
+    .cover-bg {
+        background: url(https://www.directdb.co.kr/images/product/ltmgnrl/cancer/step_01.jpg) 0px 0px no-repeat;
+        min-height: 800px;
+        min-width: 1200px;
+        width: 100%;
+        height: 800px;
+        position: fixed;
+    }
+    #header {
+        position: relative;
+        height: 60px;
+        background: #ffffff;
+    }
+    .wrap_header {
+        position: relative;
+        width: 890px;
+        margin: 0 auto;
+        padding: 0 45px 0 165px;
+    }
+    #container {
+        position: relative;
+    }
+    .wrap_main #container {
+        width: 1060px;
+        margin: 40px auto 0;
+        padding-bottom: 80px;
+    }
+    .wrap_header div {
+        position: absolute;
+        top: 13px;
+        left: 0;
+    }
+    .wrap_header div a {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .wrap_calc_process {
+        position: relative;
+        width: 420px;
+        margin: 0 auto;
+        padding-top: 11px;
+    }
+    .calc_preocess {
+        display: inline-block;
+        background-repeat: repeat-x;
+    }
+    .wrap_main .wrap_header .btn_close {
+        background-repeat: no-repeat;
+    }
+    .wrap_tabs.ui_tab_group {
+        margin-left: 11px;
+    }
+    .wrap_pop_cont .btn_center {
+        margin: 24px 0 0 278px;
+    }
+    .wrap_header .btn_close {
+        display: block;
+        position: absolute;
+        top: 11px;
+        right: 0;
+        width: 38px;
+        height: 38px}
+    .hide_text {
+        display: inline-block;
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        font-size: 1px;
+        line-height: 0;
+        clip: rect(1px 1px 1px 1px);
+    }    
+    .wrap_main #block {
+        float: left;
+        margin-right: 35px;
+        margin-top: 1px;
+    }
+    .wrap_main #lnb h2 span {
+        display: block;
+        margin-top: -5px;
+        color: #fff;
+        font-size: 15px;
+        word-spacing: -1px;
+        letter-spacing: -1px;
+        line-height: 17px;
+    }
+    #wrap.cancer #lnb h2 em {
+        width: 38px;
+        height: 38px;
+    }    
+    .wrap_main #lnb .btn_guide {
+        display: block;
+        width: 112px;
+        height: 77px;
+        margin-top: 16px;
+        padding: 35px 0 0;
+        background: #636b7e;
+        text-align: center;
+    }
+    .wrap_main #lnb .btn_guide span {
+        color: #fff;
+        font-size: 15px;
+        word-spacing: -1px;
+        letter-spacing: -1px;
+    }
+    .wrap_main #contents {
+        float: left;
+        width: 920px;
+    }    
+    .wrap_contents {
+        position: relative;
+    }
+    .wrap_form_area {
+        float: left;
+        width: 525px;
+        padding-top: 56px;
+        background: #fff;
+        border: 1px solid grey;
+    }
+    .wrap_info_regist.step > dt, em {
+        color: #666;
+    }
+    .wrap_info_regist {
+        position: relative;
+        height: 456px;
+        padding: 0 64px;
+    }
+    .wrap_info_regist .h3_title {
+        display: inline-block;
+        margin-bottom: 65px;
+        font-size: 35px
+    }    
+    .wrap_info_regist dl {
+        display: table;
+        width: 100%;
+        margin-bottom: 6px;
+    }
+    .wrap_info_regist dl > dt {
+        width: 90px;
+        font-size: 15px;
+        font-weight: 400;
+        color: #666;
+    }
+
+    .wrap_info_regist dd, .wrap_info_regist dt {
+        display: inline-block;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+    .wrap_info_regist dd .wrap_input {
+        display: block;
+        float: left;
+    }
+    .txt_inp.inp_b {
+        height: 49px;
+        width: 175px;
+        padding: 5px;
+        font-size: 18px;
+        text-indent: 9px;
+    }
+    .icon_gender {
+        float: left;
+        margin-left: 10px;
+        list-style: none;
+        padding: 0 0 0 3px;
+    }
+    .icon_gender li {
+        float: left;
+        position: relative;
+        left: -1px;
+        margin-left: 0;
+    }    
+    .chk, .rad {
+        display: inline-block;
+        position: relative;
+        line-height: 1.6;
+        cursor: pointer;
+    }
+    .icon_gender .rad input {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 55px;
+        height: 47px;
+        margin-top: -23px;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .icon_gender li:first-child .rad span {
+        display: block;
+        z-index: 0;
+        min-height: 46px;
+    }    
+    .icon_gender li .rad span {
+        display: block;
+        position: relative;
+        min-height: 46px;
+        padding: 10px 19px 9px 19px;
+        border: 1px solid #bbb;
+    }
+    .wrap_info_regist dl.job_sch dt {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }    
+    .wrap_info_regist dl.job_sch dd {
+        display: block;
+        position: relative;
+    }
+    .wrap_info_regist dl.job_sch dd .icon_sch_input {
+        top: 15px;
+        right: 15px;
+    }
+    .wrap_info_regist .dot_list {
+        padding-top: 11px;
+        border-top: 1px solid #ddd;
+    }
+    .nborder {
+        border: none !important;
+    }
+    .dot_list li:first-child {
+        margin-top: 0;
+    }
+    .wrap_info_regist .dot_list li {
+        margin-top: 0;
+        word-spacing: -1px;
+        letter-spacing: -1px;
+    }
+    .txt_orange {
+        color: #db3e07!important;
+    }
+    .wrap_form_area .btn_foot {
+        margin-top: 0;
+    }
+    .btn_foot {
+        display: table;
+        width: 100%;
+        margin-top: 60px;
+    }
+    .btn_last_calc.btn_active {
+        background: #636b7e;
+    }
+    a.btn_last_calc {
+        width: 50%;
+        background: #bbb;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .btn_foot a {
+        display: table-cell;
+        position: relative;
+        height: 66px;
+        font-size: 22px;
+    }
+    .wrap_form_area .btn_foot a.btn_calc {
+        font-size: 22px;
+    }
+    .btn_calc.btn_active {
+        background: #00a087;
+    }
+    a.btn_calc {
+        width: 50%;
+        background: #999;
+        font-weight: 600;
+        font-size: 17px;
+    }
+    a, a:focus, a:hover, a:link, a:visited {
+        font-size: 100%;
+        text-decoration: none;
+        color: #fff;
+    }
+    .btns {
+        display: inline-block;
+        color: #fff;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 1;
+    }
+    .dot_list{
+        list-style: none;
+        padding: 11px 0;
+    }
+    .fa-exclamation-circle, .fa-info-circle {
+        margin-right: 5px;
+        font-size: 15px;
+    }
+    p.error_txt {
+        margin: 6px 0;
+        color: #db3e07;
+        font-size: 13px!important;
+    }    
+    a:hover {
+        color: #fff;
+        cursor: pointer;
+    }
+    .wrap_markerting_area {
+        float: right;
+        width: 344px;
+    }
+    .wrap_markerting_area img {
+        border: 0;
+        vertical-align: middle;
+    }
+    .quick_link {
+        margin-top: 16px;
+    }
+    .wrap_markerting_area .quick_link.only>a {
+        display: inline-block;
+        float: none;
+        width: 344px;
+        height: 66px;
+        padding: 18px 20px 0;
+        font-size: 18px;
+        box-sizing: border-box;
+        text-align: center;
+        background:  #928787;
+    }
+    .insu_notice {
+        color: #fff;
+    }
+    .insu_notice .fa-exclamation-circle {
+        margin-top: 3px;
+        vertical-align: text-bottom;
+    }
+    .chk_on span {
+        z-index: 1;
+        border: 1px solid #00a087;
+        background: #00a087;
+        color: #fff;
+    }
+    .txt_inp.error_txt, 
+    .txt_inp.error_txt:focus, 
+    .txt_inp.error_txt:hover {
+        border: 1px solid #db3e07!important;
+        color: #333;
+    }
+    .txt_inp:focus, .txt_inp:hover {
+        border: 1px solid #127570;
+    }
+    .wrap_popup {
+        padding-bottom: 50px;
+        display: none;
+    }
+    #popNoteJoinLayer {
+         z-index: 245;
+         left: 649.5px;
+         top: 235px;
+         position: absolute;
+         display: none;
+    }
+    .wrap_container.w600 {
+         width: 600px;
+         margin-left: -100px;
+    }
+    .wrap_container {
+     z-index: 245;
+     margin-left: 0px;
+     top: 0px;
+     left: 0px;
+     position: relative;
+    }
+    .wrap_pop {
+         position: relative;
+         background: #fff;
+         letter-spacing: -.9px;
+     }
+     .wrap_pop_head {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 50px;
+         background: #13756f;
+     }
+     .wrap_pop_cont {
+         position: relative;
+         padding: 77px 27px 27px;
+     }
+     .wrap_sc_box.note_join_list {
+         padding: 17px 15px 10px 20px;
+     }
+     .wrap_sc_box {
+         overflow-y: auto;
+         height: 480px;
+         padding: 10px 5px 10px 10px;
+         border-top: 1px solid #bbb;
+         border-bottom: 1px solid #bbb;
+         background: #f9f9f9;
+     }
+     .wrap_pop_foot .btn_pop_close {
+         display: block;
+         position: absolute;
+         top: 16px;
+         right: 16px;
+         width: 14px;
+         height: 14px;
+         color: #fff;
+     }
+     .wrap_pop_head h4 {
+         color: #fff;
+         font-weight: 500;
+         margin-left: 25px;
+         margin-top: 15px;
+     }
+     .dimm {
+         display: none;
+         position: fixed;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         z-index: 100;
+         width: 100%;
+         height: 100%;
+         background: #000;
+         opacity: .6;
+         filter: alpha(opacity=60);
+     }
+     .wrap_pop_cont .btn_center:hover {
+         color: #fff;
+     }
+     .btns.btn_pop_green {
+         height: 40px;
+         padding: 0 28px;
+         background: #00a087;
+         line-height: 40px;
+     }
+     .sch {
+         display: inline-flex;
+     }
+     .sch a {
+        float: right;
+        margin-left: -31px;
+        font-size: 21px;
+        color: #827f7f;
+        margin: 12px 0 0 -37px;
+     }
+     .sch a i {
+         margin-right: 12px;
+     }
+     .wrap_popup .btns {
+         min-width: auto!important;
+     }
+     .btn_center a {
+         margin: 0 4px;
+     }
+     .wrap_container.w700 {
+        width: 700px;
+        margin-left: -350px;
+    }
+    .wrap_pop_tab {
+        width: 100%;
+        margin: -18px 0 25px 1px;
+    }
+    .wrap_pop_tab.type02 li {
+        width: calc(96% + 1px);
+        margin-left: 5px;
+    }
+
+    .wrap_pop_tab li {
+        float: left;
+        width: 182px;
+        margin-left: -1px;
+        text-align: center;
+    }
+    .wrap_pop_cont li, .wrap_pop_cont p {
+        font-size: 13px;
+    }
+    .wrap_pop_tab li a {
+        display: block;
+        position: relative;
+        padding: 12px 0 13px;
+        border: 1px solid #bbb;
+        color: #000;
+        font-size: 14px;
+        letter-spacing: -1.2px;
+        margin-bottom: 10px;
+    }
+    .wrap_pop .txt_bm {
+        margin-top: -5px!important;
+        margin-bottom: 0!important;
+    }
+    .mgb10 {
+        margin-bottom: 10px!important;
+    }
+    .mgt30 {
+        margin-top: 30px!important;
+    }
+    .find_job .job_box_wrap {
+        float: left;
+    }
+  
+    .wrap_pop_cont .h3_pop {
+        margin-bottom: 12px;
+        padding: 0;
+        background: 0 0;
+        color: #444;
+        font-weight: 700;
+        font-size: 15px !important;
+        text-align: center;
+    }
+    .find_job .wrap_selec_job_box {
+        width: 207px;
+        height: 311px;
+        overflow: hidden;
+        overflow-y: auto;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        background-color: #f8f8f8;
+    }
+    .wrap_pop_job_list {
+        margin: 0 0 25px 1px;
+    }
+    .clfix {
+        *zoom: 1;
+    }
+    .find_job .wrap_pop_job_list li:first-child {
+        margin-top: 0;
+    }
+    .find_job .wrap_pop_job_list li {
+        width: 100%;
+        margin-top: -1px;
+        margin-left: -1px;
+        text-align: left;
+        background: #fff;
+    }
+    .wrap_pop_job_list li {
+        float: left;
+        width: 182px;
+        margin-top: -1px;
+        margin-left: -1px;
+        text-align: center;
+    }
+    .wrap_pop_cont li, .wrap_pop_cont p {
+        font-size: 13px;
+    }
+    .find_job .wrap_pop_job_list li a {
+        padding: 12px !important;
+    }
+    .wrap_pop_job_list li a, .wrap_pop_job_list li span {
+        display: block;
+        position: relative;
+        min-height: 20px;
+        padding: 12px 0 13px;
+        border: 1px solid #ddd;
+        color: #666;
+        font-size: 14px;
+        letter-spacing: -1.2px;
+    }
+    .wrap_pop_cont li, .wrap_pop_cont p {
+        font-size: 13px;
+    }
+    .ico_noti_gray {
+        margin-bottom: 5px;
+        padding-left: 20px;
+        font-size: 13px;
+    }
+    .ico_noti_gray i {
+        color: #a5a4a4;
+    }
+    ol, ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .txt_bm ul li {
+        display: inline-block;
+    }
