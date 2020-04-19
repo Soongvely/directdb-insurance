@@ -66,9 +66,11 @@
                             </dl>
                             <ul class="dot_list nborder">
                                 <li>
-                                    <strong><span class="txt_orange">
-                                            <i class="fas fa-info-circle"></i>보험 가입 시 공인인증서, 카카오페이 인증이 가능합니다.
-                                        </span></strong>
+                                    <strong>
+	                                    <span class="txt_orange">
+	                                    	<i class="fas fa-info-circle"></i>보험 가입 시 공인인증서, 카카오페이 인증이 가능합니다.
+	                                    </span>
+                                    </strong>
                                 </li>
                             </ul>
                             <div class="wrap_validator">
@@ -259,98 +261,98 @@
 </div>
 </body>
 <script>
-$(".btn_foot a").on('click', function() {
-
-    // 생년월일 
-    if ($(".wrap_input input[name='birthday']").val().length == 8) {
-        $(this).removeClass("error_txt");
-        $("#all-error").hide();
-    } else {
-        $(this).addClass("error_txt");
-        $("#all-error").show();
-
-        $("#birthday").focus();
-        return false;
-    }
-    
-    // 성별
-    if(!$(".input_radio.rad").hasClass("chk_on")) {
-        $("#gd_error").show();
-
-        return false;
-    } else $("#gd_error").hide();
-
-    
-    // 직업군 
-    if ($("#jobNm").val() == '') {
-        $(this).addClass("error_txt");
-        $("#tmpJobNm-error").show();
-        $("#jobNm").focus();
-        
-        return false;
-    } 
-
-});
-
-// 생일 입력값 확인
-$(".wrap_input input[name='birthday']").focusout(function () {
-    if ($(".wrap_input input[name='birthday']").val().length != 8) {
-        $(this).addClass("error_txt");
-        $("#all-error").show();
-    } 
-});
-
-$(".wrap_input input[name='birthday']").keyup(function () {
-   if ($(".wrap_input input[name='birthday']").val().length == 8) {
-        $(this).removeClass("error_txt");
-        $("#all-error").hide();
-    }
-});
-
-// 성별 버튼 이벤트    
-$(".icon_gender label").click(function () {
-    if ($(this).hasClass("chk_on")) {
-        return;
-    }
-    $(".icon_gender label").removeClass("chk_on");
-    $(this).addClass("chk_on");
-});
-
-// 성별 선택 예외처리
-$(".input_radio.rad").click(function() {
-    if ($(this).hasClass("chk_on")) 
-        $("#gd_error").hide();
-});
-
-// 직업군 선택 예외처리 
-$("#jobNm").focusout(function() {
-    if ($("#jobNm").val() != "") {
-        $("#tmpJobNm-error").hide();
-    } else {
-        $("#tmpJobNm-error").show();
-    }
-
-});
-
-// 보험 유의사항
-$(".insu_notice").click(function () {
-    $("#popNoteJoinLayer").css('display', 'block');
-})
-$(".wrap_pop_cont .btn_center").on('click', function () {
-    $("#popNoteJoinLayer").css('display', 'none');
-});
-$(".btn_pop_close").on('click', function () {
-    $("#popNoteJoinLayer").css('display', 'none');
-})
-
-// 직업군 검색 
-$("#jobNm").click(function() {
-    $("#popNoteJoinLayer2").css('display', 'block');
-});
-
-// 확인, 닫기 버튼 이벤트
-$("#_btn_job_complete_ a").on('click', function() {
-    $("#popNoteJoinLayer2").css('display', 'none');
-});
+	$(".btn_foot a").on('click', function() {
+	
+	    // 생년월일 
+	    if ($(".wrap_input input[name='birthday']").val().length == 8) {
+	        $(this).removeClass("error_txt");
+	        $("#all-error").hide();
+	    } else {
+	        $(this).addClass("error_txt");
+	        $("#all-error").show();
+	
+	        $("#birthday").focus();
+	        return false;
+	    }
+	    
+	    // 성별
+	    if(!$(".input_radio.rad").hasClass("chk_on")) {
+	        $("#gd_error").show();
+	
+	        return false;
+	    } else $("#gd_error").hide();
+	
+	    
+	    // 직업군 
+	    if ($("#jobNm").val() == '') {
+	        $(this).addClass("error_txt");
+	        $("#tmpJobNm-error").show();
+	        $("#jobNm").focus();
+	        
+	        return false;
+	    } 
+	
+	});
+	
+	// 생일 입력값 확인
+	$(".wrap_input input[name='birthday']").focusout(function () {
+	    if ($(".wrap_input input[name='birthday']").val().length != 8) {
+	        $(this).addClass("error_txt");
+	        $("#all-error").show();
+	    } 
+	});
+	
+	$(".wrap_input input[name='birthday']").keyup(function () {
+	   if ($(".wrap_input input[name='birthday']").val().length == 8) {
+	        $(this).removeClass("error_txt");
+	        $("#all-error").hide();
+	    }
+	});
+	
+	// 성별 버튼 이벤트    
+	$(".icon_gender label").click(function () {
+	    if ($(this).hasClass("chk_on")) {
+	        return;
+	    }
+	    $(".icon_gender label").removeClass("chk_on");
+	    $(this).addClass("chk_on");
+	});
+	
+	// 성별 선택 예외처리
+	$(".input_radio.rad").click(function() {
+	    if ($(this).hasClass("chk_on")) 
+	        $("#gd_error").hide();
+	});
+	
+	// 직업군 선택 예외처리 
+	$("#jobNm").focusout(function() {
+	    if ($("#jobNm").val() != "") {
+	        $("#tmpJobNm-error").hide();
+	    } else {
+	        $("#tmpJobNm-error").show();
+	    }
+	
+	});
+	
+	// 보험 유의사항
+	$(".insu_notice").click(function () {
+	    $("#popNoteJoinLayer").css('display', 'block');
+	})
+	$(".wrap_pop_cont .btn_center").on('click', function () {
+	    $("#popNoteJoinLayer").css('display', 'none');
+	});
+	$(".btn_pop_close").on('click', function () {
+	    $("#popNoteJoinLayer").css('display', 'none');
+	})
+	
+	// 직업군 검색 
+	$("#jobNm").click(function() {
+	    $("#popNoteJoinLayer2").css('display', 'block');
+	});
+	
+	// 확인, 닫기 버튼 이벤트
+	$("#_btn_job_complete_ a").on('click', function() {
+	    $("#popNoteJoinLayer2").css('display', 'none');
+	});
 </script>
 </html>

@@ -26,13 +26,11 @@
             <div class="wrap_header">
                 <div class="main_logo">
                     <a href="">
-                        <img src="img/동부.png" alt="DB손해보험 메인으로 이동" style="width: 200px; height: 35px;" />
+                        <img src="/resources/img/동부.png" style="width: 200px; height: 35px;" />
                     </a>
                 </div>
                 <div class="wrap_calc_process">
-                    <ol class="calc_preocess step">
-
-                    </ol>
+                    <ol class="calc_preocess step"></ol>
                 </div>
                 <a href="" class="btn_close"></a>
             </div>
