@@ -2,6 +2,7 @@
         position: relative;
         border-top: 2px solid #444;
     }
+
     .plan_btn_box {
         position: absolute;
         top: -40px;
@@ -9,10 +10,12 @@
         width: 100%;
         text-align: right;
     }
+
     .plan_btn_box i {
         color: grey;
         margin-right: 4px;
     }
+
     .plan_btn_box .btn_agree {
         display: block;
         position: absolute;
@@ -21,10 +24,12 @@
         color: #666;
         font-size: 12px;
     }
+
     .plan_txt_box {
         min-height: 67px;
         padding: 13px 0 0;
     }
+
     .plan_select {
         display: table;
         width: 870px;
@@ -32,16 +37,19 @@
         border: 1px solid #bbb;
         table-layout: fixed;
     }
+
     .plan_select li.plan_name {
         width: 253px;
     }
-    .plan_select>li {
-        display: table-cell;
-        position: relative;
-        width: 154px;
-        border-right: 1px solid #ddd;
-        vertical-align: top;
-    }
+
+	.plan_select>li {
+	    display: table-cell;
+	    position: relative;
+	    width: 154px;
+	    border-right: 1px solid #ddd;
+	    vertical-align: top;
+	}
+
     dl {
         display: block;
         margin-block-start: 1em;
@@ -49,9 +57,12 @@
         margin-inline-start: 0px;
         margin-inline-end: 0px;
     }
-    ol, ul {
+
+    ol,
+    ul {
         margin: 0;
     }
+
     .plan_select li dl dt {
         display: table;
         position: relative;
@@ -60,18 +71,35 @@
         border-bottom: 1px solid #bbb;
         background: #fff;
     }
+
     .plan_select li.on dl dt div {
         height: 60px;
         padding: 0 16px;
     }
+
     .plan_select li dl dt div {
         display: table-cell;
         height: 61px;
         vertical-align: middle;
         text-align: center;
     }
+
     .plan_select li dl dt div label {
         margin-left: 16px;
+    }
+
+    li[class^="plan0"] {
+        overflow: initial;
+    }
+
+    .plan_select li.on {
+        margin: -1px;
+        border: 2px solid #636b7e;
+        width: 304px;
+    }
+
+    .plan_select li.on dl {
+        width: 301px;
     }
 
     .plan_select li.plan_name dl dd {
@@ -82,6 +110,7 @@
         display: table;
         width: 100%;
     }
+
     .plan_select li dl dd div {
         display: table-cell;
         position: relative;
@@ -90,14 +119,22 @@
         vertical-align: middle;
     }
 
-    element.style {
-        width: 154px;
+    .plan_select li dl dd>ul li {
+        display: table-cell;
+        height: 50px;
+        border-bottom: 1px solid #fff;
+        vertical-align: middle;
     }
-
+    
     .plan_select li dl dd ul li.pmoney {
         padding-right: 16px;
         font-size: 14px;
         text-align: right;
+    }
+
+    .plan_select li dl dd ul li.money,
+    .plan_select li dl dd ul li.signup {
+        display: none;
     }
 
     .plan_select li dl dd>ul {
@@ -105,33 +142,28 @@
         width: 100%;
     }
 
-    .plan_select li dl dd>ul li {
-        display: table-cell;
-        height: 51px;
-        border-bottom: 1px solid #fff;
-        vertical-align: middle;
-    }
-
     .hide_txt {
         display: none;
     }
 
+    .plan_select li.on dl dd ul li.pmoney {
+        position: relative;
+        width: 110px;
+        padding-right: 8px;
+        color: #13756f;
+        letter-spacing: -1.2px;
+    }
+    
     .plan_select li.on dl dd ul li.signup {
         display: table-cell;
         padding-right: 12px;
-        text-align: right;
+        text-align: center;
     }
-
-    .plan_select li.on dl dd ul li.signup {
-        display: table-cell;
-        padding-right: 12px;
-        text-align: right;
-    }
-
+    
     .plan_select li.on dl dd ul li.money {
         display: table-cell;
         position: relative;
-        width: 78px;
+        width: 83px;
         padding-right: 16px;
         border-left: 1px solid #ddd;
         font-weight: 700;
@@ -139,30 +171,33 @@
         text-align: right;
     }
 
-    .plan_select li.on dl dd ul li.money .bubble_tip {
-        top: -14px;
-        right: 15px;
-    }
     .plan_btn_box a {
         cursor: pointer;
     }
+
     .plan_total {
-    position: relative;
-    height: 130px;
-    padding: 15px 20px 0;
-    border: 1px solid #7c7c7c;
-    background: #f5f5f5;
+        position: relative;
+        height: 118px;
+        padding: 15px 20px 0;
+        border: 1px solid #7c7c7c;
+        background: #f5f5f5;
     }
-    button, input, select, textarea {
+
+    button,
+    input,
+    select,
+    textarea {
         margin: 0;
         font-size: 100%;
         vertical-align: middle;
     }
+
     .plan_bot_dl {
         display: table;
         width: 310px;
         margin-bottom: -13px;
     }
+
     .plan_bot_dl dt {
         display: table-cell;
         width: 70px;
@@ -172,43 +207,53 @@
         font-size: 13px;
         color: #666666;
     }
+
     .plan_bot_dl dd {
         display: table-cell;
         padding-top: 6px;
         vertical-align: top;
     }
+
     .plan_slide_box {
         position: relative;
         width: 220px;
     }
+
     .plan_slide_box .slide_bar {
         position: relative;
         width: 220px;
         height: 21px;
         border: 0;
     }
+
     .plan_num02 .plan_slide_box a.year01 {
         left: 50%;
     }
+
     .plan_slide_box a.on {
         background: none;
     }
+
     .plan_bot_dl {
         display: table;
         width: 310px;
     }
+
     .plan_bot_dl.last dd {
         padding-top: 0;
     }
+
     .plan_bot_dl dd {
         display: table-cell;
         padding-top: 6px;
         vertical-align: top;
     }
+
     .label_horizental li {
         float: left;
         margin: 1px 20px 5px 14px;
     }
+
     .rad input {
         position: absolute;
         top: 50%;
@@ -217,55 +262,75 @@
         height: 20px;
         margin-top: -16px;
     }
+
     .rad.chk_on span {
         background: none;
     }
+
     .rad span {
         display: block;
         min-height: 24px;
         padding-left: 24px;
         padding-top: 6px;
     }
-    .rad span em, .rad span strong {
+
+    .rad span em,
+    .rad span strong {
         margin-left: 8px;
         font-size: 13px;
     }
-    address, caption, cite, code, dfn, em, th, var {
+
+    address,
+    caption,
+    cite,
+    code,
+    dfn,
+    em,
+    th,
+    var {
         font-weight: 400;
         font-style: normal;
     }
+
     .right_plan {
         position: absolute;
         top: 0;
         right: 20px;
     }
+
     .right_plan .plan_money {
         float: left;
         width: 250px;
         margin: 20px 0 0 35px;
         text-align: right;
     }
+
     .right_plan .plan_money dt {
         height: 63px;
         border-bottom: 1px solid #ddd;
     }
+
     .right_plan .plan_money dt {
         height: 63px;
         border-bottom: 1px solid #ddd;
     }
+
     .right_plan .plan_money dt strong.price {
         font-size: 28px;
         color: #db3e07;
     }
+
     strong {
         font-style: normal;
     }
+
     .right_plan_again {
         display: none;
         position: absolute;
         top: 37px;
         left: 462px;
     }
+
     .right_plan_again .arrow_txt {
         display: inline-block;
         width: 221px;
@@ -273,6 +338,7 @@
         background: none;
         font-size: 13px;
     }
+
     .right_plan_again .btn_all_agree_whit {
         position: relative;
         top: -4px;
@@ -280,34 +346,67 @@
         vertical-align: top;
         line-height: 45px;
     }
+
     .arrow_btn {
         display: inline-block;
         font-size: 34px;
         color: #dddddd;
     }
+
     .btn_all_agree_whit.on {
         border: 1px solid #13756f;
         background: #fff;
     }
+
     .right_plan_again .btn_all_agree_whit .ico_again {
         width: 17px;
         height: 16px;
         vertical-align: -4px;
     }
+
     .right_plan_again .btn_all_agree_whit span {
         font-weight: 700;
         font-size: 15px;
     }
+
     .btn_all_agree_whit.on span,
     .btn_all_agree_whit.on i {
         color: #13756f;
     }
+
     .btn_all_agree_whit span {
         color: #444;
     }
-    .chk, .rad {
+
+    .chk,
+    .rad {
         display: inline-block;
         position: relative;
         line-height: 0;
         cursor: pointer;
+    }
+    
+    .signup_box {
+	    display: inline-block;
+	    position: relative;
+	    top: 3px;
+	    width: 68px;
+	    height: 21px;
+	}
+	
+	input[id^="ckbox"] + label {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #6b5c5c;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+    input[id^="ckbox"]:checked + label {
+        background-color: #04ca8a;
+    }
+    
+    input[id^="ckbox"] {
+        display: none;
     }

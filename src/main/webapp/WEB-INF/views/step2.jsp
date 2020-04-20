@@ -4,7 +4,11 @@
 <%@ include file="common/header.jsp" %>
 <link href="<c:url value="/resources/css/step2.css" />" rel="stylesheet"> 
      
-	<form id="tagForm" action="" method="POST"></form>
+	<form id="tagForm" action="/step3" method="POST">
+		<input type="hidden" name="birthday" value="${userInfo.birthday}">
+		<input type="hidden" name="gender" value="${userInfo.gender}">
+		<input type="hidden" name="job" value="${userInfo.job}">
+	</form>
         <div id="wrap" class="wrap_sub insurance">
 	    	<div id="container" class="step">
 		        <div id="lnb">
@@ -32,48 +36,46 @@
 		            <div id="cocmDiv" class="mgt20"></div>
 		        </div>
 		        <div id="contents">
-		            <form id="sForm" action="" method="POST">
-		                <div class="wrap_contents" style="min-height: 230px;padding-bottom: 126px;">
-		                    <div class="head_area">
-		                        <h3 class="h3_ttl">원하는 부위만 쏙쏙 골라 가입 가능합니다.<br>중점 보장 받고 싶은 암부위를 선택해주세요.</h3>
-		                    </div>
-		                    <div id="cancer_tab" class="wrap_cancer">
-		                        <ul class="wrap_kind_select clfix">
-		                            <li name="cancer_11">
-		                                <a href="#">
-		                                    <i class="fas fa-check-circle"></i>종합보장
-		                                </a>
-		                            </li>
-		                            <li name="cancer_11">
-		                                <a href="#">
-		                                    <i class="fas fa-check-circle"></i>위암
-		                                </a>
-		                            </li>
-		                            <li name="cancer_11">
-		                                <a href="#">
-		                                    <i class="fas fa-check-circle"></i>폐암
-		                                </a>
-		                            </li>
-		                            <li name="cancer_11">
-		                                <a href="#">
-		                                    <i class="fas fa-check-circle"></i>간암
-		                                </a>
-		                            </li>
-		                        </ul>
-		                    </div>
-		                    <div class="btn_foot" style="display: table; bottom: 0px;">
-		                        <a href="#" class="btns btn_pre">
-		                            <i class="fas fa-chevron-left"></i>
-		                            <span>이전</span>
-		                        </a>
-		                        <!--.btn_active :: 활성화 클래스-->
-		                        <a href="#" class="btns btn_next btn_active">
-		                            <span>다음</span>
-		                            <i class="fas fa-chevron-right"></i>
-		                        </a>
-		                    </div>
-		                </div>
-		            </form>
+	                <div class="wrap_contents" style="min-height: 230px;padding-bottom: 126px;">
+	                    <div class="head_area">
+	                        <h3 class="h3_ttl">원하는 부위만 쏙쏙 골라 가입 가능합니다.<br>중점 보장 받고 싶은 암부위를 선택해주세요.</h3>
+	                    </div>
+	                    <div id="cancer_tab" class="wrap_cancer">
+	                        <ul class="wrap_kind_select clfix">
+	                            <li name="cancer_11">
+	                                <a href="#">
+	                                    <i class="fas fa-check-circle"></i>종합보장
+	                                </a>
+	                            </li>
+	                            <li name="cancer_11">
+	                                <a href="#">
+	                                    <i class="fas fa-check-circle"></i>위암
+	                                </a>
+	                            </li>
+	                            <li name="cancer_11">
+	                                <a href="#">
+	                                    <i class="fas fa-check-circle"></i>폐암
+	                                </a>
+	                            </li>
+	                            <li name="cancer_11">
+	                                <a href="#">
+	                                    <i class="fas fa-check-circle"></i>간암
+	                                </a>
+	                            </li>
+	                        </ul>
+	                    </div>
+	                    <div class="btn_foot" style="display: table; bottom: 0px;">
+	                        <a href="#" class="btns btn_pre">
+	                            <i class="fas fa-chevron-left"></i>
+	                            <span>이전</span>
+	                        </a>
+	                        <!--.btn_active :: 활성화 클래스-->
+	                        <a href="#" class="btns btn_next btn_active">
+	                            <span>다음</span>
+	                            <i class="fas fa-chevron-right"></i>
+	                        </a>
+	                    </div>
+	                </div>
 		        </div>
 		    </div>
         </div>
@@ -86,5 +88,17 @@
         $(".wrap_kind_select.clfix li").removeClass("on");
         $(this).addClass("on");
     })
+    
+    $(".btn_foot a").click(function() {
+    	
+    	var isNext = $(this).hasClass("btn_next");
+    	
+    	if(isNext) {
+    		$("#tagForm").submit();
+    	} else {
+    		$("#tagForm").attr({"action":"/main"}).submit();
+    	}
+    	
+    });
 </script>
 </html>

@@ -36,7 +36,7 @@
     .wrap_header div {
         position: absolute;
         top: 13px;
-        left: 0;
+        left: -102px;
     }
     .wrap_header div a {
         display: block;
@@ -60,9 +60,6 @@
     }
     .wrap_tabs.ui_tab_group {
         margin-left: 11px;
-    }
-    .wrap_pop_cont .btn_center {
-        margin: 24px 0 0 278px;
     }
     .wrap_header .btn_close {
         display: block;
@@ -456,7 +453,7 @@
          margin: 0 4px;
      }
      .wrap_container.w700 {
-        width: 700px;
+        width: 653px;
         margin-left: -350px;
     }
     .wrap_pop_tab {
@@ -511,8 +508,8 @@
         text-align: center;
     }
     .find_job .wrap_selec_job_box {
-        width: 207px;
-        height: 311px;
+        width: 275px;
+        height: 245px;
         overflow: hidden;
         overflow-y: auto;
         margin-bottom: 15px;
@@ -529,7 +526,7 @@
         margin-top: 0;
     }
     .find_job .wrap_pop_job_list li {
-        width: 100%;
+        width: 101%;
         margin-top: -1px;
         margin-left: -1px;
         text-align: left;
@@ -548,7 +545,8 @@
     .find_job .wrap_pop_job_list li a {
         padding: 12px !important;
     }
-    .wrap_pop_job_list li a, .wrap_pop_job_list li span {
+    .wrap_pop_job_list li a, 
+    .wrap_pop_job_list li span {
         display: block;
         position: relative;
         min-height: 20px;

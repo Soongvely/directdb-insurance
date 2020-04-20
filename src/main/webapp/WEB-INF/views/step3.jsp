@@ -169,7 +169,7 @@
                                         </dd>
                                     </dl>
                                 </li>
-                                <li class="plan01" style="width: 154px; overflow: initial;">
+                                <li class="plan01">
                                     <!-- 플랜선택시 class : on -->
                                     <dl>
                                         <dt>
@@ -193,7 +193,6 @@
                                                     <span id="cvr2Inam_12_314183" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-
                                                     <span id="cvrSign_12_314183" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
@@ -224,11 +223,8 @@
                                                     <span id="cvr2Inam_12_314180" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_314180">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_314180">-</span>
@@ -243,11 +239,8 @@
                                                     <span id="cvr2Inam_12_314127" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_314127">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="cb1" class="signup_box">
+    												<label for=""></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_314127">-</span>
@@ -257,8 +250,7 @@
                                         <dd>
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_4">
-                                                <li class="pmoney">
-                                                </li>
+                                                <li class="pmoney">-</li>
                                                 <li class="signup">
                                                 </li>
                                                 <li class="money">
@@ -269,8 +261,7 @@
                                         <dd>
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_5">
-                                                <li class="pmoney">
-                                                </li>
+                                                <li class="pmoney">-</li>
                                                 <li class="signup">
                                                 </li>
                                                 <li class="money">
@@ -286,11 +277,8 @@
                                                     <span id="cvr2Inam_12_314138" style="display: none">3,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_314138">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_314138">-</span>
@@ -300,10 +288,8 @@
                                         <dd>
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_7">
-                                                <li class="pmoney">
-                                                </li>
-                                                <li class="signup">
-                                                </li>
+                                                <li class="pmoney">-</li>
+                                                <li class="signup"></li>
                                                 <li class="money">
                                                     <span id="cvrPrm__N">-</span>
                                                 </li>
@@ -317,11 +303,8 @@
                                                     <span id="cvr2Inam_12_318111" style="display: none">100만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_318111">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_318111">-</span>
@@ -336,11 +319,8 @@
                                                     <span id="cvr2Inam_12_318650" style="display: none">2만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_318650">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_318650">-</span>
@@ -355,11 +335,8 @@
                                                     <span id="cvr2Inam_12_317954" style="display: none">5만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_317954">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_317954">-</span>
@@ -374,11 +351,8 @@
                                                     <span id="cvr2Inam_12_314161" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_314161">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_314161">-</span>
@@ -393,11 +367,8 @@
                                                     <span id="cvr2Inam_12_314178" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_314178">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_314178">-</span>
@@ -407,10 +378,8 @@
                                         <dd>
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_13">
-                                                <li class="pmoney">
-                                                </li>
-                                                <li class="signup">
-                                                </li>
+                                                <li class="pmoney">-</li>
+                                                <li class="signup"></li>
                                                 <li class="money">
                                                     <span id="cvrPrm__N">-</span>
                                                 </li>
@@ -419,10 +388,8 @@
                                         <dd>
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_14">
-                                                <li class="pmoney">
-                                                </li>
-                                                <li class="signup">
-                                                </li>
+                                                <li class="pmoney">-</li>
+                                                <li class="signup"></li>
                                                 <li class="money">
                                                     <span id="cvrPrm__N">-</span>
                                                 </li>
@@ -431,10 +398,8 @@
                                         <dd>
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_15">
-                                                <li class="pmoney">
-                                                </li>
-                                                <li class="signup">
-                                                </li>
+                                                <li class="pmoney">-</li>
+                                                <li class="signup"></li>
                                                 <li class="money">
                                                     <span id="cvrPrm__N">-</span>
                                                 </li>
@@ -448,11 +413,8 @@
                                                     <span id="cvr2Inam_12_314179" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_314179">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_314179">-</span>
@@ -467,11 +429,8 @@
                                                     <span id="cvr2Inam_12_318652" style="display: none">100만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_318652">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_318652">-</span>
@@ -486,11 +445,8 @@
                                                     <span id="cvr2Inam_12_317912" style="display: none">300만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_12_317912">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                   <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_317912">-</span>
@@ -499,14 +455,14 @@
                                         </dd>
                                     </dl>
                                 </li>
-                                <li class="plan02 fixed on" style="width: 154px; overflow: initial;">
+                                <li class="plan02 fixed on">
                                     <!-- 플랜선택시 class : on -->
                                     <dl>
                                         <dt>
                                             <span class="best"></span>
                                             <div>
                                                 <label for="pdcPanCd2" class="input_radio rad">
-                                                    <input id="pdcPanCd2" name="pdcPanCd" type="radio" value="13">
+                                                    <input id="pdcPanCd2" name="pdcPanCd" type="radio" value="13" checked="checked">
                                                     <span>
                                                         <span>표준형 <br>
                                                             <strong class="default m_down" id="panSmPrm_13">
@@ -526,11 +482,9 @@
                                                     <span id="cvr2Inam_13_314183" style="display: none">2,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-
                                                     <span id="cvrSign_13_314183" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
-                                                    <span class="bubble_tip">보험료</span>
                                                     <span id="cvrPrm_13_314183">7,420 원</span>
                                                 </li>
                                             </ul>
@@ -543,7 +497,6 @@
                                                     <span id="cvr2Inam_13_314184" style="display: none">200만 원</span>
                                                 </li>
                                                 <li class="signup">
-
                                                     <span id="cvrSign_13_314184" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
@@ -559,11 +512,8 @@
                                                     <span id="cvr2Inam_13_314180" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_314180">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_314180">150 원</span>
@@ -578,11 +528,8 @@
                                                     <span id="cvr2Inam_13_314127" style="display: none">2,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_314127">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_314127">560 원</span>
@@ -597,11 +544,8 @@
                                                     <span id="cvr2Inam_13_314093" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_314093">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_314093">250 원</span>
@@ -616,11 +560,8 @@
                                                     <span id="cvr2Inam_13_314092" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_314092">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_314092">460 원</span>
@@ -635,11 +576,8 @@
                                                     <span id="cvr2Inam_13_314138" style="display: none">3,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_314138">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_314138">570 원</span>
@@ -654,11 +592,8 @@
                                                     <span id="cvr2Inam_13_314110" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_314110">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_314110">300 원</span>
@@ -673,11 +608,8 @@
                                                     <span id="cvr2Inam_13_318111" style="display: none">100만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_318111">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_318111">290 원</span>
@@ -692,11 +624,8 @@
                                                     <span id="cvr2Inam_13_318650" style="display: none">2만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_318650">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_318650">294 원</span>
@@ -711,11 +640,8 @@
                                                     <span id="cvr2Inam_13_317954" style="display: none">10만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_317954">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_317954">2,330 원</span>
@@ -728,14 +654,10 @@
                                                 <li class="pmoney">
                                                     <span id="cvrInam_13_314161">1,000만 원</span>
                                                     <span id="cvr2Inam_13_314161" style="display: none">1,000만 원</span>
-
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_314161">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_314161">855 원</span>
@@ -750,11 +672,8 @@
                                                     <span id="cvr2Inam_13_314178" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_314178">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_314178">380 원</span>
@@ -765,8 +684,7 @@
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_13" style="margin-left: 0px;">
                                                 <li class="pmoney">-</li>
-                                                <li class="signup">
-                                                </li>
+                                                <li class="signup"></li>
                                                 <li class="money">
                                                     <span id="cvrPrm__N">-</span>
                                                 </li>
@@ -776,8 +694,7 @@
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_14" style="margin-left: 0px;">
                                                 <li class="pmoney">-</li>
-                                                <li class="signup">
-                                                </li>
+                                                <li class="signup"></li>
                                                 <li class="money">
                                                     <span id="cvrPrm__N">-</span>
                                                 </li>
@@ -787,8 +704,7 @@
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_15" style="margin-left: 0px;">
                                                 <li class="pmoney">-</li>
-                                                <li class="signup">
-                                                </li>
+                                                <li class="signup"></li>
                                                 <li class="money">
                                                     <span id="cvrPrm__N">-</span>
                                                 </li>
@@ -802,11 +718,8 @@
                                                     <span id="cvr2Inam_13_314179" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_314179">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_314179">140 원</span>
@@ -821,11 +734,8 @@
                                                     <span id="cvr2Inam_13_318652" style="display: none">500만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_318652">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_318652">1,165 원</span>
@@ -840,11 +750,8 @@
                                                     <span id="cvr2Inam_13_317912" style="display: none">300만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_13_317912">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_13_317912">1,410 원</span>
@@ -853,7 +760,7 @@
                                         </dd>
                                     </dl>
                                 </li>
-                                <li class="plan03" style="width: 154px; overflow: initial;">
+                                <li class="plan03">
                                     <!-- 플랜선택시 class : on -->
                                     <dl>
                                         <dt>
@@ -882,8 +789,6 @@
                                                     <span id="cvrSign_14_314183" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
-                                                    <!--첫번째 항목만 class="bubble_tip" 이후는 hide_txt-->
-                                                    <span class="bubble_tip">보험료</span>
                                                     <span id="cvrPrm_14_314183">-</span>
                                                 </li>
                                             </ul>
@@ -911,11 +816,8 @@
                                                     <span id="cvr2Inam_14_314180" style="display: none">2,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314180">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314180">-</span>
@@ -930,11 +832,8 @@
                                                     <span id="cvr2Inam_14_314127" style="display: none">3,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314127">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314127">-</span>
@@ -949,11 +848,8 @@
                                                     <span id="cvr2Inam_14_314093" style="display: none">2,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314093">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314093">-</span>
@@ -968,11 +864,8 @@
                                                     <span id="cvr2Inam_14_314092" style="display: none">2,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314092">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314092">-</span>
@@ -987,11 +880,8 @@
                                                     <span id="cvr2Inam_14_314138" style="display: none">5,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314138">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314138">-</span>
@@ -1006,11 +896,8 @@
                                                     <span id="cvr2Inam_14_314110" style="display: none">3,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314110">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314110">-</span>
@@ -1025,11 +912,8 @@
                                                     <span id="cvr2Inam_14_318111" style="display: none">100만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_318111">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_318111">-</span>
@@ -1044,11 +928,8 @@
                                                     <span id="cvr2Inam_14_318650" style="display: none">2만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_318650">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_318650">-</span>
@@ -1063,11 +944,8 @@
                                                     <span id="cvr2Inam_14_317954" style="display: none">10만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_317954">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_317954">-</span>
@@ -1082,11 +960,8 @@
                                                     <span id="cvr2Inam_14_314161" style="display: none">2,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314161">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314161">-</span>
@@ -1101,11 +976,8 @@
                                                     <span id="cvr2Inam_14_314178" style="display: none">2,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314178">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314178">-</span>
@@ -1120,11 +992,8 @@
                                                     <span id="cvr2Inam_14_314182" style="display: none">40만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314182">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314182">-</span>
@@ -1139,11 +1008,8 @@
                                                     <span id="cvr2Inam_14_314186" style="display: none">100만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314186">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314186">-</span>
@@ -1158,11 +1024,8 @@
                                                     <span id="cvr2Inam_14_314140" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314140">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_14_314140">-</span>
@@ -1177,11 +1040,8 @@
                                                     <span id="cvr2Inam_14_314179" style="display: none">2,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <a href="#" class="signup_box on" id="cvrSign_14_314179">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money"><span id="cvrPrm_14_314179">-</span>
                                                 </li>
@@ -1193,11 +1053,9 @@
                                                 <li class="pmoney"><span id="cvrInam_14_318652">500만 원</span>
                                                     <span id="cvr2Inam_14_318652" style="display: none">500만 원</span>
                                                 </li>
-                                                <li class="signup"><a href="#" class="signup_box on" id="cvrSign_14_318652"></a>
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a>
+                                                <li class="signup">
+                                                	<input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money"><span id="cvrPrm_14_318652">-</span>
                                                 </li>
@@ -1208,11 +1066,10 @@
                                             <ul name="cvrRow_18">
                                                 <li class="pmoney"><span id="cvrInam_14_317912">300만 원</span>
                                                     <span id="cvr2Inam_14_317912" style="display: none">300만 원</span></li>
-                                                <li class="signup"><a href="#" class="signup_box on" id="cvrSign_14_317912">
-                                                        <span class="signup_ball">
-                                                            <em class="hide_txt">ON</em>
-                                                        </span>
-                                                    </a></li>
+                                                <li class="signup">
+                                                	<input type="checkbox" id="" class="signup_box">
+                                                	<label for="" class="signup_label"></label>
+                                                </li>
                                                 <li class="money"><span id="cvrPrm_14_317912">-</span>
                                                 </li>
                                             </ul>
@@ -1221,57 +1078,24 @@
                                 </li>
                             </div>
                             <div class="plan_total ui_plan_slider">
+                                <!--선택 갯수에 따라 2개일때 plan_num02 ~ 6개일때 plan_num06까지-->
                                 <input type="hidden" id="arcTrmCd" name="arcTrmCd" value="Y010">
-                                <dl class="plan_bot_dl ui_plan01 plan_num02" style="margin-top: 0;">
-                                    <dt>보험기간</dt>
-                                    <ul class="label_horizental clfix">
-                                        <li>
-                                            <label for="pymMtdCd1 " class="input_radio rad">
-                                                <input id="pymMtdCd1" name="pymMtdCd" onclick="calcLtmForm.setAgain();" type="radio" value="01" checked="checked">
-                                                <span><em>월납</em></span>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label for="pymMtdCd2 " class="input_radio rad">
-                                                <input id="pymMtdCd2" name="pymMtdCd" onclick="calcLtmForm.setAgain();" type="radio" value="05">
-                                                <span><em>연납</em></span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                    <!-- <dd>
-                                        <div class="plan_slide_box">
-                                            <div class="slide_bar"></div>
-                                                <a href="#" class="year01  on" id="selArcTrm1" name="selArcTrm" value="Y010">10년<span class="hide_txt">선택</span></a>
-                                                <a href="#" class="year02 " id="selArcTrm2" name="selArcTrm" value="Y020">20년</a>
-                                        </div>
-                                    </dd> -->
-                                </dl>
-                                    <dl class="plan_bot_dl ui_plan02 ui_disable plan_num02">
-                                    <input type="hidden" id="pymTrmCd" name="pymTrmCd" value="Y010" />
+                                <dl class="plan_bot_dl ui_plan01 plan_num02" style="margin-top: 14px;">
                                     <dt>납입기간</dt>
                                     <ul class="label_horizental clfix">
                                         <li>
                                             <label for="pymMtdCd1 " class="input_radio rad">
-                                                <input id="pymMtdCd1" name="pymMtdCd" onclick="calcLtmForm.setAgain();" type="radio" value="01" checked="checked">
-                                                <span><em>월납</em></span>
+                                                <input id="pymMtdCd1" name="pymMtdCd" type="radio" value="Y10" checked="checked">
+                                                <span><em>10년</em></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label for="pymMtdCd2 " class="input_radio rad">
-                                                <input id="pymMtdCd2" name="pymMtdCd" onclick="calcLtmForm.setAgain();" type="radio" value="05">
-                                                <span><em>연납</em></span>
+                                                <input id="pymMtdCd2" name="pymMtdCd" type="radio" value="Y20">
+                                                <span><em>20년</em></span>
                                             </label>
                                         </li>
                                     </ul>
-                                    <!-- <dd>
-                                        <div class="plan_slide_box">
-                                            <div class="slide_bar dis01">
-                                                <span class="disable_bar" style="width: 100%;"></span>
-                                            </div>
-                                            <a href="#" class="year01 on" id="selPymTrm1" name="selPymTrm" value="Y010">선택</span></a>
-                                            <a href="#" class="year02 disable" id="selPymTrm2" name="selPymTrm" value="Y020">20년</a>
-                                        </div>
-                                    </dd> -->
                                 </dl>
                                 <!--e:ux_modify 20160211 기간 선택 코딩 변경-->
                                 <dl class="plan_bot_dl last">
@@ -1280,20 +1104,21 @@
                                         <ul class="label_horizental clfix">
                                             <li>
                                                 <label for="pymMtdCd1 " class="input_radio rad">
-                                                    <input id="pymMtdCd1" name="pymMtdCd" type="radio" value="01" checked="checked">
+                                                    <input id="pymMtdCd1" name="pymMtdCd" type="radio" value="M01" checked="checked">
                                                     <span><em>월납</em></span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label for="pymMtdCd2 " class="input_radio rad">
-                                                    <input id="pymMtdCd2" name="pymMtdCd"type="radio" value="05">
+                                                    <input id="pymMtdCd2" name="pymMtdCd"type="radio" value="M12">
                                                     <span><em>연납</em></span>
                                                 </label>
                                             </li>
                                         </ul>
                                     </dd>
                                 </dl>
-                                <div display:none;="" class="right_plan" style="display: none;">
+                                <!-- s: -->
+                                <div class="right_plan" style="display: none;">
                                     <dl class="plan_money">
                                         <dt>
                                             <span id="totPrmPymMtdTxt">월 보험료</span>
@@ -1343,11 +1168,28 @@
         </div>
     </div>
 </body>
-
-<script>
-    $(".money span[id^=cvrPrm__N]").css('display', 'none');
-    $(".money span[id^=cvrPrm]").css('display', 'none');
-    $(".signup").css('display', 'none');
-    $(".money").css('display', 'none');
-</script>
 </html>
+<script>
+	// 보장형태 선택 이벤트
+	$("[id^=pdcPanCd]").parent().click(function() {
+	    $(this).children().attr("checked", "checked");
+	
+	    $(".plan_select li").removeClass("on");
+	    $(this).parents("li[class^='plan0']").addClass("on");
+	});
+
+	// 선택가입 체크박스 이벤트, 고유id 부여
+	 $('.signup_box').each(function(i){ 
+        $(".signup_box:eq("+i+")").attr("id", "ckbox" + i);
+        $(".signup_label:eq("+i+")").attr("for", "ckbox" + (i + 1));
+    });
+
+	// 선택된 체크박스
+	$("input[id^='ckbox']").click(function() {
+		if($(this).prop("checked") == true) {
+			$(this).addClass("chk_on");
+		} else {
+			$(this).removeClass("chk_on");
+		}		
+	});
+</script>
