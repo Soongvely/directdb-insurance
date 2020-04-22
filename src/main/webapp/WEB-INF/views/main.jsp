@@ -194,53 +194,130 @@
                                         <div class="job_box_wrap" style="margin: 0 0 12px 13px ;">
                                             <h2 class="h3_pop">대분류</h2>
                                             <div class="wrap_selec_job_box">
-                                                <ul id="__job_lgcg_area__" class="wrap_pop_job_list clfix">
+                                                <ul id="job_lgcg_area" class="wrap_pop_job_list clfix">
                                                     <li data-job="0">
-                                                        <a href="#" title="사무 종사자">사무 종사자</a>
+                                                        <a title="사무 종사자">사무 종사자</a>
                                                     </li>
                                                     <li data-job="1">
-                                                        <a href="#" title="서비스 종사자">서비스 종사자</a>
+                                                        <a title="서비스 종사자">서비스 종사자</a>
                                                     </li>
                                                     <li data-job="2">
-                                                        <a href="#" title="장치·기계조작 및 조립 종사자">장치·기계조작 및 조립 종사자</a>
+                                                        <a title="장치·기계조작 및 조립 종사자">장치·기계조작 및 조립 종사자</a>
                                                     </li>
                                                     <li data-job="4">
-                                                        <a href="#" title="주부,학생 및 기타 비경제활동인구">주부,학생 및 기타 비경제활동인구</a>
+                                                        <a title="주부,학생 및 기타 비경제활동인구">주부,학생 및 기타 비경제활동인구</a>
                                                     </li>
                                                     <li data-job="5">
-                                                        <a href="#" title="사무 종사자">사무 종사자</a>
+                                                        <a  itle="전문가 및 관련 종사자">전문가 및 관련 종사자</a>
+                                                    </li>
+                                                    <li data-job="6">
+                                                        <a title="군인">군인</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <!-- 중분류 -->
                                         <div class="job_box_wrap">
                                             <h2 class="h3_pop">중분류</h2>
                                             <div class="wrap_selec_job_box">
-                                                <div class="wrap_selec_job_box">
-                                                  <ul id="__job_secg_area__" class="wrap_pop_job_list clfix">
-	                                                  <li>
-	                                                  	<a href="#">고객 상담 및 모니터 요원</a>
-	                                                  </li>
-	                                                  <li>
-	                                                  	<a href="#">기타 사무원</a>
-	                                                  </li>
-	                                                  <li>
-	                                                  	<a href="#">보험 사무원</a>
-	                                                  </li>
-	                                                  <li>
-	                                                  	<a href="#">신용 추심원</a>
-	                                                  </li>
-	                                                  <li>
-	                                                  	<a href="#">안내·접수 사무원 및 안내원</a>
-	                                                  </li>
-	                                                  <li>
-	                                                  	<a href="#">행정 사무원</a>
-	                                                  </li>
-                                                 </ul>
-                                              </div>
+                                                <ul id="job_secg_area" class="wrap_pop_job_list clfix">
+                                                    <li>
+                                                    <a>고객 상담 및 모니터 요원</a>
+                                                    </li>
+                                                    <li>
+                                                    <a>기타 사무원</a>
+                                                    </li>
+                                                    <li>
+                                                    <a >보험 사무원</a>
+                                                    </li>
+                                                    <li>
+                                                    <a >신용 추심원</a>
+                                                    </li>
+                                                    <li>
+                                                    <a>안내·접수 사무원 및 안내원</a>
+                                                    </li>
+                                                    <li>
+                                                    <a>행정 사무원</a>
+                                                    </li>
+                                                </ul>
+                                                <ul id="job_secg_area" class="wrap_pop_job_list clfix">
+                                                    <li>
+                                                        <a>간병인</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>결혼 상담원 및 웨딩플래너</a></li>
+                                                    <li>
+                                                        <a>경찰관(일반,해양 등)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>경호원</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>기타 경호 및 보안 관련 종사원</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>기타 미용관련 서비스 종사원</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>기타 여가 서비스 종사원</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>기타 음식서비스 종사원</a>
+                                                    </li>
+                                                    <li>
+                                                        <a>기타의료·복지관련서비스 </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>메이크업 아티스트 및 분장사</a>
+                                                    </li>
+                                                </ul>
+                                                <ul id="job_secg_area" class="wrap_pop_job_list clfix">
+                                                  <li>
+                                                  	<a>가구조립원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>건설 기계 운송 관련 종사자</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>건설 및 채굴 기계 운전원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>고무 및 플라스틱 제품 조립원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>곡물가공제품 기계 조작원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>광석 및 석제품 가공기 조작원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>금속가공 기계조작원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>금속가공관련 제어장치 조작원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>금속공작기계 조작원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>금속기계부품 조립원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>기타 목재 및 종이 관련 기계 조작원</a>
+                                                  </li>
+                                                  <li>
+                                                  	<a>기타 비금속제품관련 생산기 조작원</a>
+                                                  </li>
+                                            	</ul>
                                             </div>
                                         </div>
+                                        <!-- //직업코드
+                                        <div class="job_box_wrap">
+                                            <h2 class="h3_pop">소분류</h2>
+                                            <div class="wrap_selec_job_box">
+                                                <ul id="__job_code_area__" class="wrap_pop_job_list clfix">
+                                                </ul>
+                                            </div>
+                                        </div> -->
                                     </div>
                                     <ul>
                                         <li class="ico_noti_gray">
@@ -275,7 +352,7 @@
 </body>
 <script>
 	$(".btn_foot a").on('click', function() {
-	
+		
 	    // 생년월일 
 	    if ($(".wrap_input input[name='birthday']").val().length == 8) {
 	        $(this).removeClass("error_txt");
@@ -307,75 +384,93 @@
 	    
 	    $("#sForm").submit();
 	});
-	
-	// 생일 입력값 확인
-	$(".wrap_input input[name='birthday']").focusout(function () {
-	    if ($(".wrap_input input[name='birthday']").val().length != 8) {
-	        $(this).addClass("error_txt");
-	        $("#all-error").show();
-	    } 
-	});
-	
-	$(".wrap_input input[name='birthday']").keyup(function () {
-	   if ($(".wrap_input input[name='birthday']").val().length == 8) {
-	        $(this).removeClass("error_txt");
-	        $("#all-error").hide();
-	    }
-	});
-	
-	// 성별 버튼 이벤트    
-	$(".icon_gender label").click(function () {
-	    if ($(this).hasClass("chk_on")) {
-	        return;
-	    }
-	    $(".icon_gender label").removeClass("chk_on");
-	    $(this).addClass("chk_on");
-	});
-	
-	// 성별 선택 예외처리
-	$(".input_radio.rad").click(function() {
-	    if ($(this).hasClass("chk_on")) 
-	        $("#gd_error").hide();
-	});
-	
-	// 직업군 선택 예외처리 
-	$("#jobNm").focusout(function() {
-	    if ($("#jobNm").val() != "") {
-	        $("#tmpJobNm-error").hide();
-	    } else {
-	        $("#tmpJobNm-error").show();
-	    }
-	
-	});
-	
-	// 보험 유의사항 팝업창 활성화
-	$(".insu_notice").click(function () {
-	    $("#popNoteJoinLayer").css('display', 'block');
-	})
-	$(".wrap_pop_cont .btn_center").on('click', function () {
-	    $("#popNoteJoinLayer").css('display', 'none');
-	});
-	$(".btn_pop_close").on('click', function () {
-	    $("#popNoteJoinLayer").css('display', 'none');
-	    $("#popNoteJoinLayer2").css('display', 'none');
-	})
-	
-	// 직업군 팝업창 활성화
-	$(".sch").click(function() {
-        $("#popNoteJoinLayer2").css('display', 'block');		
-	});
-	
-	// 직업군 선택
-    $("#__job_secg_area__ li a").on('click', function() {
+
+    // 생일 입력값 확인
+    $(".wrap_input input[name='birthday']").focusout(function () {
+        if ($(".wrap_input input[name='birthday']").val().length != 8) {
+            $(this).addClass("error_txt");
+            $("#all-error").show();
+        } 
+    });
+
+    $(".wrap_input input[name='birthday']").keyup(function () {
+       if ($(".wrap_input input[name='birthday']").val().length == 8) {
+            $(this).removeClass("error_txt");
+            $("#all-error").hide();
+        }
+    });
+    
+    // 성별 버튼 이벤트    
+    $(".icon_gender label").click(function () {
+        if ($(this).hasClass("chk_on")) {
+            return;
+        }
+        $(".icon_gender label").removeClass("chk_on");
+        $(this).addClass("chk_on");
+    });
+
+    // 성별 선택 예외처리
+    $(".input_radio.rad").click(function() {
+        if ($(this).hasClass("chk_on")) 
+            $("#gd_error").hide();
+    });
+
+    // 직업군 선택 예외처리 
+    $("#jobNm").focusout(function() {
+        if ($("#jobNm").val() != "") {
+            $("#tmpJobNm-error").hide();
+        } else {
+            $("#tmpJobNm-error").show();
+        }
+    });
+
+    /********************** 직업군 검색 및 보험 유의사항  **********************/
+
+    //1. 각 하위 직업군에 고유 아이디 부여
+    $("[id^=job_secg_area]").each(function(i) {
+        $("[id^=job_secg_area]:eq("+ i +")").attr("id", "job_secg_area" + i);
+        $("[id^=job_secg_area]:eq("+ i +")").attr("data-jobnum", i);
+    });
+
+    //2. 상위 직업군에 맞는 하위 직업군 조회 이벤트
+    $("#job_lgcg_area li").on("click", function() {
+        $("[id^=job_secg_area]").removeClass("chk_job");
+
+        var job = $(this).data("job");
+
+        if (job == $("[id^=job_secg_area]:eq("+ job +")").data("jobnum")) 
+            $("[id^=job_secg_area]:eq("+ job +")").addClass("chk_job");
+        
+    });
+
+    //3. 하위 직업군 선택 시 직업란에 표시
+    $("[id^=job_secg_area] li a").on('click', function() {
         $("#popNoteJoinLayer2").css('display', 'none');
 
         $("#jobNm").val($(this).text());
+        $("#tmpJobNm-error").hide();
     });
 
-	// 확인, 닫기 버튼 이벤트
-	$("#_btn_job_complete_ a").on('click', function() {
-	    $("#popNoteJoinLayer2").css('display', 'none');
-	});
-	
+    //4. 직업군 검색 창 오픈 
+    $(".sch").click(function() {
+        $("#popNoteJoinLayer2").css('display', 'block');
+    });
+
+    //5. 보험 유의사항
+    $(".insu_notice").click(function () {
+        $("#popNoteJoinLayer").css('display', 'block');
+    })
+    $(".wrap_pop_cont .btn_center").on('click', function () {
+        $("#popNoteJoinLayer").css('display', 'none');
+    });
+    $(".btn_pop_close").on('click', function () {
+        $("#popNoteJoinLayer").css('display', 'none');
+        $("#popNoteJoinLayer2").css('display', 'none');
+    })
+
+    //6. 팝업창 확인, 닫기 버튼 이벤트
+    $("#_btn_job_complete_ a").on('click', function() {
+        $("#popNoteJoinLayer2").css('display', 'none');
+    });
 </script>
 </html>

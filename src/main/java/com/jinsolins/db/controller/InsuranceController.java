@@ -50,4 +50,9 @@ public class InsuranceController {
 	public String step5() {
 		return "step5";
 	}
+	
+	@GetMapping("/step6")
+	public String step6() {
+		return "step6";
+	}
 }

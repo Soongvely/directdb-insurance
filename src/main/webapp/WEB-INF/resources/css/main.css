@@ -575,3 +575,9 @@
     .txt_bm ul li {
         display: inline-block;
     }
+    [id^="job_secg_area"] {
+        display: none;
+    }
+    .chk_job {
+        display: block;
+    }

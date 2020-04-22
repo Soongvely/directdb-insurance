@@ -1,0 +1,151 @@
+.wrap_agree {
+    margin-bottom: 16px;
+    border: 1px solid #bbb;
+}
+
+.agree_tit_box {
+    position: relative;
+    min-height: 82px;
+    padding: 35px 0 27px 70px;
+}
+
+.wrap_re_agree {
+    position: relative;
+    padding: 80px 40px 40px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+.wrap_re_agree .box_agree dt {
+    margin-top: -1px;
+    padding: 30px 0 15px;
+    color: #333;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.wrap_re_agree .box_agree dt strong {
+    color: #13756f;
+    font-size: 15px;
+}
+
+strong {
+    font-style: normal;
+}
+
+.wrap_re_agree .box_agree:first-child {
+    border-top: 1px dotted #ddd;
+}
+
+.wrap_re_agree .box_agree dd {
+    position: relative;
+}
+
+.wrap_re_agree .box_agree_cont {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 150px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: grey;
+    font-size: 13px;
+}
+
+.terms .tit {
+    display: none;
+    margin-bottom: 15px;
+    color: #444;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.terms .cont dl,
+.terms .cont p {
+    margin-bottom: 10px;
+}
+
+.txt15 {
+    font-size: 15px !important;
+    line-height: 22px !important;
+    color: #555 !important;
+}
+
+.txt_orange {
+    color: #db3e07 !important;
+}
+
+.terms .cont dt {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #444;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.terms .dash_list li {
+    padding-left: 11px;
+
+}
+
+.wrap_re_agree .agree_cont {
+    position: absolute;
+    top: -40px;
+    right: -30px;
+}
+
+.wrap_re_agree .all_agree {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+/* a, a:active, a:focus, a:hover, a:link, a:visited {
+    color: #000;
+    font-size: 100%;
+    text-decoration: none;
+} */
+.btn_all_agree {
+    padding: 11px 12px 12px;
+    background: #636b7e;
+}
+
+span>em {
+    font-style: normal;
+}
+
+.head_area .h4_ttl {
+    position: relative;
+    top: -8px;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+    line-height: 44px;
+    letter-spacing: -1.5px;
+
+}
+
+.agree_tit_box dt {
+    margin-bottom: 12px;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 133px;
+    margin-top: 3px;
+}
+
+.agree_tit_box.bg_required>* {
+    display: inline-block;
+}
+
+.agree_tit_box dd {
+    font-size: 14px;
+    margin-left: 132px;
+}
+
+.all_agree i {
+    font-size: 11px;
+    margin-right: 3px;
+}
