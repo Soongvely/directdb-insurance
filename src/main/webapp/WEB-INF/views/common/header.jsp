@@ -23,15 +23,11 @@
 </head>
 <body>
 	<div id="header">
-            <div class="wrap_header">
-                <div class="main_logo">
-                    <a href="">
-                        <img src="/resources/img/동부.png" style="width: 200px; height: 35px;" />
-                    </a>
-                </div>
-                <div class="wrap_calc_process">
-                    <ol class="calc_preocess step"></ol>
-                </div>
-                <a href="" class="btn_close"></a>
-            </div>
-        </div>
+	    <div class="wrap_header">
+	        <div class="main_logo">
+	            <a href="/main">
+	                <img src="/resources/img/동부.png" style="width: 200px; height: 35px;" />
+	            </a>
+	        </div>
+	    </div>
+	</div>

@@ -21,6 +21,10 @@
         letter-spacing: -1px;
         line-height: 17px;
     }
+    .step_ctt {
+        font-size: 12px;
+    	margin-left: 12px;
+    }
     .fas.fa-heartbeat {
         color: #fff;
     }
@@ -40,9 +44,9 @@
         background: #636b7e;
         color: #fff;
         width: 180px;
-    }
+    }    
     .process_step li span {
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 400;
     }
     .mgt20 {

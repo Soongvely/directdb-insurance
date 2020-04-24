@@ -12,5 +12,6 @@ public class UserInfo {
 	private String birthday;
 	private String job;
 	private String gender;
+	
 
 }

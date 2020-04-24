@@ -11,30 +11,7 @@
 	</form>
         <div id="wrap" class="wrap_sub insurance">
 	    	<div id="container" class="step">
-		        <div id="lnb">
-		            <ol class="process_step">
-		                <li style="padding: 20px 30px 20px 30px; background: #f0640e; text-align: center;">
-		                    <i class="fas fa-hand-holding-heart"></i><br>
-		                    <span>암보험</span>
-		                </li>
-		                <li>
-		                    <p class="step_ttl">1. 고객정보 </p>
-		                </li>
-		                <li>
-		                    <p class="step_ttl">2. 보험료 확인하기</p>
-		                </li>
-		                <li>
-		                    <p class="step_ttl">3. 피보험자/계약자 <br>정보</p>
-		                </li>
-		                <li>
-		                    <p class="step_ttl">4. 청약내용 확인</p>
-		                </li>
-		                <li>
-		                    <p class="step_ttl">5. 보험료 결제</p>
-		                </li>
-		            </ol>
-		            <div id="cocmDiv" class="mgt20"></div>
-		        </div>
+		        <%@ include file="common/subbar.jsp" %>
 		        <div id="contents">
 	                <div class="wrap_contents" style="min-height: 230px;padding-bottom: 126px;">
 	                    <div class="head_area">
@@ -42,22 +19,22 @@
 	                    </div>
 	                    <div id="cancer_tab" class="wrap_cancer">
 	                        <ul class="wrap_kind_select clfix">
-	                            <li name="cancer_11">
+	                            <li>
 	                                <a href="#">
 	                                    <i class="fas fa-check-circle"></i>종합보장
 	                                </a>
 	                            </li>
-	                            <li name="cancer_11">
+	                            <li>
 	                                <a href="#">
 	                                    <i class="fas fa-check-circle"></i>위암
 	                                </a>
 	                            </li>
-	                            <li name="cancer_11">
+	                            <li>
 	                                <a href="#">
 	                                    <i class="fas fa-check-circle"></i>폐암
 	                                </a>
 	                            </li>
-	                            <li name="cancer_11">
+	                            <li>
 	                                <a href="#">
 	                                    <i class="fas fa-check-circle"></i>간암
 	                                </a>
@@ -69,7 +46,6 @@
 	                            <i class="fas fa-chevron-left"></i>
 	                            <span>이전</span>
 	                        </a>
-	                        <!--.btn_active :: 활성화 클래스-->
 	                        <a href="#" class="btns btn_next btn_active">
 	                            <span>다음</span>
 	                            <i class="fas fa-chevron-right"></i>

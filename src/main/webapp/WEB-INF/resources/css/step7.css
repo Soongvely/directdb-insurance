@@ -413,11 +413,11 @@ i {
 }
 
 .box_bg_cont.m500 {
-    margin: 140px 0 0 210px;
+    margin: 85px 0 0 210px;
 }
 
 .etc_txt {
-    font-size: 17px;
+    font-size: 14px;
     color: #a7a4a4;
     font-weight: 600;
     margin-top: 45px;
@@ -435,11 +435,13 @@ i {
     font-size: 17px;
 }
 
-.btn_home .btns.btn_next.btn_active {
+.btn_home #btnHome {
     width: 250px;
-    height: 90px;
-    font-size: 18px;
+    height: 57px;
+    font-size: 21px;
     font-weight: 500;
-    background: #00a087;
+    background: #0b8a77;
+    padding: 17px;
+}
 
 }

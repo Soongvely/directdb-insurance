@@ -4,7 +4,6 @@
 
 	<div id="wrap" class="wrap_main insurance" style="position: relative; overflow: hidden; background-image: none; height: 453px; min-height: 1500px;">
 	    <div class="cover-bg"></div>
-	    
 	    <div id="container" class="step">
 	        <div id="block">
 	            <img src="/resources/img/동부_레드블록.PNG" style="height: 105px; width: 105px;">

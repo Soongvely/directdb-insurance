@@ -1,5 +1,7 @@
 package com.jinsolins.db.controller;
 
+import java.text.SimpleDateFormat;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,8 +27,11 @@ public class InsuranceController {
 	@PostMapping("/step2")
 	public String step2(Model model, UserInfo userInfo) {
 		
-		System.out.printf("%s", userInfo.toString());
+
+		int year = 2020 - Integer.parseInt(userInfo.getBirthday().substring(0, 4));
+		userInfo.setBirthday(String.valueOf(year));
 		
+		System.out.printf("%s", userInfo.toString());
 		model.addAttribute("userInfo", userInfo);
 		
 		return "step2";
@@ -54,5 +59,15 @@ public class InsuranceController {
 	@GetMapping("/step6")
 	public String step6() {
 		return "step6";
+	}
+	
+	@GetMapping("/step7")
+	public String step7() {
+		return "step7";
+	}
+	
+	@GetMapping("/step8")
+	public String step8() {
+		return "step8";
 	}
 }
