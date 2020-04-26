@@ -14,9 +14,9 @@
                     <div class="wrap_contents" style="min-height: 230px;padding-bottom: 126px;">
                         <div class="head_area">
                             <h3 class="h3_ttl">계약전 알릴 사항입니다.<br>
-                                아래의 질문에 사실대로 정확하게 선택해 주세요.
-                            </h3>
+                                아래의 질문에 사실대로 정확하게 선택해 주세요.</h3>
                         </div>
+                        
                         <div class="wrap_bg_box medical">
 							<h4>아래 질문은 보험가입에 매우 중요한 사항이며, 사실과 답변이 다를 경우
 								<br> 계약유지 또는 보험금 지급에 영향을 미칠 수 있음을 알려드립니다.</h4>
@@ -28,25 +28,21 @@
                                                 <i class="fas fa-capsules"></i>
                                             </div>
 											<p>최근 3개월 이내에 의사의 진료를 받고 그 결과 질병 확정 진단, 질병
-												<br>의심소견, 치료, 입원, 수술(제왕절개 포함), 투약 받은 사실이 있습니까?
-											</p>
+												<br>의심소견, 치료, 입원, 수술(제왕절개 포함), 투약 받은 사실이 있습니까?</p>
 										</dt>
 										<dd class="ico_ox yes">
 											<label for="qtnd1repYn9_1" class="input_radio rad">
-												<input id="qtnd1repYn9_1" name="qtnd1repYn9" class="dev_underWriting" type="radio" value="1">
+												<input id="qtnd1repYn9_1" name="qtnd1repYn" class="dev_underWriting" type="radio" value="1">
 												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd1repYn9_2" class="input_radio rad chk_on">
-												<input id="qtnd1repYn9_2" name="qtnd1repYn9" class="dev_underWriting" type="radio" value="0" checked="checked">
+											<label for="qtnd1repYn9_2" class="input_radio rad">
+												<input id="qtnd1repYn9_2" name="qtnd1repYn" class="dev_underWriting" type="radio" value="0">
 												<span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span> 
 											</label>
 										</dd>
 									</dl>
-									<div class="wrap_validator">
-										<p id="elb_qtnd1repYn9"></p>
-									</div>
 								</li>
 								<li>
 									<dl class="before02">
@@ -55,25 +51,21 @@
                                                 <i class="fas fa-syringe"></i>
                                             </div>
 											<p>최근 3개월 이내에 마약, 혈압강하제, 신경안정제, 수면제,
-												<br>각성제(흥분제), 진통제를 상시 복용한 사실이 있습니까?
-											</p>
+												<br>각성제(흥분제), 진통제를 상시 복용한 사실이 있습니까?</p>
 										</dt>
 										<dd class="ico_ox yes">
 											<label for="qtnd2repYn11_1" class="input_radio rad">
-												<input id="qtnd2repYn11_1" name="qtnd2repYn11" class="dev_underWriting" type="radio" value="1">
+												<input id="qtnd2repYn11_1" name="qtnd2repYn" class="dev_underWriting" type="radio" value="1">
 												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd2repYn11_2" class="input_radio rad chk_on">
-												<input id="qtnd2repYn11_2" name="qtnd2repYn11" class="dev_underWriting" type="radio" value="0" checked="checked">
+											<label for="qtnd2repYn11_2" class="input_radio rad">
+												<input id="qtnd2repYn11_2" name="qtnd2repYn" class="dev_underWriting" type="radio" value="0">
 												<span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span>
 											</label>
 										</dd>
 									</dl>
-									<div class="wrap_validator">
-										<p id="elb_qtnd2repYn11"></p>
-									</div>
 								</li>
 								<li>
 									<dl class="before05">
@@ -86,26 +78,17 @@
 										</dt>
 										<dd class="ico_ox yes">
 											<label for="qtnd3repYn12_1" class="input_radio rad">
-												<input id="qtnd3repYn12_1" name="qtnd3repYn12" class="dev_underWriting" type="radio" value="1">
-												<span>
-													<i class="far fa-check-circle"></i>
-													<span class="hide_txt">예</span>
-												</span>
+												<input id="qtnd3repYn12_1" name="qtnd3repYn" class="dev_underWriting" type="radio" value="1">
+												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd3repYn12_2" class="input_radio rad chk_on">
-												<input id="qtnd3repYn12_2" name="qtnd3repYn12" class="dev_underWriting" type="radio" value="0" checked="checked">
-                                                <span>
-                                                	<i class="far fa-times-circle"></i>
-                                                	<span class="hide_txt">아니오</span>
-                                                </span>
+											<label for="qtnd3repYn12_2" class="input_radio rad">
+												<input id="qtnd3repYn12_2" name="qtnd3repYn" class="dev_underWriting" type="radio" value="0">
+                                                <span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span>
 											</label>
 										</dd>
 									</dl>
-									<div class="wrap_validator">
-										<p id="elb_qtnd3repYn12"></p>
-									</div>
 								</li>
 								<li>
 									<dl class="before03">
@@ -114,31 +97,21 @@
                                                 <i class="fas fa-mortar-pestle"></i>
                                             </div>
 											<p>최근 5년 이내에 입원/수술/7일 이상 치료/30일 이상
-												<br>투약 받은 사실이 있습니까?
-											</p>
+												<br>투약 받은 사실이 있습니까?</p>
 										</dt>
 										<dd class="ico_ox yes">
 											<label for="qtnd4repYn10_1" class="input_radio rad">
-												<input id="qtnd4repYn10_1" name="qtnd4repYn10" class="dev_underWriting" type="radio" value="1">
-												<span>
-													<i class="far fa-check-circle"></i>
-													<span class="hide_txt">예</span>
-												</span>
+												<input id="qtnd4repYn10_1" name="qtnd4repYn" class="dev_underWriting" type="radio" value="1">
+												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd4repYn10_2" class="input_radio rad chk_on">
-												<input id="qtnd4repYn10_2" name="qtnd4repYn10" class="dev_underWriting" type="radio" value="0" checked="checked">
-												<span>
-													<i class="far fa-times-circle"></i>
-													<span class="hide_txt">아니오</span>
-												</span>
+											<label for="qtnd4repYn10_2" class="input_radio rad">
+												<input id="qtnd4repYn10_2" name="qtnd4repYn" class="dev_underWriting" type="radio" value="0">
+												<span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span>
 											</label>
 										</dd>
 									</dl>
-									<div class="wrap_validator">
-										<p id="elb_qtnd4repYn10"></p>
-									</div>
 								</li>
 								<li>
 									<dl class="before04">
@@ -148,32 +121,27 @@
                                             </div>
 											<p style="margin-top: 10px;">최근 5년 이내에 아래 11대 질병으로 진료를 받고 그 결과
 												<br>질병 확정 진단, 질병의심 소견, 치료, 입원, 수술(제왕절개 포함),
-												<br>투약 받은 사실이 있습니까?
-											</p>
+												<br>투약 받은 사실이 있습니까?</p>
 										</dt>
 										<dd class="ico_ox yes">
 											<label for="qtnd5repYn3_1" class="input_radio rad">
-												<input id="qtnd5repYn3_1" name="qtnd5repYn3" class="dev_underWriting" type="radio" value="1">
-												<span>
-													<i class="far fa-check-circle"></i>
-													<span class="hide_txt">예</span>
-												</span>
+												<input id="qtnd5repYn3_1" name="qtnd5repYn" class="dev_underWriting" type="radio" value="1">
+												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd5repYn3_2" class="input_radio rad chk_on">
-												<input id="qtnd5repYn3_2" name="qtnd5repYn3" class="dev_underWriting" type="radio" value="0" checked="checked">
-												<span>
-													<i class="far fa-times-circle"></i>
-													<span class="hide_txt">아니오</span>
-												</span>
+											<label for="qtnd5repYn3_2" class="input_radio rad">
+												<input id="qtnd5repYn3_2" name="qtnd5repYn" class="dev_underWriting" type="radio" value="0">
+												<span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span>
 											</label>
 										</dd>
 									</dl>
-									<div class="wrap_validator">
-										<p id="elb_qtnd5repYn3"></p>
-									</div>
 								</li>
+								<div class="wrap_validator">
+                                    <p id="elb_notice_chk01" class="error_txt">
+										<i class="fas fa-exclamation-circle"></i>질문에 대한 답변을 선택해주세요.
+									</p>
+                                </div>
 								<li>
 									<dl class="before08">
 										<dt>
@@ -183,9 +151,6 @@
 											<p style="margin-top: 10px;">자동차(건설기계, 농기계 포함) 및 오토바이를 운전하세요?</p>
 										</dt>
 									</dl>
-									<div class="wrap_validator">
-										<p id="elb_qtnd10All"></p>
-									</div>
 									<div class="box_bgg" id="driverInfo">
 										<ul class="label_horizental clfix">
 											<li>
@@ -195,14 +160,19 @@
 												</label>
 											</li>
 											<li>
-												<label for="qtnd10repYn6_2" class="input_radio rad chk_on">
-													<input name="qtnd10repYn6" type="radio" value="0" checked="checked">
+												<label for="qtnd10repYn6_2" class="input_radio rad">
+													<input name="qtnd10repYn6" type="radio" value="0">
 													<span>운전안함</span>
 												</label>
 											</li>
 										</ul>
 									</div>
 								</li>
+								<div class="wrap_validator">
+                                    <p id="elb_notice_chk02" class="error_txt">
+										<i class="fas fa-exclamation-circle"></i>운전여부를 선택해주세요.
+									</p>
+                                </div>
 								<li class="other_list">
 									<dl class="before11">
 										<dt>
@@ -218,7 +188,7 @@
 												</div>
 												<div class="tb_td_cell inp-box">
 													<span class="wrap_inp" style="width:150px;">
-														<input id="qtnd11repVal10" name="qtnd11repVal10" style="width: 150px;" class="txt_inp" type="text" value="160">
+														<input id="qtnd11repVal10" name="qtnd11repVal10" style="width: 150px;" class="txt_inp" type="text">
 													</span>
 												</div>
 												<div class="tb_td_cell w50" style="margin-right: 80px;">
@@ -229,15 +199,13 @@
 												</div>
 												<div class="tb_td_cell inp-box">
 													<span class="wrap_inp" style="width:140px;">
-														<input id="qtnd12repVal11" name="qtnd12repVal11" style="width: 150px;" class="txt_inp" type="text" value="51.00">
+														<input id="qtnd12repVal11" name="qtnd12repVal11" style="width: 150px;" class="txt_inp" type="text">
 													</span>
 												</div>
 												<div class="tb_td_cell w50" style="margin-left: 10px;">
 													<span>kg</span>
 												</div>
 											</div>
-											<p id="elb_qtnd11A12"></p>
-										
 											<div class="wrap_tb_cell">
 												<div class="tb_td_cell w150" style="margin-right: 78px;">
 													<label>음주여부</label>
@@ -245,7 +213,7 @@
                                                 <div class="tb_td_cell inp-box">
 													<ul class="label_horizental clfix">
 														<li>
-															<label for="qtnd14repYn17_1" class="input_radio rad chk_on">
+															<label for="qtnd14repYn17_1" class="input_radio rad">
 																<input name="qtnd14repYn17" type="radio" value="1" checked="checked">
 																<span>예</span>
 															</label>
@@ -259,7 +227,6 @@
 													</ul>
 												</div>
 											</div>
-											<p id="elb_qtnd13All"></p>
 											<div class="wrap_tb_cell">
 												<div class="tb_td_cell w150" style="margin-right: 78px;">
 													<label>흡연여부</label>
@@ -267,8 +234,8 @@
 												<div class="tb_td_cell inp-box">
 													<ul class="label_horizental clfix">
 														<li>
-															<label for="qtnd14repYn17_1" class="input_radio rad chk_on">
-																<input id="qtnd14repYn17_1" name="qtnd14repYn17" type="radio" value="1" checked="checked">
+															<label for="qtnd14repYn17_1" class="input_radio rad">
+																<input id="qtnd14repYn17_1" name="qtnd14repYn17" type="radio" value="1">
 																<span>예</span>
 															</label>
 														</li>
@@ -284,10 +251,15 @@
 										</dd>
 									</dl>
 								</li>
+								<div class="wrap_validator">
+                                    <p id="elb_notice_chk03" class="error_txt">
+										<i class="fas fa-exclamation-circle"></i>기타사항을 모두 입력해주세요.
+									</p>
+                                </div>
 							</ul>
 							<ul class="dot_ul">
 								<li>계약전 알릴 의무 내용 중 이상이 있으신 경우 별도의 심사절차가 필요한 관계로 홈페이지 가입이 어려우니
-									<strong class="txt_green"> ☎ 1600-0100 </strong>으로 연락하여 주시기 바랍니다.</li><!-- 2016.06.21 전화번호 변경 by moon -->
+									<strong class="txt_green"> ☎ 1600-0100 </strong>으로 연락하여 주시기 바랍니다.</li>
                                 <li>보험계약자는 DB손해보험 다이렉트로부터 계약전 알릴 의무 위반시의 효과(계약해지, 보장제한, 보험금 미지급 등)에
                                             안내 받았으며, 계약전 알릴 의무 사항에 대해 사실대로 입력하였음을 확인합니다.<br>
                                     <label for="notice_chk01" class="input_checkbox chk" style="float:right;top:-10px">
@@ -296,7 +268,9 @@
                                     </label>
                                 </li>
                                 <div class="wrap_validator">
-                                    <p id="elb_notice_chk01"></p>
+                                    <p id="elb_notice_chk04" class="error_txt">
+										<i class="fas fa-exclamation-circle"></i>확인에 체크하셔야 다음단계 진행이 가능합니다.
+									</p>
                                 </div>
 							</ul>
 						</div>
@@ -310,8 +284,8 @@
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </div>
-                    </div>
-                    <!-- 인수불가 팝업 창-->
+					</div>
+					<!-- 인수불가 팝업 창-->
 					<div id="notOblLayer" class="wrap_popup" style="z-index: 215;left: 250px;top: 80px;position: absolute;display: block;">
 	                    <div style="display: block; z-index: 214;" class="dimm"></div>
 	                    <div class="wrap_container w600" tabindex="0" style="z-index: 215; margin-left: 0px; top: 0px; left: 0px; position: relative;">
@@ -322,7 +296,7 @@
 	                            <div class="wrap_cont_sc">
 	                                <div class="wrap_pop_cont">
 	                                    <div class="box_pop_info">
-	                                        <img src="/resources/img/알림아이콘.PNG" class="ico_sorry"></img>
+	                                        <img src="img/알림아이콘.PNG" class="ico_sorry"></img>
 	                                        <div class="tit">고객님 죄송합니다.</div>
 	                                        <p>알려주신 내용에 대해 추가적인 확인이 필요하여
 	                                            <br>암보험을 인터넷으로 가입실 수 없습니다.</p>
@@ -361,16 +335,53 @@
 			$("#notOblLayer").show();
 		}
 
+		// OX 체크
+		var isChecked = true;
+		$(".ico_ox.no input").each((i, item) => {
+			if(!$(item).is(":checked")) {
+				$("#elb_notice_chk01").show();
+				$(item).focus();
+				isChecked = false;
+			}
+		});
+
+		if(!isChecked) return;
+		else $("#elb_notice_chk01").hide();
+		
+
 		// 운전여부 체크 여부
-		if ($("#driverInfo input[name='qtnd10repYn6']").prop("checked") == false) {
-			
-		}
+		if ($("#driverInfo input[name='qtnd10repYn6']").is(":checked") == false) {
+			$("#elb_notice_chk02").show();
+			$(this).focus();
+
+			return false;
+		} else $("#elb_notice_chk02").hide();
+
 		// 확인란 체크 여부
 		if ($("#notice_chk01").prop("checked") == false) {
 			$("#elb_notice_chk04").show();
+			$(this).focus();
+
+			return false;
 		} else {
 			$("#elb_notice_chk04").hide();
 		}
+	});
+
+	/***************** 체크란 입력 시 에러메세지 숨기기 *******************/
+	// 1. 운전 여부
+	$("#driverInfo input[name='qtnd10repYn6']").click(function() {
+		if($(this).prop("checked") == true) {
+			$("#elb_notice_chk02").hide();
+		}
+	});
+
+	// 2. 신체정보
+
+	// 3. 확인 체크
+	$("#notice_chk01").click(function() {
+		if($(this).prop("checked") == true) 
+		$("#elb_notice_chk04").hide();
 	});
 
 	// OX 버튼 클릭 시 에러메세지 이벤트
@@ -385,8 +396,9 @@
 		$("#notOblLayer").hide();
 	});
 
+	// radio버튼 체크 이벤트
 	$("[class^='before'] input").click(function () {
-		if ($(this).prop("checked") == true)
-			$(this).parent("label").addClass("chk_on");
+		$('input[name='+ $(this).attr('name') +']').parent('label').removeClass('chk_on');
+		$(this).parent("label").addClass("chk_on");
 	});
 </script>

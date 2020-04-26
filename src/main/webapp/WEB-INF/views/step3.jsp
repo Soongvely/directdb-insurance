@@ -214,8 +214,8 @@
                                                     <span id="cvr2Inam_12_314127" style="display: none">1,000만 원</span>
                                                 </li>
                                                 <li class="signup">
-                                                    <input type="checkbox" id="cb1" class="signup_box">
-    												<label for=""></label>
+                                                    <input type="checkbox" id="" class="signup_box">
+    												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
                                                     <span id="cvrPrm_12_314127">-</span>
@@ -1145,6 +1145,8 @@
 </body>
 </html>
 <script>
+	$(".signup_box").attr("checked", "checked");
+	
 	// 보장형태 선택 이벤트
 	$("[id^=pdcPanCd]").parent().click(function() {
 	    $(this).children().attr("checked", "checked");
@@ -1156,7 +1158,7 @@
 	// 선택가입 체크박스 이벤트, 고유id 부여
 	 $('.signup_box').each(function(i){ 
         $(".signup_box:eq("+i+")").attr("id", "ckbox" + i);
-        $(".signup_label:eq("+i+")").attr("for", "ckbox" + (i + 1));
+        $(".signup_label:eq("+i+")").attr("for", "ckbox" + i);
     });
 
 	// 선택된 체크박스
