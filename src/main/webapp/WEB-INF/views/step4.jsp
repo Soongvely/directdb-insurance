@@ -284,24 +284,6 @@
 										</dd>
 									</dl>
 								</li>
-								<!-- <li class="last">
-									<dl class="before12">
-										<dt>
-											<p>계약자의 월평균 소득은 어느 정도 인가요?</p>
-											<em class="before_item">- 계약자 기준, 단 계약자가 미성년자, 주부인 경우 <br>가구 총 소득 입력</em>
-										</dt>
-										<dd class="box_area_input">
-											<label for="qtnd15repVal16">월평균</label>
-											<span class="wrap_inp" style="width:80px;">
-												<input id="qtnd15repVal16" name="qtnd15repVal16" style="width:80px;" class="txt_inp" type="text" value="200">
-											</span>
-											<span>만 원</span>
-										</dd>
-									</dl>
-									<div class="wrap_validator">
-										<p id="elb_qtnd15repVal16"></p>
-									</div>
-								</li> -->
 							</ul>
 							<ul class="dot_ul">
 								<li>계약전 알릴 의무 내용 중 이상이 있으신 경우 별도의 심사절차가 필요한 관계로 홈페이지 가입이 어려우니
@@ -323,13 +305,45 @@
                                 <i class="fas fa-chevron-left"></i>
                                 <span>이전</span>
                             </a>
-                            <!--.btn_active :: 활성화 클래스-->
                             <a href="#" class="btns btn_next btn_active">
                                 <span>다음</span>
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </div>
                     </div>
+                    <!-- 인수불가 팝업 창-->
+					<div id="notOblLayer" class="wrap_popup" style="z-index: 215;left: 250px;top: 80px;position: absolute;display: block;">
+	                    <div style="display: block; z-index: 214;" class="dimm"></div>
+	                    <div class="wrap_container w600" tabindex="0" style="z-index: 215; margin-left: 0px; top: 0px; left: 0px; position: relative;">
+	                        <div class="wrap_pop">
+	                            <div class="wrap_pop_head">
+	                                <h1>알려드립니다</h1>
+	                            </div>
+	                            <div class="wrap_cont_sc">
+	                                <div class="wrap_pop_cont">
+	                                    <div class="box_pop_info">
+	                                        <img src="/resources/img/알림아이콘.PNG" class="ico_sorry"></img>
+	                                        <div class="tit">고객님 죄송합니다.</div>
+	                                        <p>알려주신 내용에 대해 추가적인 확인이 필요하여
+	                                            <br>암보험을 인터넷으로 가입실 수 없습니다.</p>
+	                                        <p class="call_info01"> 상담원과의 통화
+	                                            <span class="pop_txt_green">(☎1600-0100)</span>를 진행해 주시기 바랍니다.</p>
+	                                    </div>
+	                                    <div class="btn_center bd_top">
+	                                        <a class="btns btn_pop_green btn_pop_close">
+	                                            <span>확인</span>
+	                                        </a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="wrap_pop_foot">
+	                                <a class="btn_pop_close">
+	                                    <i class="glyphicon glyphicon-remove"></i>
+	                                </a>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
                 </form>
             </div>
         </div>
@@ -337,5 +351,42 @@
 </body>
 </html>
 <script>
-	// 예외처리 error_txt 확인에 체크하셔야 다음단계 진행이 가능합니다. 질문에 대한 답변을 입력해 주세요.
+	$("#notOblLayer").hide();
+
+	// 예외처리
+	$(".btn_next.btn_active").click(function() {
+
+		// yes에 체크되어 있는 경우
+		if($(".ico_ox.yes label").hasClass("chk_on")) {
+			$("#notOblLayer").show();
+		}
+
+		// 운전여부 체크 여부
+		if ($("#driverInfo input[name='qtnd10repYn6']").prop("checked") == false) {
+			
+		}
+		// 확인란 체크 여부
+		if ($("#notice_chk01").prop("checked") == false) {
+			$("#elb_notice_chk04").show();
+		} else {
+			$("#elb_notice_chk04").hide();
+		}
+	});
+
+	// OX 버튼 클릭 시 에러메세지 이벤트
+	$(".before_list li .ico_ox").click(function() {
+		if($(this).hasClass("chk_on")) {
+			$("#elb_notice_chk01").hide();
+		}
+	});
+
+	// 팝업창 닫기
+	$(".btn_pop_close").on("click", function() {
+		$("#notOblLayer").hide();
+	});
+
+	$("[class^='before'] input").click(function () {
+		if ($(this).prop("checked") == true)
+			$(this).parent("label").addClass("chk_on");
+	});
 </script>

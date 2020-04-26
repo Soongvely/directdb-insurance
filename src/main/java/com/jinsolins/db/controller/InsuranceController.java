@@ -17,8 +17,6 @@ public class InsuranceController {
 	@RequestMapping("/main")
 	public String home(Model model, UserInfo userInfo) {
 		
-		System.out.printf("%s", userInfo.toString());
-		
 		model.addAttribute("userInfo", userInfo);
 		
 		return "main";
@@ -26,12 +24,10 @@ public class InsuranceController {
 	
 	@PostMapping("/step2")
 	public String step2(Model model, UserInfo userInfo) {
-		
 
 		int year = 2020 - Integer.parseInt(userInfo.getBirthday().substring(0, 4));
 		userInfo.setBirthday(String.valueOf(year));
 		
-		System.out.printf("%s", userInfo.toString());
 		model.addAttribute("userInfo", userInfo);
 		
 		return "step2";
@@ -40,13 +36,11 @@ public class InsuranceController {
 	@PostMapping("/step3")
 	public String step3(Model model, UserInfo userInfo) {
 		
-		System.out.printf("%s", userInfo.toString());
-		
 		model.addAttribute("userInfo", userInfo);
 		return "step3";
 	}
 
-	@PostMapping("/step4")
+	@GetMapping("/step4")
 	public String step4() {
 		return "step4";
 	}

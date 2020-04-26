@@ -218,3 +218,71 @@
         min-height: 24px;
         padding-left: 33px;
     } 
+
+    /******************** 인수불가  팝업 창 ******************/
+    .wrap_pop_head h1 {
+        width: auto!important;
+        padding-left: 30px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 48px;
+    }
+    .wrap_pop_head h1 {
+        width: 355px!important;
+        margin-top: 0;
+        margin-left: 0;
+        padding-left: 28px;
+        color: #fff;
+        font-size: 18px;
+        line-height: 48px;
+    }
+    .wrap_pop_cont {
+        position: relative;
+        padding: 77px 27px 27px;
+        font-size: 13px;
+    }
+    .box_pop_info {
+        text-align: center;
+    }
+    .box_pop_info .ico_sorry {
+        height: 91px;
+        margin: 33px auto 20px;
+    }
+    .box_pop_info .tit {
+        margin-bottom: 22px;
+        color: #000;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        letter-spacing: -.9px;
+    }
+    .box_pop_info p {
+        font-size: 14px;
+    }
+    .box_pop_info .call_info01 {
+        margin-top: 20px;
+    }
+    .pop_txt_green {
+        color: #13756f;
+        font-weight: 700;
+    }
+    .wrap_pop_cont .btn_center, .wrap_pop_cont .btn_right {
+        margin: 24px 0 0;
+    }
+    .wrap_pop_cont .bd_top {
+        padding-top: 24px;
+        border-top: 1px solid #bbb;
+        text-align: center;
+    }
+    .btns.btn_pop_green span {
+        color: #fff;
+        font-size: 15px;
+    }
+    .btns span {
+        color: #fff;
+        vertical-align: top;
+        letter-spacing: -1px;
+    }
+    .wrap_validator .error_txt {
+        display: none;
+    }

@@ -132,7 +132,7 @@
                                 <dd>오늘 날짜</dd>
                             </dl>
                             <p class="add_comment txt_orange txt_bold">위 청약내용은 보험계약의 기본사항만을 요약한 것이므로 자세한 내용은 아래 버튼을 눌러 확인해 주세요.</p>
-	                            <a href="pdf/상품약관.pdf" class="btns btn_line_gray w200" id="pdcExprLayer" style="margin-right: 5px;">
+	                            <a href="/resources/pdf/상품설명서.pdf" class="btns btn_line_gray w200" id="pdcExprLayer" target="_blank" style="margin-right: 5px;">
 	                                <span>상품설명서</span>
 	                            </a>
                                 <a href="https://www.directdb.co.kr/doc/pdf/terms/ltm_direct_cancer2004.pdf" target="_blank" id="yakgwanLayer" class="btns btn_line_gray w200">
