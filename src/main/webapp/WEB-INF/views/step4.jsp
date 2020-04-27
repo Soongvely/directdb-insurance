@@ -214,13 +214,13 @@
 													<ul class="label_horizental clfix">
 														<li>
 															<label for="qtnd14repYn17_1" class="input_radio rad">
-																<input name="qtnd14repYn17" type="radio" value="1" checked="checked">
+																<input name="qtnd14repYn17" id="qtnd14repYn17_1" type="radio" value="1">
 																<span>예</span>
 															</label>
 														</li>
 														<li>
 															<label for="qtnd14repYn17_2" class="input_radio rad">
-																<input name="qtnd14repYn17" type="radio" value="0">
+																<input name="qtnd14repYn17" id="qtnd14repYn17_2" type="radio" value="0">
 																<span>아니오</span>
 															</label>
 														</li>
@@ -234,14 +234,14 @@
 												<div class="tb_td_cell inp-box">
 													<ul class="label_horizental clfix">
 														<li>
-															<label for="qtnd14repYn17_1" class="input_radio rad">
-																<input id="qtnd14repYn17_1" name="qtnd14repYn17" type="radio" value="1">
+															<label for="qtnd14repYn17_3" class="input_radio rad">
+																<input id="qtnd14repYn17_3" name="qtnd14repYn18" type="radio" value="1">
 																<span>예</span>
 															</label>
 														</li>
 														<li>
-															<label for="qtnd14repYn17_2" class="input_radio rad">
-																<input id="qtnd14repYn17_2" name="qtnd14repYn17" type="radio" value="0">
+															<label for="qtnd14repYn17_4" class="input_radio rad">
+																<input id="qtnd14repYn17_4" name="qtnd14repYn18" type="radio" value="0">
 																<span>아니오</span>
 															</label>
 														</li>
@@ -335,7 +335,7 @@
 			$("#notOblLayer").show();
 		}
 
-		// OX 체크
+		// OX 체크가 안돼있는 경우
 		var isChecked = true;
 		$(".ico_ox.no input").each((i, item) => {
 			if(!$(item).is(":checked")) {

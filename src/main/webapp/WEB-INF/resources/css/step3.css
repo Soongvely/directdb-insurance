@@ -274,12 +274,6 @@
         padding-top: 6px;
     }
 
-    .rad span em,
-    .rad span strong {
-        margin-left: 8px;
-        font-size: 13px;
-    }
-
     address,
     caption,
     cite,
@@ -410,3 +404,28 @@
     input[id^="ckbox"] {
         display: none;
     }
+    
+	.plan_select li.on dl dt div label span em strong {
+	    font-weight: 700;
+	    letter-spacing: -1.2px;
+	    font-size: 16px;
+	}
+	
+	strong {
+	    margin-left: 8px;
+	    font-style: normal;
+	}
+	
+	.plan_select li dl dt div label span em {
+	    color: #444;
+	    font-size: 16px;
+	    line-height: 25px;
+	}
+	
+	.rad span em {
+	    margin-left: 8px;
+	}
+	
+	.rad span strong {
+	    margin-left: 16px;
+	}

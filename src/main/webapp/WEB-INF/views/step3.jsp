@@ -5,7 +5,12 @@
 <link href="<c:url value="/resources/css/step2.css" />" rel="stylesheet"> 
 <link href="<c:url value="/resources/css/step3.css" />" rel="stylesheet"> 
 
-    <form id="tagForm" action="" method="POST"></form>
+    <form id="tagForm" action="/step4" method="POST">
+    	<input type="hidden" name="birthday" value="${userInfo.birthday}">
+		<input type="hidden" name="gender" value="${userInfo.gender}">
+		<input type="hidden" name="job" value="${userInfo.job}">
+		<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
+    </form>
     <div id="wrap" class="wrap_sub insurance">
     	<div id="container" class="step">
             <%@ include file="common/subbar.jsp" %>
@@ -112,12 +117,6 @@
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_14">
-                                                <strong>자궁적출수술비Ⅱ(1회지급)</strong>
-                                                <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314186"></a>
-                                            </div>
-                                        </dd>
-                                        <dd>
                                             <div name="cvrRow_15">
                                                 <strong>재진단암진단비(유사암,대장점막내암,전립선암제외)</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314140"></a>
@@ -152,10 +151,9 @@
                                                 <label for="pdcPanCd1" class="input_radio rad">
                                                     <input id="pdcPanCd1" name="pdcPanCd" type="radio" value="12">
                                                     <span>
-                                                        <span>실속형 <br>
-                                                            <strong class="default" id="panSmPrm_12"></strong>
-                                                            <strong id="smPrm_12" style="display:none;"></strong>
-                                                        </span>
+                                                        <em>실속형 <br>
+                                                            <strong id="smPrm_12" style="display:none;" data-default="1800"></strong>
+                                                        </em>
                                                     </span>
                                                 </label>
                                             </div>
@@ -171,7 +169,7 @@
                                                     <span id="cvrSign_12_314183" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_314183">-</span>
+                                                    <span id="cvrPrm_12_314183">420</span>원
                                                 </li>
                                             </ul>
                                         </dd>
@@ -186,7 +184,7 @@
                                                     <span id="cvrSign_12_314184" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_314184">-</span>
+                                                    <span id="cvrPrm_12_314184">85</span>원
                                                 </li>
                                             </ul>
                                         </dd>
@@ -202,7 +200,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_314180">-</span>
+                                                    <span id="cvrPrm_12_314180">10</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -218,7 +216,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_314127">-</span>
+                                                    <span id="cvrPrm_12_314127">130</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -256,7 +254,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_314138">-</span>
+                                                    <span id="cvrPrm_12_314138">480</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -282,7 +280,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_318111">-</span>
+                                                    <span id="cvrPrm_12_318111">80</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -298,7 +296,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_318650">-</span>
+                                                    <span id="cvrPrm_12_318650">12</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -314,7 +312,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_317954">-</span>
+                                                    <span id="cvrPrm_12_317954">165</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -330,7 +328,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_314161">-</span>
+                                                    <span id="cvrPrm_12_314161">140</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -346,23 +344,13 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_314178">-</span>
+                                                    <span id="cvrPrm_12_314178">25</span>
                                                 </li>
                                             </ul>
                                         </dd>
                                         <dd>
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_13">
-                                                <li class="pmoney">-</li>
-                                                <li class="signup"></li>
-                                                <li class="money">
-                                                    <span id="cvrPrm__N">-</span>
-                                                </li>
-                                            </ul>
-                                        </dd>
-                                        <dd>
-                                            <span class="hide_txt"></span>
-                                            <ul name="cvrRow_14">
                                                 <li class="pmoney">-</li>
                                                 <li class="signup"></li>
                                                 <li class="money">
@@ -392,7 +380,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_314179">-</span>
+                                                    <span id="cvrPrm_12_314179">5</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -408,7 +396,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_318652">-</span>
+                                                    <span id="cvrPrm_12_318652">19</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -424,7 +412,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_12_317912">-</span>
+                                                    <span id="cvrPrm_12_317912">159</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -439,12 +427,9 @@
                                                 <label for="pdcPanCd2" class="input_radio rad">
                                                     <input id="pdcPanCd2" name="pdcPanCd" type="radio" value="13" checked="checked">
                                                     <span>
-                                                        <span>표준형 <br>
-                                                            <strong class="default m_down" id="panSmPrm_13">
-                                                                <strong></strong>
-                                                            </strong>
-                                                            <strong id="smPrm_13" style="display: inline;"></strong>
-                                                        </span>
+                                                        <em>표준형<br>
+                                                        	<strong id="smPrm_13"></strong>
+                                                        </em>
                                                     </span>
                                                 </label>
                                             </div>
@@ -460,7 +445,7 @@
                                                     <span id="cvrSign_13_314183" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314183">7,420 원</span>
+                                                    <span id="cvrPrm_13_314183">840</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -475,7 +460,7 @@
                                                     <span id="cvrSign_13_314184" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314184">580 원</span>
+                                                    <span id="cvrPrm_13_314184">170</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -491,7 +476,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314180">150 원</span>
+                                                    <span id="cvrPrm_13_314180">10</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -507,7 +492,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314127">560 원</span>
+                                                    <span id="cvrPrm_13_314127">260</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -523,7 +508,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314093">250 원</span>
+                                                    <span id="cvrPrm_13_314093">60</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -539,7 +524,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314092">460 원</span>
+                                                    <span id="cvrPrm_13_314092">60</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -555,7 +540,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314138">570 원</span>
+                                                    <span id="cvrPrm_13_314138">480</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -571,7 +556,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314110">300 원</span>
+                                                    <span id="cvrPrm_13_314110">60</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -587,7 +572,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_318111">290 원</span>
+                                                    <span id="cvrPrm_13_318111">80</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -603,7 +588,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_318650">294 원</span>
+                                                    <span id="cvrPrm_13_318650">12</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -619,7 +604,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_317954">2,330 원</span>
+                                                    <span id="cvrPrm_13_317954">330</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -635,7 +620,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314161">855 원</span>
+                                                    <span id="cvrPrm_13_314161">140</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -651,23 +636,13 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314178">380 원</span>
+                                                    <span id="cvrPrm_13_314178">25</span>
                                                 </li>
                                             </ul>
                                         </dd>
                                         <dd>
                                             <span class="hide_txt"></span>
                                             <ul name="cvrRow_13" style="margin-left: 0px;">
-                                                <li class="pmoney">-</li>
-                                                <li class="signup"></li>
-                                                <li class="money">
-                                                    <span id="cvrPrm__N">-</span>
-                                                </li>
-                                            </ul>
-                                        </dd>
-                                        <dd>
-                                            <span class="hide_txt"></span>
-                                            <ul name="cvrRow_14" style="margin-left: 0px;">
                                                 <li class="pmoney">-</li>
                                                 <li class="signup"></li>
                                                 <li class="money">
@@ -697,7 +672,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_314179">140 원</span>
+                                                    <span id="cvrPrm_13_314179">5</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -713,7 +688,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_318652">1,165 원</span>
+                                                    <span id="cvrPrm_13_318652">95</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -729,7 +704,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_13_317912">1,410 원</span>
+                                                    <span id="cvrPrm_13_317912">159</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -743,12 +718,9 @@
                                                 <label for="pdcPanCd3" class="input_radio rad">
                                                     <input id="pdcPanCd3" name="pdcPanCd" type="radio" value="14">
                                                     <span>
-                                                        <span>고급형 <br>
-                                                            <strong class="default" id="panSmPrm_14">
-                                                                <strong></strong>
-                                                            </strong>
-                                                            <strong id="smPrm_14" style="display:none;"></strong>
-                                                        </span>
+                                                        <em>고급형 <br>
+                                                        	<strong id="smPrm_14" style="display: none"></strong>
+                                                        </em>
                                                     </span>
                                                 </label>
                                             </div>
@@ -764,7 +736,7 @@
                                                     <span id="cvrSign_14_314183" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314183">-</span>
+                                                    <span id="cvrPrm_14_314183">1260</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -779,7 +751,7 @@
                                                     <span id="cvrSign_14_314184" class="on">필수가입</span>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314184">-</span>
+                                                    <span id="cvrPrm_14_314184">255</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -795,7 +767,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314180">-</span>
+                                                    <span id="cvrPrm_14_314180">20</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -811,7 +783,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314127">-</span>
+                                                    <span id="cvrPrm_14_314127">390</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -827,7 +799,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314093">-</span>
+                                                    <span id="cvrPrm_14_314093">120</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -843,7 +815,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314092">-</span>
+                                                    <span id="cvrPrm_14_314092">120</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -859,7 +831,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314138">-</span>
+                                                    <span id="cvrPrm_14_314138">800</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -875,7 +847,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314110">-</span>
+                                                    <span id="cvrPrm_14_314110">180</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -891,7 +863,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_318111">-</span>
+                                                    <span id="cvrPrm_14_318111">80</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -907,7 +879,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_318650">-</span>
+                                                    <span id="cvrPrm_14_318650">12</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -923,7 +895,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_317954">-</span>
+                                                    <span id="cvrPrm_14_317954">330</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -939,7 +911,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314161">-</span>
+                                                    <span id="cvrPrm_14_314161">280</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -955,7 +927,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314178">-</span>
+                                                    <span id="cvrPrm_14_314178">50</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -971,23 +943,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314182">-</span>
-                                                </li>
-                                            </ul>
-                                        </dd>
-                                        <dd>
-                                            <span class="hide_txt">자궁적출수술비Ⅱ(1회지급)</span>
-                                            <ul name="cvrRow_14">
-                                                <li class="pmoney">
-                                                    <span id="cvrInam_14_314186">100만 원</span>
-                                                    <span id="cvr2Inam_14_314186" style="display: none">100만 원</span>
-                                                </li>
-                                                <li class="signup">
-                                                    <input type="checkbox" id="" class="signup_box">
-    												<label for="" class="signup_label"></label>
-                                                </li>
-                                                <li class="money">
-                                                    <span id="cvrPrm_14_314186">-</span>
+                                                    <span id="cvrPrm_14_314182">2</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -1003,7 +959,7 @@
     												<label for="" class="signup_label"></label>
                                                 </li>
                                                 <li class="money">
-                                                    <span id="cvrPrm_14_314140">-</span>
+                                                    <span id="cvrPrm_14_314140">400</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -1018,7 +974,7 @@
                                                     <input type="checkbox" id="" class="signup_box">
     												<label for="" class="signup_label"></label>
                                                 </li>
-                                                <li class="money"><span id="cvrPrm_14_314179">-</span>
+                                                <li class="money"><span id="cvrPrm_14_314179">10</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -1032,7 +988,7 @@
                                                 	<input type="checkbox" id="" class="signup_box">
     												<label for="" class="signup_label"></label>
                                                 </li>
-                                                <li class="money"><span id="cvrPrm_14_318652">-</span>
+                                                <li class="money"><span id="cvrPrm_14_318652">95</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -1045,7 +1001,7 @@
                                                 	<input type="checkbox" id="" class="signup_box">
                                                 	<label for="" class="signup_label"></label>
                                                 </li>
-                                                <li class="money"><span id="cvrPrm_14_317912">-</span>
+                                                <li class="money"><span id="cvrPrm_14_317912">159</span>
                                                 </li>
                                             </ul>
                                         </dd>
@@ -1145,14 +1101,60 @@
 </body>
 </html>
 <script>
-	$(".signup_box").attr("checked", "checked");
+	$(function () {
+		// 보장내용 전체 체크
+		$(".signup_box").prop("checked", true);
+		
+		if($(".signup_box").is(":checked")) {
+			$(".signup_box").addClass("on");
+		}
 	
+		// 기본 보험료 계산
+		outputPrice();	
+		
+			
+	/* 	$("strong[id^=smPrm]").each(function (i, item) {
+			var age = $("#userInfo").data("age");
+			var jobCd = $("#userJob").data("jobcd");
+			var price = $(item).data("default");
+			
+			if(jobCd == 'basic') {
+				$(item).text(numberWithCommas(price + (age-19) * 300) + " 원");				
+			} else {
+				$(item).text(numberWithCommas((price + (age-19) * 300) * 1.6) + " 원");				
+			}
+		}); */
+		
+	});
+	
+	// 기본 보험료 산출
+	function outputPrice() {
+		var money = 0;
+		var sum = 0;
+		$("[class^=plan].on").find(".signup:has(.on) + .money").children().each(function (i, item) {
+			money += Number($(item).text());
+			sum = numberWithCommas(Math.ceil(money / 100) * 100);
+		});
+		$("[class^=plan].on").find("[id^=smPrm]").text(sum + " 원");
+		$("[class^=plan].on").find("[id^=smPrm]").prop("data", "default" + sum);	
+	}
+	
+	/**************** 보험료 계산 ****************/
+	// 1. plan이 바뀔 때 마다 
+	$("[class^=plan]").on("change", function () {			
+		outputPrice();		
+	});
+	
+
 	// 보장형태 선택 이벤트
 	$("[id^=pdcPanCd]").parent().click(function() {
-	    $(this).children().attr("checked", "checked");
+		$("input[id^=pdcPanCd]").prop("checked", false);
+	    $(this).children().prop("checked", true);
 	
 	    $(".plan_select li").removeClass("on");
+        $("strong[id^=smPrm]").css('display', 'none');
 	    $(this).parents("li[class^='plan0']").addClass("on");
+        $(this).find("strong").css("display", 'block');
 	});
 
 	// 선택가입 체크박스 이벤트, 고유id 부여
@@ -1164,9 +1166,15 @@
 	// 선택된 체크박스
 	$("input[id^='ckbox']").click(function() {
 		if($(this).prop("checked") == true) {
-			$(this).addClass("chk_on");
+			$(this).addClass("on");
 		} else {
-			$(this).removeClass("chk_on");
+			$(this).removeClass("on");
 		}		
 	});
+	
+	// 콤마 찍기
+	function numberWithCommas(x) {
+	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+
 </script>

@@ -10,7 +10,7 @@
 	        </div>
 	        <div id="contents">
 	            <form id="sForm" action="/step2" method="post">
-	                <input type="hidden">
+	                <input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
 	                <div class="wrap_contents step">
 	                    <div class="wrap_form_area">
 	                        <div class="wrap_info_regist step">
@@ -28,7 +28,7 @@
 	                                    <span class="wrap_input">
 	                                        <input id="birthday" class="txt_inp inp_b" name="birthday"
 	                                            title="생년월일" placeholder="예) 19950214" type="text" maxlength="8"
-	                                            value="${userInfo.birthday }"/>
+	                                            value="${userInfo.birthday == 0 ? '' : userInfo.birthday}"/>
 	                                    </span>
 	                                    <ul class="icon_gender">
 	                                        <li>
@@ -53,7 +53,7 @@
 	                                <dd class="sch">
 	                                    <span class="wrap_input" style="width: 400px;">
 	                                        <input type="text" id="jobNm" name="job" class="txt_inp inp_b"
-	                                            title="직업정보 검색" readonly="readonly" placeholder="직업정보 검색"
+	                                            title="직업정보 검색" readonly="readonly" placeholder="직업정보 검색" value="${userInfo.job }"
 	                                            style="width: 400px;">
 	                                    </span>
 	                                    <a class="icon_sch_input">
@@ -309,14 +309,6 @@
                                             	</ul>
                                             </div>
                                         </div>
-                                        <!-- //직업코드
-                                        <div class="job_box_wrap">
-                                            <h2 class="h3_pop">소분류</h2>
-                                            <div class="wrap_selec_job_box">
-                                                <ul id="__job_code_area__" class="wrap_pop_job_list clfix">
-                                                </ul>
-                                            </div>
-                                        </div> -->
                                     </div>
                                     <ul>
                                         <li class="ico_noti_gray">
@@ -350,6 +342,8 @@
     </div>
 </body>
 <script>
+
+/********************* 예외처리 *********************/
 	$(".btn_foot a").on('click', function() {
 		
 	    // 생년월일 
@@ -445,8 +439,13 @@
     //3. 하위 직업군 선택 시 직업란에 표시
     $("[id^=job_secg_area] li a").on('click', function() {
         $("#popNoteJoinLayer2").css('display', 'none');
-
+	
         $("#jobNm").val($(this).text());
+
+        if($(this).parents("ul").prop("id") == 'job_secg_area2'){
+        	$("#jobCd").val("risk");
+        } else $("#jobCd").val("basic");
+
         $("#tmpJobNm-error").hide();
     });
 

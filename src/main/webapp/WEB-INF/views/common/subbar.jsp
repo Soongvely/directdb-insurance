@@ -9,8 +9,8 @@
 	        </li>
 	        <li style="padding: 21px 10px 21px 0;">
 	               <p class="step_ttl">1. 고객정보 </p>
-	               <p class="step_ctt">- 만 ${userInfo.birthday }세 / ${userInfo.gender == "1" ? "남자" : "여자"}</p>
-	               <p class="step_ctt">- 직업 : ${userInfo.job }</p>
+	               <p class="step_ctt" id="userInfo" data-age="${userInfo.birthday }">- 만 ${userInfo.birthday }세 / ${userInfo.gender == "1" ? "남자" : "여자"}</p>
+	               <p class="step_ctt" id="userJob" data-jobcd="${userInfo.jobCd}">- 직업 : ${userInfo.job }</p>
 	              </li>
 	        <li>
 	            <p class="step_ttl">2. 보험료 확인하기</p>

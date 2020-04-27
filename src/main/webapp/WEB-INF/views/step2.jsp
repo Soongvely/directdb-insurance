@@ -8,6 +8,7 @@
 		<input type="hidden" name="birthday" value="${userInfo.birthday}">
 		<input type="hidden" name="gender" value="${userInfo.gender}">
 		<input type="hidden" name="job" value="${userInfo.job}">
+		<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
 	</form>
         <div id="wrap" class="wrap_sub insurance">
 	    	<div id="container" class="step">
