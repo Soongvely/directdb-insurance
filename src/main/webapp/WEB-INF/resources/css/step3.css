@@ -408,11 +408,10 @@
 	.plan_select li.on dl dt div label span em strong {
 	    font-weight: 700;
 	    letter-spacing: -1.2px;
-	    font-size: 16px;
+	    font-size: 17px;
 	}
 	
 	strong {
-	    margin-left: 8px;
 	    font-style: normal;
 	}
 	
