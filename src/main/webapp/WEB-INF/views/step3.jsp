@@ -1102,35 +1102,18 @@
 </body>
 </html>
 <script>
-window.onload = function(){
-	outputPrice();	
-};
+	window.onload = () => outputPrice();
 
 	$(function () {			
 		
 		var age = $("#userInfo").data("age");
 		var jobCd = $("#userJob").data("jobcd");
 		
-		// 위험군 직업인 경우 '상해사망' 보험료 가격 변동
-		var $shanghai = $("[class^=plan].on").find("ul[name=cvrRow_6]").children(".money").children("span");
-		if(jobCd == "risk") {
-			$shanghai.text(Number($shanghai.text()) * 4.4375);
-		}
-		
-		// <plan>이 바뀔 때 마다 보험료 계산
-		$("[class^=plan0] .input_radio.rad input").click(function () {						
-			var $shanghai = $("[class^=plan].on").find("ul[name=cvrRow_6]").children(".money").children("span");
-			if(jobCd == "risk") {
-				$shanghai.text(Number($shanghai.text()) * 4.4375);
-			}
-			
-			outputPrice();	
-		});
-		
+		init();
 		
 		// 개별 보장 체크할 때 마다 보험료 계산
-		$("[class^=plan].on input[id^='ckbox']").on('click', function () {
-			outputPrice();		
+		$(".ui_plan_select input[type=checkbox]").on('change', function () {
+			outputPrice();
 		});
 		
 		// <plan> 선택 이벤트
@@ -1141,20 +1124,8 @@ window.onload = function(){
 	        $("strong[id^=smPrm]").css('display', 'none');
 		    $(this).parents("li[class^='plan0']").addClass("on");
 	        $(this).find("strong").css("display", 'block');
+	        outputPrice();
 		});
-		
-		// 보장내용 전체 체크
-		$(".signup_box").prop("checked", true);
-		
-		if($(".signup_box").is(":checked")) {
-			$(".signup_box").addClass("on");
-		}
-		
-		// 선택가입 체크박스 이벤트, 고유id 부여
-		 $('.signup_box').each(function(i){ 
-	        $(".signup_box:eq("+i+")").attr("id", "ckbox" + i);
-	        $(".signup_label:eq("+i+")").attr("for", "ckbox" + i);
-	    });
 
 		// 선택된 체크박스
 		$("input[id^='ckbox']").click(function() {
@@ -1162,8 +1133,8 @@ window.onload = function(){
 				$(this).addClass("on");
 			} else {
 				$(this).removeClass("on");
-			}		
-		});	
+			}
+		});
 		
 	/* 	$("strong[id^=smPrm]").each(function (i, item) {
 			var age = $("#userInfo").data("age");
@@ -1177,28 +1148,47 @@ window.onload = function(){
 			}
 		}); */
 		
+
+		function init() {
+			
+			// 위험군 직업인 경우 '상해사망' 보험료 가격 변동
+			var $shanghai = $("[class^=plan]").find("ul[name=cvrRow_6]").children(".money").children("span");
+			
+			if(jobCd == "risk") {
+				$shanghai.each((i, item) => {
+					$(item).text(parseInt($(item).text()) * 4.4375);
+				});
+			}
+				
+			// 보장내용 전체 체크
+			$(".signup_box").prop("checked", true);
+			
+			if($(".signup_box").is(":checked")) {
+				$(".signup_box").addClass("on");
+			}
+			
+			// 선택가입 체크박스 이벤트, 고유id 부여
+			 $('.signup_box').each(function(i){ 
+		        $(".signup_box:eq("+i+")").attr("id", "ckbox" + i);
+		        $(".signup_label:eq("+i+")").attr("for", "ckbox" + i);
+		    });
+		}
 	});
 	
 	// 기본 보험료(사무직/위험군) 산출
 	function outputPrice() {
 		var money = 0;
 		var sum = 0;
-		$("[class^=plan].on").find(".signup:has(.on) + .money").children("span").each(function (i, item) {
-			
+		$("[class^=plan0].on").find(".signup:has(.on) + .money").children("span").each(function (i, item) {
 			money += Number($(item).text());
-			
-	//		$(item).text(numberWithCommas($(item).text()));
 		});
-		sum = Math.ceil(money / 100) * 100;
+		
+		sum = Math.ceil(money / 10) * 10;
+		
+		console.log(sum)
 		
 		$("[class^=plan].on").find("[id^=smPrm]").text(numberWithCommas(sum) + " 원");
-		$("[class^=plan].on").find("[id^=smPrm]").prop("data", "default" + sum);	
 	}
-	
-	/**************** 보험료 계산 ****************/
-
-	
-	
 	
 	// 콤마 찍기
 	function numberWithCommas(x) {
