@@ -33,110 +33,110 @@
                                             <div style="padding-bottom: 11px;">보장내용</div>
                                         </dt>
                                         <dd>
-                                            <div name="cvrRow_0" style="margin-left: 0px;" data-ratio="2">
+                                            <div name="cvrRow_0" style="margin-left: 0px;" data-ratio="0.3">
                                                 <strong>암진단비Ⅱ(유사암제외)</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314183"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_1" data-ratio="4">
+                                            <div name="cvrRow_1" data-ratio="0.06071">
                                                 <strong>유사암진단비Ⅱ</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314184"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_2" data-ratio="2">
+                                            <div name="cvrRow_2" data-ratio="0.00357">
                                                 <strong>간,담낭,담도,췌장암진단비</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314180"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_3" data-ratio="2">
+                                            <div name="cvrRow_3" data-ratio="0.09285">
                                                 <strong>고액치료비암진단비</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314127"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_4" data-ratio="2">
+                                            <div name="cvrRow_4" data-ratio="0.02142">
                                                 <strong>급성심근경색증진단비</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314093"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_5" data-ratio="2">
+                                            <div name="cvrRow_5" data-ratio="0.021428">
                                                 <strong>뇌출혈진단비</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314092"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_6" data-ratio="2">
+                                            <div name="cvrRow_6" data-ratio="0.17142">
                                                 <strong>상해사망</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314138"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_7" data-ratio="2">
+                                            <div name="cvrRow_7" data-ratio="0.02142">
                                                 <strong>암사망</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314110"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_8" data-ratio="2">
+                                            <div name="cvrRow_8" data-ratio=0.02857>
                                                 <strong>유사암수술비</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_318111"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_9" data-ratio="2">
+                                            <div name="cvrRow_9" data-ratio="0.00428">
                                                 <strong>암입원일당(요양병원)(1일이상90일한도)</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_318650"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_10" data-ratio="2">
+                                            <div name="cvrRow_10" data-ratio="0.11785">
                                                 <strong>암직접치료입원일당(요양병원제외)(1일이상180일한도)</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_317954"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_11" data-ratio="2">
+                                            <div name="cvrRow_11" data-ratio="0.05">
                                                 <strong>생식기관련 암진단비</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314161"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_12" data-ratio="2">
+                                            <div name="cvrRow_12" data-ratio="0.00892">
                                                 <strong>위암진단비</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314178"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_13" data-ratio="2">
+                                            <div name="cvrRow_13" data-ratio="0.0043">
                                                 <strong>유방암으로인한유방수술비</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314182"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_15" data-ratio="2">
+                                            <div name="cvrRow_14" data-ratio="0.0869">
                                                 <strong>재진단암진단비(유사암,대장점막내암,전립선암제외)</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314140"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_16" data-ratio="2">
+                                            <div name="cvrRow_15" data-ratio="0.00178">
                                                 <strong>폐암진단비</strong>
 
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_314179"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_17" data-ratio="2">
+                                            <div name="cvrRow_16" data-ratio="0.03392">
                                                 <strong>항암방사선,약물치료비</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_318652"></a>
                                             </div>
                                         </dd>
                                         <dd>
-                                            <div name="cvrRow_18" data-ratio="2">
+                                            <div name="cvrRow_17" data-ratio="0.05678">
                                                 <strong>암수술비(유사암제외)</strong>
                                                 <a href="#" title="상세설명 보기" class="ico_pop" name="cvrPop_317912"></a>
                                             </div>
@@ -1118,7 +1118,6 @@
 	        $(this).find("strong").css("display", 'block');
 	        
 	        outputPrice();
-	        eachPrice();
 		});
 
 		// 선택된 체크박스
@@ -1169,6 +1168,10 @@
 		}
 	});
 	
+	/////////////
+	$("input[name=selArcTrm]").change(function () {
+		console.log("gggggg")
+	})
 	
 	// 기본 보험료(사무직/위험군) 산출
 	function outputPrice() {
@@ -1180,7 +1183,7 @@
 		});
 				
 		if($("input[name=selArcTrm]:checked").val() == 'Y20') 
-			money = money * 2;
+			money = money / 0.48275;
 		
 		if($("input[name=pymMtdCd]:checked").val() == 'M12')
 			money = money * 12;			
@@ -1191,27 +1194,29 @@
 		$("#totPrm").text(numberWithCommas(sum));
 	}
 	
-	 function eachPrice() {
+	// 각 보험료 계산
+	// TODO: 보험료 다시 계산할것
+	function eachll() {
+		var totalPrice = removeComma($("#totPrm").text());
+		console.log("TOTAL >> ",totalPrice)
 		
-		$("[class^=plan0].on").find("ul").each(function (i, item) {		
-			var $price = Number($(item).find(".signup:has(.on) + .money span").text());
-			console.log(Number($(item).find(".signup:has(.on) + .money span").text()))
-			// 전체 금액 나누기 ratio한 값 ---> text()
-			$("div[name^=cvrRow]").each(function (j, name) {
-				var ratio = $(name).data("ratio");
-
-				if($(name).attr("name") == $(item).attr("name")) {
-					$(item).find(".signup:has(.on) + .money span").text($price * ratio);
-				}
+		$("[class^=plan0].on").find("ul").each(function (i, item) {	
+			
+			var ratio = $("div[name='cvrRow_" + i + "']").data('ratio');
+			
+			$(item).find('.money span').each(function(j, money) {
 				
-			})
+				//$(money).text(Math.round(totalPrice * ratio));
+				
+			});
+			
 		});
-	} 
+	}
 
 	// 납입기간에 따른 보험료 계산
 	$("input[name=selArcTrm]").change(function () {		
 		outputPrice();
-		eachPrice();
+		eachll();
 	});
 	
 	// 납입주기에 따른 보험료 계산
@@ -1222,11 +1227,15 @@
 			$("#totPrmPymMtdTxt").text("연 보험료");			
 		
 		outputPrice();	
-		eachPrice();
 	});
 	
 	// 콤마 찍기
 	function numberWithCommas(x) {
 	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
+	
+	function removeComma(str) {
+		return parseInt(str.replace(/,/g,""));;
+	}
+
 </script>
