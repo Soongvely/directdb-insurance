@@ -1,5 +1,7 @@
 package com.jinsolins.db.controller;
 
+import java.util.Calendar;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,11 +26,23 @@ public class InsuranceController {
 	@PostMapping("/step2")
 	public String step2(Model model, UserInfo userInfo) {
 		System.out.printf("%s", userInfo);
-		String year = String.valueOf(userInfo.getBirthday()).substring(0, 4);
-		System.out.println(year);
-		userInfo.setBirthday((2020-1) - Integer.parseInt(year));
 		
-		model.addAttribute("userInfo", userInfo);
+		int birthYear = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(0, 4));
+		int birthMonth = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(4, 6));
+		int birthDay = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(6, 8));
+		
+	     Calendar current = Calendar.getInstance();
+	     int currentYear  = current.get(Calendar.YEAR);
+	     int currentMonth = current.get(Calendar.MONTH) + 1;
+	     int currentDay   = current.get(Calendar.DAY_OF_MONTH);
+	   
+	     int age = currentYear - birthYear;
+	     // 생일 안 지난 경우 -1
+	     if (birthMonth * 100 + birthDay > currentMonth * 100 + currentDay) 
+	         age--;
+	     
+	     userInfo.setBirthday(age);
+	     model.addAttribute("userInfo", userInfo);
 		
 		return "step2";
 	}
