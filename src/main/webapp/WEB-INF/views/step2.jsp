@@ -6,6 +6,7 @@
      
 	<form id="tagForm" action="/step3" method="POST">
 		<input type="hidden" name="birthday" value="${userInfo.birthday}">
+		<input type="hidden" name="age" value="${userInfo.age}">
 		<input type="hidden" name="gender" value="${userInfo.gender}">
 		<input type="hidden" name="job" value="${userInfo.job}">
 		<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
@@ -66,6 +67,7 @@
         $(this).addClass("on");
     })
     
+    // 이전 || 다음 버튼 클릭 시 폼 전송
     $(".btn_foot a").click(function() {
     	
     	var isNext = $(this).hasClass("btn_next");

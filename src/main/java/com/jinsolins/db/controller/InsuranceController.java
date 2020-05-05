@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.jinsolins.db.model.PlanInfo;
 import com.jinsolins.db.model.UserInfo;
 
 
@@ -41,7 +42,7 @@ public class InsuranceController {
 	     if (birthMonth * 100 + birthDay > currentMonth * 100 + currentDay) 
 	         age--;
 	     
-	     userInfo.setBirthday(age);
+	     userInfo.setAge(age);
 	     model.addAttribute("userInfo", userInfo);
 		
 		return "step2";
@@ -51,11 +52,16 @@ public class InsuranceController {
 	public String step3(Model model, UserInfo userInfo) {
 		
 		model.addAttribute("userInfo", userInfo);
+		
 		return "step3";
 	}
 
-	@GetMapping("/step4")
-	public String step4() {
+	@PostMapping("/step4")
+	public String step4(Model model, UserInfo userInfo, PlanInfo planInfo) {
+		
+		model.addAttribute("userInfo", userInfo);
+		model.addAttribute("planInfo", planInfo);
+		
 		return "step4";
 	}
 

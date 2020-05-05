@@ -10,9 +10,9 @@ import lombok.ToString;
 public class UserInfo {
 	
 	private int birthday;
+	private int age;
 	private String job;
 	private String gender;
-	private String jobCd;
-	
+	private String jobCd;	
 
 }
