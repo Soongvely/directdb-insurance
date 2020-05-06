@@ -7,12 +7,29 @@
 <link href="<c:url value="/resources/css/step4.css" />" rel="stylesheet"> 
 <link href="<c:url value="/resources/css/step6.css" />" rel="stylesheet"> 
 
-	<form id="tagForm" action="" method="get"></form>
     <div id="wrap" class="wrap_sub insurance">
     	<div id="container" class="step">
-			<%@ include file="common/subbar.jsp" %>
-			<div id="contents">
-				<form id="sForm" action="" method="POST">
+			<form id="sForm" action="/step7" method="POST">
+				<input type="hidden" name="custNm" value="${userInfo.custNm}">
+				<input type="hidden" name="birthday" value="${userInfo.birthday}">
+		    	<input type="hidden" name="age" value="${userInfo.age}">
+				<input type="hidden" name="gender" value="${userInfo.gender}">
+				<input type="hidden" name="job" value="${userInfo.job}">
+				<input type="hidden" name="emailId" value="${userInfo.emailId }">
+				<input type="hidden" name="emailType" value="${userInfo.emailType }">
+				<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
+				<input type="hidden" name="planName" value="${planInfo.planName }">
+				<input type="hidden" name="totalPrice" value="${planInfo.totalPrice }">
+				<input type="hidden" id="selArcTrm" name="selArcTrm" value="${planInfo.selArcTrm }">
+		  		<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="${planInfo.pymMtdCd }">
+				<input type="hidden" id="isDriving" name="qtnd10repYn6" value="${userInfo.qtnd10repYn6}">
+				<input type="hidden" id="isDrinking" name="qtnd14repYn17" value="${userInfo.qtnd14repYn17}">
+				<input type="hidden" id="isSmoking" name="qtnd14repYn18" value="${userInfo.qtnd14repYn18}">
+				<input type="hidden" id="stature" name="qtnd11repVal10" value="${userInfo.qtnd11repVal10}">
+				<input type="hidden" id="weight" name="qtnd12repVal11" value="${userInfo.qtnd12repVal11}">
+				
+				<%@ include file="common/subbar.jsp" %>
+				<div id="contents">
 					<div class="wrap_contents" style="min-height: 230px;padding-bottom: 126px;">
 						<div class="head_area">
 							<h4 class="h4_ttl">고객님의 보험료 계산을 위한<br>
@@ -519,19 +536,28 @@
 	$(".error_txt").hide();
 	
 	// 약관동의 예외처리
-	$(".btns.btn_next.btn_active").click(function () {
-		var radios = $("input:radio[value='Y']");
-
-		for (var i = 0; i < radios.length; i++) {
-			var $this = $(radios[i]);
-
-			if (!$this.is(":checked")) {
-				$this.focus();
-				$this.parents("dd").find(".error_txt").show();
-
-				return false;
+	$(".btn_foot a").click(function() {
+		
+		var isNext = $(this).hasClass("btn_next");
+    	
+    	if(isNext) {
+			var radios = $("input:radio[value='Y']");
+	
+			for (var i = 0; i < radios.length; i++) {
+				var $this = $(radios[i]);
+	
+				if (!$this.is(":checked")) {
+					$this.focus();
+					$this.parents("dd").find(".error_txt").show();
+	
+					return false;
+				}
 			}
-		}
+			
+			$("#sForm").submit();
+    	}  else 
+    		$("#sForm").attr({"action":"/step5"}).submit();
+		
 	});
 
 	// 이용약관 전체동의 체크 이벤트

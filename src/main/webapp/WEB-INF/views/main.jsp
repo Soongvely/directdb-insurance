@@ -370,6 +370,7 @@
 	    if ($("#jobNm").val() == '') {
 	        $(this).addClass("error_txt");
 	        $("#tmpJobNm-error").show();
+	        
 	        $("#jobNm").focus();
 	        
 	        return false;

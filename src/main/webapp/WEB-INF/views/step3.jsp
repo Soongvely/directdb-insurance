@@ -11,6 +11,10 @@
 		<input type="hidden" name="gender" value="${userInfo.gender}">
 		<input type="hidden" name="job" value="${userInfo.job}">
 		<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
+		<input type="hidden" id="planName" name="planName" value="">
+		<input type="hidden" id="totalPrice" name="totalPrice" value="">
+		<input type="hidden" id="selArcTrm" name="selArcTrm" value="">
+  		<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="">
     </form>
     <div id="wrap" class="wrap_sub insurance">
     	<div id="container" class="step">
@@ -22,7 +26,8 @@
                             <div class="plan_btn_box">
                                 <a href="https://www.directdb.co.kr/doc/pdf/terms/ltm_direct_cancer2004.pdf" title="새창"
                                     target="_blank" id="yakgwan" class="btn_agree">
-                                    <i class="glyphicon glyphicon-list-alt"></i> 약관보기</a>
+                                    <i class="glyphicon glyphicon-list-alt"></i> 약관보기
+                                </a>
                             </div>
                             <div class="plan_txt_box">
                                 <strong>플랜과 보험기간, 납입기간, 납입주기를 선택해 주세요.</strong>
@@ -977,13 +982,13 @@
                                     <ul class="label_horizental clfix">
                                         <li>
                                             <label for="selArcTrm1 " class="input_radio rad">
-                                                <input id="selArcTrm1" name="selArcTrm" type="radio" value="Y10" checked="checked">
+                                                <input id="selArcTrm1" name="selArcTrm" type="radio" value="10년" checked="checked">
                                                 <span><em>10년</em></span>
                                             </label>
                                         </li>
                                         <li>
                                             <label for="selArcTrm2 " class="input_radio rad">
-                                                <input id="selArcTrm2" name="selArcTrm" type="radio" value="Y20">
+                                                <input id="selArcTrm2" name="selArcTrm" type="radio" value="20년">
                                                 <span><em>20년</em></span>
                                             </label>
                                         </li>
@@ -996,13 +1001,13 @@
                                         <ul class="label_horizental clfix">
                                             <li>
                                                 <label for="pymMtdCd1 " class="input_radio rad">
-                                                    <input id="pymMtdCd1" name="pymMtdCd" type="radio" value="M01" checked="checked">
+                                                    <input id="pymMtdCd1" name="pymMtdCd" type="radio" value="월납" checked="checked">
                                                     <span><em>월납</em></span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label for="pymMtdCd2 " class="input_radio rad">
-                                                    <input id="pymMtdCd2" name="pymMtdCd"type="radio" value="M12">
+                                                    <input id="pymMtdCd2" name="pymMtdCd"type="radio" value="연납">
                                                     <span><em>연납</em></span>
                                                 </label>
                                             </li>
@@ -1010,7 +1015,6 @@
                                     </dd>
                                 </dl>
                                 <!-- 월 보험료 -->
-                                <input type="hidden" name="codeName" value="">
                                 <div class="right_plan" style="display: block;">
                                 	<dl class="plan_money">
                                     	<dt>
@@ -1055,16 +1059,17 @@
 </body>
 </html>
 <script>
+	// 기본 보험료 data-defalut로 설정
+	// 나이에 따라서 일정 금액만큼 보험료 인상
+	// 직업에 따라서 일정 금액만큼 보험료 인상
+	// 개별 보장 보험료 계산(총 보험료 * 퍼센트)
+	// 개별 보장 항목 체크시 총 보험료 변동
+	// 납입 주기 || 납입 기간 선택에 따른 보험료 변동
+
 	window.onload = function(){
 		outputPrice();
 		eachPrice();
 	};
-
-	// 기본 보험료 data-defalut로 설정
-	// 나이에 따라서 일정 금액만큼 보험료 인상
-	// 개별 보험료 계산(총 보험료 * 퍼센트)
-	// 위험군인 상해사망에 해당 퍼센트 (*) -> 늘어난 보험료 만큼 총 보험료 (+))
-	// 개별 항목 체크시 보험료 변동
 	
 	$(function () {			
 		
@@ -1075,7 +1080,7 @@
 		
 		// <plan> 선택 이벤트
 		$("[id^=pdcPanCd]").parent().on('click', function() {
-			$(".signup_box").prop("checked", true);
+			
 		    $(this).children().attr("checked", "checked");
 		
 		    $(".plan_select li").removeClass("on");
@@ -1096,33 +1101,6 @@
 			}
 		});
 
-		// 개별 보장 체크할 때 마다 보험료 계산
-		$(".ui_plan_select input[type=checkbox]").on('change', function () {
-			var totalPrice = Number(removeComma($("[class^=plan0].on").find("[id^=smPrm]").text()));
-	
-			var price = Number($(this).parents().siblings('.money').find('span').text());
-			
-			var isChecked = $(this).hasClass("on");
-
-			var changePrice = isChecked ? totalPrice + price : totalPrice - price;
-			
-			$("[class^=plan0].on").find("[id^=smPrm]").text(numberWithCommas(Math.round(changePrice / 10 * 10)) + " 원");
-			$("#totPrm").text(changePrice);
-			
-			// 연납 월납 바뀔 떄 마다 체크박스 전체 선택
-			/* console.log("t", totalPrice)
-
-			$(".signup_box").each(function (i, ckbox) {
-				var price = Number($(ckb	ox).parents("ul").find(".money span").text());
-				console.log(price)
-	
-				if (!$(ckbox).prop("checked") || !$(ckbox).hasClass("on")) 
-					totalPrice -= price;
-			});
-			$("[class^=plan0].on").find("[id^=smPrm]").text(numberWithCommas(Math.round(totalPrice / 10 * 10)) + " 원");
-			$("#totPrm").text(numberWithCommas(Math.round(totalPrice / 10 * 10)));
- */		});
-
 		function init() {
 
 			// 보장내용 전체 체크
@@ -1142,7 +1120,9 @@
 	
 	// 총 보험료 계산 (최초 1회)
 	function outputPrice() {
+		
 		$("[class^=plan0]").each(function(i, plan) {
+			
 			var age = $("#userInfo").data("age");
 			var jobCd = $("#userJob").data("jobcd");
 
@@ -1173,13 +1153,16 @@
 
 	// plan이 바뀔 때 마다 총 보험료 계산
 	function outputPrice2() {
+		$(".signup_box").prop("checked", true);
+		
 		var onTotalPrice = $("[class^=plan].on").find("[id^=smPrm]").data("default");
 		
 		// 10년납 || 20년납
-		if($("input[name=selArcTrm]:checked").val() == 'Y20') 
+		if($("input[name=selArcTrm]:checked").val() == '20년') 
 			onTotalPrice = onTotalPrice / 0.4827586207;
+		
 		// 월납 || 연납
-		if($("input[name=pymMtdCd]:checked").val() == 'M12')
+		if($("input[name=pymMtdCd]:checked").val() == '연납')
 			onTotalPrice = onTotalPrice * 12;	
 		
 		var roundPrice = numberWithCommas(Math.round(onTotalPrice / 10) * 10)
@@ -1189,16 +1172,17 @@
 	}
 	
 	// 개별 보험료 계산
-	function eachPrice() {	
+	// ratio = totalPrice / eachPrice
+	// eachPrice = totalPrice * ratio
+	function eachPrice() {
+		
+		var onTotalPrice = removeComma($("[class^=plan0].on").find("[id^=smPrm]").text());
+		
 		$("[class^=plan0].on").find("ul").each(function (i, item) {		
-			
-			var onTotalPrice = $("[class^=plan].on").find("[id^=smPrm]").data("default");
 			
 			$(item).find('.money span').each(function(j, money) {
 				
 				var ratio = $(money).data('ratio');
-				// ratio = totalPrice / eachPrice
-				// eachPrice = totalPrice * ratio
 				
 				if($(money).text() != '-') 
 					$(money).text(numberWithCommas(Math.round(onTotalPrice * ratio)));
@@ -1206,19 +1190,36 @@
 		});	
 	}
 
+	// 개별 보장 체크할 때 마다 보험료 계산
+	$(".ui_plan_select input[type=checkbox]").on('change', function () {
+		
+		var totalPrice = removeComma($("[class^=plan0].on").find("[id^=smPrm]").text());
+
+		var price = removeComma($(this).parents().siblings('.money').find('span').text());
+		
+		var isChecked = $(this).hasClass("on");
+
+		var changePrice = isChecked ? totalPrice + price : totalPrice - price;
+		
+		$("[class^=plan0].on").find("[id^=smPrm]").text(numberWithCommas(Math.round(changePrice / 10 * 10)) + " 원");
+		$("#totPrm").text(numberWithCommas(Math.round(changePrice / 10 * 10)));
+	});
+	
 	// 납입기간에 따른 보험료 계산
 	$("input[name=selArcTrm]").change(function () {
 		 outputPrice2();
+		 eachPrice();
 	});
 	
 	// 납입주기에 따른 보험료 계산
 	$("input[name=pymMtdCd]").change(function () {		
-		if($("input[name=pymMtdCd]:checked").val() == 'M01')
+		if($("input[name=pymMtdCd]:checked").val() == '월납')
 			$("#totPrmPymMtdTxt").text("월 보험료");
 	 	else 
 			$("#totPrmPymMtdTxt").text("연 보험료");			
 		
 		 outputPrice2();
+		 eachPrice();
 	});
 	
 	// 콤마 찍기
@@ -1226,8 +1227,9 @@
 	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	}
 	
+	// 콤마 제거, 숫자 형식으로 변환
 	function removeComma(str) {
-		return str.replace(/[^0-9]/g,'');
+		return Number(str.replace(/[^0-9]/g,''));
 	}
 
 	// 이전 || 다음 버튼 클릭 시 폼 전송
@@ -1235,7 +1237,14 @@
 	    	
     	var isNext = $(this).hasClass("btn_next");
     	var plan = $("input[name=pdcPanCd]:checked").prop("id");
-    	$("input[name=codeName]").val(plan);
+    	var totalPrice = $("#totPrm").text();
+    	var selArcTrm = $("#sForm input[name=selArcTrm]:checked").val();
+    	var pymMtdCd = $("#sForm input[name=pymMtdCd]:checked").val();
+    	
+    	$("input[name=planName]").val(plan);
+    	$("input[name=totalPrice]").val(totalPrice);
+    	$("#selArcTrm").val(selArcTrm);
+    	$("#pymMtdCd").val(pymMtdCd);
     	
     	if(isNext) {
     		$("#tagForm").submit();

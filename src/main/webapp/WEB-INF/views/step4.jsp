@@ -5,18 +5,32 @@
 <link href="<c:url value="/resources/css/step2.css" />" rel="stylesheet"> 
 <link href="<c:url value="/resources/css/step4.css" />" rel="stylesheet"> 
 
-    <form id="tagForm" action="" method="POST"></form>
+    <form id="tagForm" action="/step5" method="POST">
+    	<input type="hidden" name="birthday" value="${userInfo.birthday}">
+    	<input type="hidden" name="age" value="${userInfo.age}">
+		<input type="hidden" name="gender" value="${userInfo.gender}">
+		<input type="hidden" name="job" value="${userInfo.job}">
+		<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
+		<input type="hidden" name="planName" value="${planInfo.planName }">
+		<input type="hidden" name="totalPrice" value="${planInfo.totalPrice }">
+		<input type="hidden" id="selArcTrm" name="selArcTrm" value="${planInfo.selArcTrm }">
+  		<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="${planInfo.pymMtdCd }">
+		<input type="hidden" id="isDriving" name="qtnd10repYn6" value="">
+		<input type="hidden" id="isSmoking" name="qtnd14repYn18" value="">
+		<input type="hidden" id="isDrinking" name="qtnd14repYn17" value="">
+		<input type="hidden" id="stature" name="qtnd11repVal10" value="">
+		<input type="hidden" id="weight" name="qtnd12repVal11" value="">
+    </form>
     <div id="wrap" class="wrap_sub insurance">
     	<div id="container" class="step">
             <%@ include file="common/subbar.jsp" %>
             <div id="contents">
-                <form id="sForm" action="" method="POST">
+                <form id="sForm" action="/step5" method="POST">
                     <div class="wrap_contents" style="min-height: 230px;padding-bottom: 126px;">
                         <div class="head_area">
                             <h3 class="h3_ttl">계약전 알릴 사항입니다.<br>
                                 아래의 질문에 사실대로 정확하게 선택해 주세요.</h3>
                         </div>
-                        
                         <div class="wrap_bg_box medical">
 							<h4>아래 질문은 보험가입에 매우 중요한 사항이며, 사실과 답변이 다를 경우
 								<br> 계약유지 또는 보험금 지급에 영향을 미칠 수 있음을 알려드립니다.</h4>
@@ -155,13 +169,13 @@
 										<ul class="label_horizental clfix">
 											<li>
 												<label for="qtnd10repYn6_1" class="input_radio rad">
-													<input name="qtnd10repYn6" type="radio" value="1">
+													<input name="qtnd10repYn6" type="radio" value="Y">
 													<span>운전</span>
 												</label>
 											</li>
 											<li>
 												<label for="qtnd10repYn6_2" class="input_radio rad">
-													<input name="qtnd10repYn6" type="radio" value="0">
+													<input name="qtnd10repYn6" type="radio" value="N">
 													<span>운전안함</span>
 												</label>
 											</li>
@@ -206,6 +220,12 @@
 													<span>kg</span>
 												</div>
 											</div>
+											<p id="elb_qtnd11A12" class="error_txt" style="display: none;">
+												<i class="fas fa-exclamation-circle"></i>질문에 대한 답변을 입력해 주세요.
+											</p>
+											<p id="elb_qtnd11B12" class="error_txt" style="display: none;">
+												<i class="fas fa-exclamation-circle"></i>질문에 대한 답변을 입력해 주세요.
+											</p>
 											<div class="wrap_tb_cell">
 												<div class="tb_td_cell w150" style="margin-right: 78px;">
 													<label>음주여부</label>
@@ -214,19 +234,22 @@
 													<ul class="label_horizental clfix">
 														<li>
 															<label for="qtnd14repYn17_1" class="input_radio rad">
-																<input name="qtnd14repYn17" id="qtnd14repYn17_1" type="radio" value="1">
+																<input name="qtnd14repYn17" id="qtnd14repYn17_1" type="radio" value="Y">
 																<span>예</span>
 															</label>
 														</li>
 														<li>
 															<label for="qtnd14repYn17_2" class="input_radio rad">
-																<input name="qtnd14repYn17" id="qtnd14repYn17_2" type="radio" value="0">
+																<input name="qtnd14repYn17" id="qtnd14repYn17_2" type="radio" value="N">
 																<span>아니오</span>
 															</label>
 														</li>
 													</ul>
 												</div>
 											</div>
+											<p id="elb_qtnd11A13" class="error_txt" style="display: none;">
+												<i class="fas fa-exclamation-circle"></i>질문에 대한 답변을 입력해 주세요.
+											</p>
 											<div class="wrap_tb_cell">
 												<div class="tb_td_cell w150" style="margin-right: 78px;">
 													<label>흡연여부</label>
@@ -235,19 +258,22 @@
 													<ul class="label_horizental clfix">
 														<li>
 															<label for="qtnd14repYn17_3" class="input_radio rad">
-																<input id="qtnd14repYn17_3" name="qtnd14repYn18" type="radio" value="1">
+																<input id="qtnd14repYn17_3" name="qtnd14repYn18" type="radio" value="Y">
 																<span>예</span>
 															</label>
 														</li>
 														<li>
 															<label for="qtnd14repYn17_4" class="input_radio rad">
-																<input id="qtnd14repYn17_4" name="qtnd14repYn18" type="radio" value="0">
+																<input id="qtnd14repYn17_4" name="qtnd14repYn18" type="radio" value="N">
 																<span>아니오</span>
 															</label>
 														</li>
 													</ul>
 												</div>
 											</div>
+											<p id="elb_qtnd11A14" class="error_txt" style="display: none;">
+												<i class="fas fa-exclamation-circle"></i>질문에 대한 답변을 입력해 주세요.
+											</p>
 										</dd>
 									</dl>
 								</li>
@@ -296,7 +322,7 @@
 	                            <div class="wrap_cont_sc">
 	                                <div class="wrap_pop_cont">
 	                                    <div class="box_pop_info">
-	                                        <img src="img/알림아이콘.PNG" class="ico_sorry"></img>
+	                                        <img src="/resources/img/알림아이콘.PNG" class="ico_sorry"></img>
 	                                        <div class="tit">고객님 죄송합니다.</div>
 	                                        <p>알려주신 내용에 대해 추가적인 확인이 필요하여
 	                                            <br>암보험을 인터넷으로 가입실 수 없습니다.</p>
@@ -326,59 +352,147 @@
 </html>
 <script>
 	$("#notOblLayer").hide();
+   	
+	var $stature = $("#sForm input[name=qtnd11repVal10]");
+	var $weight = $("#sForm input[name=qtnd12repVal11]");
+	
+	// 이전 || 다음 버튼 클릭 시 폼 전송
+	$(".btn_foot a").click(function() {
+	    	
+    	var isNext = $(this).hasClass("btn_next");
+    	
+	   	var isDriving = $("#sForm input[name=qtnd10repYn6]:checked").val();
+	   	var isSmoking = $("#sForm input[name=qtnd14repYn18]:checked").val();
+	   	var isDrinking = $("#sForm input[name=qtnd14repYn17]:checked").val();
+	   	var stature = $("#sForm input[name=qtnd11repVal10]").val();
+	   	var weight = $("#sForm input[name=qtnd12repVal11]").val();
 
-	// 예외처리
-	$(".btn_next.btn_active").click(function() {
+	   	$("#isDriving").val(isDriving);
+    	$("#isSmoking").val(isSmoking);
+    	$("#isDrinking").val(isDrinking);
+    	$("#stature").val(stature);
+    	$("#weight").val(weight);
+    	
+    	if(isNext) {
+    		
+    		// yes에 체크되어 있는 경우
+    		if($(".ico_ox.yes label").hasClass("chk_on")) {
+    			$("#notOblLayer").show();
+    		}
 
-		// yes에 체크되어 있는 경우
-		if($(".ico_ox.yes label").hasClass("chk_on")) {
-			$("#notOblLayer").show();
-		}
+    		// OX 체크가 안돼있는 경우
+    		var isChecked = true;
+    		$(".ico_ox.no input").each((i, item) => {
+    			if(!$(item).is(":checked")) {
+    				$("#elb_notice_chk01").show();
+    				$(item).focus();
+    				
+    				isChecked = false;
+    			}
+    		});
 
-		// OX 체크가 안돼있는 경우
-		var isChecked = true;
-		$(".ico_ox.no input").each((i, item) => {
-			if(!$(item).is(":checked")) {
-				$("#elb_notice_chk01").show();
-				$(item).focus();
-				isChecked = false;
-			}
-		});
+    		if(!isChecked) return;
+    		else $("#elb_notice_chk01").hide();
+    		
 
-		if(!isChecked) return;
-		else $("#elb_notice_chk01").hide();
-		
+    		// 운전여부 체크 여부
+    		if ($("#driverInfo input[name='qtnd10repYn6']").is(":checked") == false) {
+    			$("#elb_notice_chk02").show();
+    			$(this).focus();
 
-		// 운전여부 체크 여부
-		if ($("#driverInfo input[name='qtnd10repYn6']").is(":checked") == false) {
-			$("#elb_notice_chk02").show();
-			$(this).focus();
+    			return false;
+    		} else $("#elb_notice_chk02").hide();
 
-			return false;
-		} else $("#elb_notice_chk02").hide();
+    		// 키 입력 여부
+    		if ($stature.val() == '') {
+    			$stature.addClass("error_txt");
+    			$("#elb_qtnd11A12").show();
+    			
+    			$stature.focus;
+    			
+    			return false;
+    		}
+    		
+    		// 몸무게 입력 여부
+    		if ($weight.val() == '') {
+    			$weight.addClass("error_txt");
+    			$("#elb_qtnd11B12").show();
+    			
+    			$weight.focus;
+    			
+    			return false;
+    		}
+    		
+    		// 음주여부 체크 여부
+    		if ($("#sForm input[name=qtnd14repYn17]").is(":checked") == false) {
+    			
+    			$("#elb_qtnd11A13").show();
+    			$(this).focus();
 
-		// 확인란 체크 여부
-		if ($("#notice_chk01").prop("checked") == false) {
-			$("#elb_notice_chk04").show();
-			$(this).focus();
+    			return false;
+    		}
+    		
+    		// 흡연여부 체크 여부
+    		if ($("#sForm input[name=qtnd14repYn18]").is(":checked") == false) {
+    			
+    			$("#elb_qtnd11A14").show();
+    			$(this).focus();
 
-			return false;
-		} else {
-			$("#elb_notice_chk04").hide();
-		}
-	});
+    			return false;
+    		}
+    		
+    		// 확인란 체크 여부
+    		if ($("#notice_chk01").prop("checked") == false) {
+    			$("#elb_notice_chk04").show();
+    			$(this).focus();
 
+    			return false;
+    		} else 
+    			$("#elb_notice_chk04").hide();
+    		
+    		$("#tagForm").submit();
+    	} else {
+    		$("#tagForm").attr({"action":"/step3"}).submit();
+    	}
+    });
+	
 	/***************** 체크란 입력 시 에러메세지 숨기기 *******************/
 	// 1. 운전 여부
 	$("#driverInfo input[name='qtnd10repYn6']").click(function() {
-		if($(this).prop("checked") == true) {
+		if($(this).prop("checked") == true) 
 			$("#elb_notice_chk02").hide();
-		}
+		
 	});
 
-	// 2. 신체정보
-
-	// 3. 확인 체크
+	// 2-1. 키 입력 여부
+	$stature.keyup(function () {
+		if ($stature.val() != '') {
+			$("#elb_qtnd11A12").hide();
+			$stature.removeClass("error_txt");
+		}
+	});
+	
+	// 2-2. 몸무게 입력 여부
+	 $weight.keyup(function () {
+		if ( $weight.val() != '') {
+			$("#elb_qtnd11B12").hide();
+			$weight.removeClass("error_txt");			
+		}
+	});
+	
+	// 3. 음주여부 체크 여부
+	$("#sForm input[name=qtnd14repYn17]").click(function () {
+		if($(this).prop("checked") == true) 
+			$("#elb_qtnd11A13").hide();
+	});
+	
+	// 4. 흡연여부 체크 여부
+	$("#sForm input[name=qtnd14repYn18]").click(function () {
+		if($(this).prop("checked") == true) 
+			$("#elb_qtnd11A14").hide();		
+	});
+	
+	// 5. 확인 체크
 	$("#notice_chk01").click(function() {
 		if($(this).prop("checked") == true) 
 		$("#elb_notice_chk04").hide();
@@ -401,4 +515,6 @@
 		$('input[name='+ $(this).attr('name') +']').parent('label').removeClass('chk_on');
 		$(this).parent("label").addClass("chk_on");
 	});
+	
+	
 </script>

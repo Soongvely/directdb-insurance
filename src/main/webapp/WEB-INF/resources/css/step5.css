@@ -20,7 +20,7 @@
         width: 650px;
         min-height: 260px;
         margin: 0 auto;
-        padding: 40px 50px 90px 58px;
+        padding: 40px 50px 85px 58px;
         background: #fff;
     }
 
@@ -97,10 +97,11 @@
     .ico_people.ico_woman img {
         width: 145px;
         margin-left: 50px;
+        margin-bottom: 42px;
     }
 	
 	 .ico_people {
-        display: block;
+        display: inline-block;
         width: 133px;
         height: 135px;
     }

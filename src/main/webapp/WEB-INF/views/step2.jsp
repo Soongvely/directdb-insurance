@@ -21,7 +21,7 @@
 	                    </div>
 	                    <div id="cancer_tab" class="wrap_cancer">
 	                        <ul class="wrap_kind_select clfix">
-	                            <li>
+	                            <li class="on">
 	                                <a href="#">
 	                                    <i class="fas fa-check-circle"></i>종합보장
 	                                </a>

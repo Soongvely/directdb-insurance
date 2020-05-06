@@ -9,9 +9,9 @@ import lombok.ToString;
 @ToString
 public class PlanInfo {
 
-	private String codeName;
-	private int price;
-	private String period;
-	private String cycle;
+	private String planName;  // plan
+	private String totalPrice;	  // 총 보험료
+	private String selArcTrm; // 납입 기간
+	private String pymMtdCd;  // 납입 주기
 	
 }

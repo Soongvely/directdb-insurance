@@ -9,12 +9,26 @@
 <link href="<c:url value="/resources/css/step2.css" />" rel="stylesheet"> 
 <link href="<c:url value="/resources/css/step5.css" />" rel="stylesheet"> 
 
-    <form id="tagForm" action="" method="POST"></form>
     <div id="wrap" class="wrap_sub insurance">
     	<div id="container" class="step">
             <%@ include file="common/subbar.jsp" %>
             <div id="contents">
-                <form id="sForm" method="POST">
+                <form id="sForm" action="/step6" method="POST">
+			    	<input type="hidden" name="birthday" value="${userInfo.birthday}">
+			    	<input type="hidden" name="age" value="${userInfo.age}">
+					<input type="hidden" name="gender" value="${userInfo.gender}">
+					<input type="hidden" name="job" value="${userInfo.job}">
+					<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
+					<input type="hidden" name="planName" value="${planInfo.planName }">
+					<input type="hidden" name="totalPrice" value="${planInfo.totalPrice }">
+					<input type="hidden" id="selArcTrm" name="selArcTrm" value="${planInfo.selArcTrm }">
+			  		<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="${planInfo.pymMtdCd }">
+					<input type="hidden" id="isDriving" name="qtnd10repYn6" value="${userInfo.qtnd10repYn6}">
+					<input type="hidden" id="isDrinking" name="qtnd14repYn17" value="${userInfo.qtnd14repYn17}">
+					<input type="hidden" id="isSmoking" name="qtnd14repYn18" value="${userInfo.qtnd14repYn18}">
+					<input type="hidden" id="stature" name="qtnd11repVal10" value="${userInfo.qtnd11repVal10}">
+					<input type="hidden" id="weight" name="qtnd12repVal11" value="${userInfo.qtnd12repVal11}">
+					
                     <div class="wrap_contents clfix" style="min-height: 230px; padding-bottom: 126px; width: 943px;">
                         <div class="box_bg_cont">
                             <div class="head_area">
@@ -25,22 +39,18 @@
                                     <dt>
                                         <span class="wrap_inp" style="width:340px;">
                                             <input type="text" class="txt_inp input_b" id="custNm" name="custNm"
-                                                required="" value="" title="이름" placeholder="이름을 입력해 주세요"
-                                                style="width:340px; ime-mode:active;">
+                                                title="이름" placeholder="이름을 입력해 주세요" style="width:340px; ime-mode:active;">
                                         </span>
                                     </dt>
                                     <dd>
                                         <span class="wrap_inp" style="width:150px;">
-                                            <input type="text" class="txt_inp input_b" id="custRrno1" name="custRrno1"
-                                                value="800303" title="주민등록번호 앞자리" disabled="disabled"
-                                                style="width:150px;" tk_security="true">
+                                            <input type="text" class="txt_inp input_b" id="registNum1" name="registNum1"
+                                              title="주민등록번호 앞자리" disabled="disabled" style="width:150px;">
                                         </span>
-                                        <span class="space_b">- 2</span>
+                                        <span class="space_b">- ${userInfo.gender}</span>
                                         <span class="wrap_inp" style="width:134px;">
-                                            <input type="password" class="txt_inp input_b" id="custRrno2"
-                                                name="custRrno2" title="주민등록번호 뒤 6자리" enc="on" data-ytwsid="on"
-                                                datatype="n" placeholder="뒤 6자리" style="width:152px;" maxlength="6"
-                                                tk_security="true" autocomplete="off">
+                                            <input type="password" class="txt_inp input_b" id="registNum2" name="registNum2" 
+                                            title="주민등록번호 뒤 6자리" placeholder="뒤 6자리" style="width:152px;" maxlength="6" autocomplete="off">
                                         </span>
                                     </dd>
                                 </dl>
@@ -60,7 +70,7 @@
                                     <dt>휴대폰번호 <span class="vital">필수입력</span> </dt>
                                     <dd>
                                         <span class="wrap_inp" style="width:372px;">
-                                            <input type="text" class="txt_inp format_phone" id="clpNo" name="clpNo"
+                                            <input type="text" class="txt_inp format_phone" id="phoneNum" name="phoneNum"
                                                 value="" maxlength="13" title="휴대폰번호" placeholder="‘-’없이 입력하세요."
                                                 style="width:380px;">
                                         </span>
@@ -76,15 +86,13 @@
                                     <dt>이메일 <span class="vital">필수입력</span> </dt>
                                     <dd>
                                         <span class="wrap_inp">
-                                            <input type="text" class="txt_inp" id="emailId" name="emailId" value=""
-                                                title="이메일 계정" placeholder="이메일 계정" style="width:125px;"
-                                                tk_security="true">
+                                            <input type="text" class="txt_inp" id="emailId" name="emailId" 
+                                                title="이메일 계정" placeholder="이메일 계정" style="width:125px;">
                                         </span>
                                         <span class="space at">@</span>
                                         <span class="wrap_inp">
-                                            <input type="text" class="txt_inp" id="emailType" name="emailType" value=""
-                                                title="도메인" placeholder="도메인 입력" style="width:135px;"
-                                                tk_security="true">
+                                            <input type="text" class="txt_inp" id="emailType" name="emailType"
+                                                title="도메인" placeholder="도메인 입력" style="width:135px;">
                                         </span>
                                         <span class="selectbox_wrap ui_complete" style="width:107px;">
                                             <select id="domain" name="domain">
@@ -221,79 +229,90 @@
     </div>
 </body>
 <script>
-    $("#sForm").submit(function(e) {
-        e.preventDefault();
-    });
+	$(function () {
+		var registNum1 = $("input[name=birthday]").val();
+		$("#registNum1").val(registNum1.substring(2));
+	});
+
     /***************** 예외처리 ******************/
-    // if ($('.error_txt').not("p.hidden")) {
-    //     $(".btn_foot .btn_next").removeClass("btn_active");
-    //     $(".btn_foot .btn_next").addClass("btn_disable");
-    // } else {
-    //     $(".btn_foot .btn_next").addClass("btn_active");
-    //     $(".btn_foot .btn_next").removeClass("btn_disable");
-    // }
-
-    $(".btn_foot .btn_next").click(function () {
-
-        // 이름 & 주민번호
-        var $name = $("input[name=custNm]");
-        var $custRrno2 = $("input[name=custRrno2]");
-
-        if ($name.val() == '') {
-            alert("이름을 입력해주세요.");
-            $name.focus();
-
-            return false;
-        }
-
-        if ($name.val() != '' && $custRrno2.val().length < 6) {
-            alert("주민번호 뒤 6자리를 정확히 입력해주세요.");
-            $custRrno2.focus();
-        }
-
-        // 핸드폰 번호 
-        if ($("#clpNo").hasClass("error_txt") || $("#clpNo").val() == '') {
-            $("#clpNo-error").removeClass("hidden");
-            $(this).addClass("error_txt");
-
-            $("#clpNo").focus();
-
-            return false;
-        }
-
-        // 이메일
-        if($("#emailId").val() == '') {
-            $("#email-error").removeClass("hidden");
-            $(this).addClass("error_txt");
-
-            $("#emailId").focus();
-
-            return false;
-        }
-
-        if ($("#emailType").val() == '') {
-            $("#email-error").removeClass("hidden");
-            $(this).addClass("error_txt");
-
-            $("#emailType").focus();
-
-            return false;
-        }
-
-        // 동의 버튼 1
-        if ($("#jobChk01").prop("checked") == false) {
-            $("#elb_jobChk01").removeClass("hidden");
-        } else {
-            $("#elb_jobChk01").addClass("hidden");
-        }
-
-        // 동의버튼 2
-        if ($("#contract_chk01").prop("checked") == false) {
-            $("#elb_confirm").removeClass("hidden");
-        } else {
-            $("#elb_confirm").addClass("hidden");
-        }
-
+    $(".btn_foot a").click(function() {
+	    	
+    	var isNext = $(this).hasClass("btn_next");
+    	
+    	if(isNext) {
+	        // 이름 & 주민번호
+	        var $name = $("input[name=custNm]");
+	        var $registNum2 = $("input[name=registNum2]");
+	
+	        if ($name.val() == '') {
+	            alert("이름을 입력해주세요.");
+	            $name.focus();
+	
+	            return false;
+	        }
+	
+	        if ($name.val() != '' && $registNum2.val().length < 6) {
+	            alert("주민번호 뒤 6자리를 정확히 입력해주세요.");
+	            $registNum2.focus();
+	            
+	            return false;
+	        }
+	
+	        // 핸드폰 번호 
+	        if ($("#phoneNum").hasClass("error_txt") || $("#phoneNum").val() == '') {
+	            $("#clpNo-error").removeClass("hidden");
+	            $(this).addClass("error_txt");
+	
+	            $("#phoneNum").focus();
+	
+	            return false;
+	        }
+	
+	        // 이메일
+	        if($("#emailId").val() == '') {
+	            $("#email-error").removeClass("hidden");
+	            $(this).addClass("error_txt");
+	
+	            $("#emailId").focus();
+	
+	            return false;
+	        }
+			
+	        // 도메인
+	        if ($("#emailType").val() == '') {
+	            $("#email-error").removeClass("hidden");
+	            $(this).addClass("error_txt");
+	
+	            $("#emailType").focus();
+	
+	            return false;
+	        }
+			
+	        // 실제 계약자 여부 버튼
+	        if ($("input[name=realOwnrYn]").val() == 0) {
+	        	
+	        	$("input[name=realOwnrYn]").focus();
+	        	
+	        	return false;
+	        }
+	        
+	        // 동의 버튼 1
+	        if ($("#jobChk01").prop("checked") == false) {
+	            $("#elb_jobChk01").removeClass("hidden");
+	        } else {
+	            $("#elb_jobChk01").addClass("hidden");
+	        }
+	
+	        // 동의버튼 2
+	        if ($("#contract_chk01").prop("checked") == false) {
+	            $("#elb_confirm").removeClass("hidden");
+	        } else {
+	            $("#elb_confirm").addClass("hidden");
+	        }
+    		
+    		$("#sForm").submit();
+    	} else 
+    		$("#sForm").attr({"action":"/step4"}).submit();
     });
 
     // 동의버튼1 'change' 이벤트
@@ -317,7 +336,7 @@
     });
 
     // 핸드폰번호 하이픈 추가
-    $("#clpNo").on("keyup", function () {
+    $("#phoneNum").on("keyup", function () {
         $(this).val(
             $(this).val().replace(/[^0-9]/g, "")
             .replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})/, "$1-$2-$3")
@@ -325,7 +344,7 @@
     });
 
     // 핸드폰번호 예외처리    
-    $("#clpNo").blur(function () {
+    $("#phoneNum").blur(function () {
         if ($(this).val().trim().length < 12) {
             $("#clpNo-error").removeClass("hidden");
             $(this).addClass("error_txt");
@@ -373,8 +392,6 @@
     $("input[name=realOwnrYn]").change(function () {
         if ($("input[name=realOwnrYn]:checked").val() == 0) {
             $("#realOwnrYn-error").removeClass("hidden");
-
-            $(this).focus();
         } else {
             $("#realOwnrYn-error").addClass("hidden");
         }

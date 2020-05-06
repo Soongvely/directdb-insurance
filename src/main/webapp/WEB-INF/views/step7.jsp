@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -10,12 +11,31 @@
 <link href="<c:url value="/resources/css/step5.css" />" rel="stylesheet"> 
 <link href="<c:url value="/resources/css/step7.css" />" rel="stylesheet"> 
 
-	<form id="tagForm" action="" method="get"></form>
+<jsp:useBean id="today" class="java.util.Date" />
+
     <div id="wrap" class="wrap_sub insurance">
 		<div id="container" class="step">
-            <%@ include file="common/subbar.jsp" %>
-            <div id="contents">
-                <form id="sForm" method="POST">
+	        <form id="sForm" action="/step8" method="POST">
+	        	<input type="hidden" name="custNm" value="${userInfo.custNm}">
+	        	<input type="hidden" name="birthday" value="${userInfo.birthday}">
+				<input type="hidden" name="age" value="${userInfo.age}">
+				<input type="hidden" name="gender" value="${userInfo.gender}">
+				<input type="hidden" name="job" value="${userInfo.job}">
+				<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
+				<input type="hidden" name="emailId" value="${userInfo.emailId }">
+				<input type="hidden" name="emailType" value="${userInfo.emailType }">
+				<input type="hidden" name="planName" value="${planInfo.planName }">
+				<input type="hidden" name="totalPrice" value="${planInfo.totalPrice }">
+				<input type="hidden" id="selArcTrm" name="selArcTrm" value="${planInfo.selArcTrm }">
+				<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="${planInfo.pymMtdCd }">
+				<input type="hidden" id="isDriving" name="qtnd10repYn6" value="${userInfo.qtnd10repYn6}">
+				<input type="hidden" id="isDrinking" name="qtnd14repYn17" value="${userInfo.qtnd14repYn17}">
+				<input type="hidden" id="isSmoking" name="qtnd14repYn18" value="${userInfo.qtnd14repYn18}">
+				<input type="hidden" id="stature" name="qtnd11repVal10" value="${userInfo.qtnd11repVal10}">
+				<input type="hidden" id="weight" name="qtnd12repVal11" value="${userInfo.qtnd12repVal11}">
+
+	            <%@ include file="common/subbar.jsp" %>
+	            <div id="contents">
                     <div class="wrap_contents clfix" style="min-height: 199px; padding-bottom: 126px; margin-left: 35px;">
                         <div class="box_bg_cont">
                             <div class="head_area">
@@ -25,23 +45,23 @@
                                 <h4 class="h4_ttl">DB손해보험 다이렉트 암보험</h4>
                                 <dl class="result_list">
                                     <dt>피보험자/계약자</dt>
-                                    <dd>[숭숭/숭숭]</dd>
+                                    <dd>${userInfo.custNm }/${userInfo.custNm }</dd>
                                 </dl>
                                 <dl class="result_list">
                                     <dt>직업</dt>
-                                    <dd>[회사 사무직 종사자]</dd>
+                                    <dd>${userInfo.job }</dd>
                                 </dl>
                                 <dl class="result_list">
                                     <dt>운전형태</dt>
-                                    <dd>[운전/비운전]</dd>
+                                    <dd>${userInfo.qtnd10repYn6 == 'Y' ? '운전' : '비운전' }</dd>
                                 </dl>
                                 <dl class="result_list">
                                     <dt>보험기간</dt>
-                                    <dd>[2020.04.22 ~ 2030.04.22]</dd>
+                                    <dd><fmt:formatDate value="${today}" pattern="yyyy.MM.dd" /> ~ 2030.04.22</dd>
                                 </dl>
                                 <dl class="result_list">
                                     <dt>납입기간/납입주기</dt>  
-                                    <dd>[10년/월납]</dd>
+                                    <dd>${planInfo.selArcTrm }/${planInfo.pymMtdCd }</dd>
                                 </dl>
                                 <dl class="result_list">
                                     <dt>예상만기환급률</dt>
@@ -50,7 +70,7 @@
                                 <dl class="result_sum">
                                     <dt><strong class="txt_gray4">보험료</strong></dt>
                                     <dd>
-                                   		<strong>5,100</strong>원</dd>
+                                   		<strong>${planInfo.totalPrice }</strong>원</dd>
                                 </dl>
                                 <div class="ico_people ico_woman">
                                     <img src="/resources/img/여자.PNG">
@@ -108,6 +128,10 @@
                                         <dd>10만 원</dd>
                                     </dl>
                                     <dl>
+                                        <dt>생식기관련 암진단비</dt>
+                                        <dd>1,000만 원</dd>
+                                    </dl>
+                                    <dl>
                                         <dt>위암진단비</dt>
                                         <dd>1,000만 원</dd>
                                     </dl>
@@ -129,7 +153,7 @@
                         <div class="wrap_box_gray">
                             <dl class="clfix">
                                 <dt style="font-weight: 700;">보험청약일</dt>
-                                <dd>오늘 날짜</dd>
+                                <dd><fmt:formatDate value="${today}" pattern="yyyy년 MM월 dd일" /></dd>
                             </dl>
                             <p class="add_comment txt_orange txt_bold">위 청약내용은 보험계약의 기본사항만을 요약한 것이므로 자세한 내용은 아래 버튼을 눌러 확인해 주세요.</p>
 	                            <a href="/resources/pdf/상품설명서.pdf" class="btns btn_line_gray w200" id="pdcExprLayer" target="_blank" style="margin-right: 5px;">
