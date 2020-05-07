@@ -29,6 +29,12 @@
 					<input type="hidden" id="stature" name="qtnd11repVal10" value="${userInfo.qtnd11repVal10}">
 					<input type="hidden" id="weight" name="qtnd12repVal11" value="${userInfo.qtnd12repVal11}">
 					
+					<input type="hidden" id="chk1" name="qtnd1repYn" value="${userInfo.qtnd1repYn}">
+					<input type="hidden" id="chk2" name="qtnd2repYn" value="${userInfo.qtnd2repYn}">
+					<input type="hidden" id="chk3" name="qtnd3repYn" value="${userInfo.qtnd3repYn}">
+					<input type="hidden" id="chk4" name="qtnd4repYn" value="${userInfo.qtnd4repYn}">
+					<input type="hidden" id="chk5" name="qtnd5repYn" value="${userInfo.qtnd5repYn}">
+					
                     <div class="wrap_contents clfix" style="min-height: 230px; padding-bottom: 126px; width: 943px;">
                         <div class="box_bg_cont">
                             <div class="head_area">
@@ -38,7 +44,7 @@
                                 <dl>
                                     <dt>
                                         <span class="wrap_inp" style="width:340px;">
-                                            <input type="text" class="txt_inp input_b" id="custNm" name="custNm"
+                                            <input type="text" class="txt_inp input_b" id="custNm" name="custNm" value="${userInfo.custNm}"
                                                 title="이름" placeholder="이름을 입력해 주세요" style="width:340px; ime-mode:active;">
                                         </span>
                                     </dt>
@@ -70,8 +76,8 @@
                                     <dt>휴대폰번호 <span class="vital">필수입력</span> </dt>
                                     <dd>
                                         <span class="wrap_inp" style="width:372px;">
-                                            <input type="text" class="txt_inp format_phone" id="phoneNum" name="phoneNum"
-                                                value="" maxlength="13" title="휴대폰번호" placeholder="‘-’없이 입력하세요."
+                                            <input type="text" class="txt_inp format_phone" id="phoneNum" name="phoneNum" autocomplete="off"
+                                                value="${userInfo.phoneNum}" maxlength="13" title="휴대폰번호" placeholder="‘-’없이 입력하세요."
                                                 style="width:380px;">
                                         </span>
                                         <p id="elb_clpNo">
@@ -86,25 +92,24 @@
                                     <dt>이메일 <span class="vital">필수입력</span> </dt>
                                     <dd>
                                         <span class="wrap_inp">
-                                            <input type="text" class="txt_inp" id="emailId" name="emailId" 
-                                                title="이메일 계정" placeholder="이메일 계정" style="width:125px;">
+                                            <input type="text" class="txt_inp" id="emailId" name="emailId" value="${userInfo.emailId }"
+                                                title="이메일 계정" placeholder="이메일 계정" style="width:125px;" autocomplete="off">
                                         </span>
                                         <span class="space at">@</span>
                                         <span class="wrap_inp">
-                                            <input type="text" class="txt_inp" id="emailType" name="emailType"
+                                            <input type="text" class="txt_inp" id="emailType" name="emailType" value="${userInfo.emailType }"
                                                 title="도메인" placeholder="도메인 입력" style="width:135px;">
                                         </span>
                                         <span class="selectbox_wrap ui_complete" style="width:107px;">
                                             <select id="domain" name="domain">
                                                 <option value="99" selected>직접입력</option>
-                                                <option value="16">naver.com</option>
-                                                <option value="23">daum.net</option>
-                                                <option value="07">hanmail.net</option>
-                                                <option value="05">gmail.com</option>
-                                                <option value="10">hotmail.com</option>
-                                                <option value="15">nate.com</option>
-                                                <option value="21">yahoo.co.kr</option>
-                                                <option value="22">yahoo.com</option>
+                                                <option value="16" ${userInfo.emailType == 'naver.com' ? 'selected' : ''}>naver.com</option>
+                                                <option value="23" ${userInfo.emailType == 'daum.net' ? 'selected' : ''}>daum.net</option>
+                                                <option value="07" ${userInfo.emailType == 'hanmail.net' ? 'selected' : ''}>hanmail.net</option>
+                                                <option value="05" ${userInfo.emailType == 'gmail.com' ? 'selected' : ''}>gmail.com</option>
+                                                <option value="10" ${userInfo.emailType == 'hotmail.com' ? 'selected' : ''}>hotmail.com</option>
+                                                <option value="15" ${userInfo.emailType == 'nate.com' ? 'selected' : ''}>nate.com</option>
+                                                <option value="21" ${userInfo.emailType == 'yahoo.co.kr' ? 'selected' : ''}>yahoo.co.kr</option>
                                             </select>
                                         </span>
                                         <p>보험증권 및 약관 전송 시 사용되오니, 정확히 입력해 주세요.</p>
@@ -270,8 +275,8 @@
 	
 	        // 이메일
 	        if($("#emailId").val() == '') {
-	            $("#email-error").removeClass("hidden");
 	            $(this).addClass("error_txt");
+	            $("#email-error").removeClass("hidden");
 	
 	            $("#emailId").focus();
 	
@@ -280,10 +285,10 @@
 			
 	        // 도메인
 	        if ($("#emailType").val() == '') {
-	            $("#email-error").removeClass("hidden");
 	            $(this).addClass("error_txt");
+	            $("#email-error").removeClass("hidden");
 	
-	            $("#emailType").focus();
+	            $("#emailId").focus();
 	
 	            return false;
 	        }
@@ -299,13 +304,15 @@
 	        // 동의 버튼 1
 	        if ($("#jobChk01").prop("checked") == false) {
 	            $("#elb_jobChk01").removeClass("hidden");
-	        } else {
-	            $("#elb_jobChk01").addClass("hidden");
-	        }
+	            
+	            return false;
+	        } 
 	
 	        // 동의버튼 2
 	        if ($("#contract_chk01").prop("checked") == false) {
 	            $("#elb_confirm").removeClass("hidden");
+	            
+	            return false;
 	        } else {
 	            $("#elb_confirm").addClass("hidden");
 	        }
@@ -345,7 +352,7 @@
 
     // 핸드폰번호 예외처리    
     $("#phoneNum").blur(function () {
-        if ($(this).val().trim().length < 12) {
+        if ($(this).val().trim().length < 12 || $(this).val().trim().length > 13) {
             $("#clpNo-error").removeClass("hidden");
             $(this).addClass("error_txt");
 
@@ -356,7 +363,7 @@
     });
 
     // 이메일 예외처리
-    $("#emailId").focusout(function () {
+    $("#emailId").blur(function () {
         if ($(this).val() == '') {
             $("#email-error").removeClass("hidden");
             $(this).addClass("error_txt");
@@ -366,7 +373,7 @@
         }
     });
 
-    $("#emailType").change(function () {
+   /*  $("#emailType").change(function () {
         if ($(this).val() == '') {
             $("#email-error").removeClass("hidden");
             $(this).addClass("error_txt");
@@ -374,7 +381,7 @@
             $("#email-error").addClass("hidden");
             $(this).removeClass("error_txt");
         }
-    });
+    }); */
 
     // 이메일 도메인 change 이벤트
     $("#domain").change(function () {
@@ -385,6 +392,14 @@
            $("#emailType").val('');
         } else {
             $("#emailType").val($domain);
+        }
+        
+        if ($(this).val() == '') {
+            $("#email-error").removeClass("hidden");
+            $(this).addClass("error_txt");
+        } else {
+            $("#email-error").addClass("hidden");
+            $(this).removeClass("error_txt");
         }
     });
 

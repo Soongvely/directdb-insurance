@@ -94,8 +94,6 @@ public class InsuranceController {
 	@PostMapping("/step7")
 	public String step7(Model model, UserInfo userInfo, PlanInfo planInfo) {
 		
-		System.out.printf("%s", userInfo);
-		System.out.printf("%s", planInfo);
 		model.addAttribute("userInfo", userInfo);
 		model.addAttribute("planInfo", planInfo);
 		
@@ -103,7 +101,10 @@ public class InsuranceController {
 	}
 	
 	@PostMapping("/step8")
-	public String step8() {
+	public String step8(Model model, UserInfo userInfo, PlanInfo planInfo) {
+		
+		model.addAttribute("userInfo", userInfo);
+		
 		return "step8";
 	}
 }

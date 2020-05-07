@@ -10,7 +10,8 @@
 	        <li style="padding: 20px 10px 20px 0;">
 	            <p class="step_ttl">1. 고객정보 </p>
 	            <p class="step_ctt" id="userInfo" data-age="${userInfo.age }">- 만 ${userInfo.age }세 / ${userInfo.gender == "1" ? "남자" : "여자"}</p>
-	            <p class="step_ctt" id="userName" >- ${userInfo.custNm }(만 ${userInfo.age }세)</p>
+	            <p class="step_ctt">- <span id="userName" style="font-size: 12px;" data-username="${userInfo.custNm }"></span> (만 ${userInfo.age }세)
+	            </p>
 	            <p class="step_ctt" id="userJob" data-jobcd="${userInfo.jobCd}">- 직업 : ${userInfo.job }</p>
 	        </li>
 	        <li>
@@ -28,7 +29,7 @@
 	            <p class="step_ttl">3. 피보험자/계약자 정보</p>
 	            <ul id="email">
                     <li>
-                    	<p class="step_ctt">- 이메일 : ${emailId }@${emailType }</p>
+                    	<p class="step_ctt">- 이메일 : <span id="newEmailId">${userInfo.emailId }</span>@${userInfo.emailType }</p>
                    	</li>
                 </ul>
 	        </li>
@@ -42,6 +43,14 @@
 	    <div id="cocmDiv" class="mgt20"></div>
 	</div>
 <script>
+/* 	var newEmailId = $("#emailId").text().substr(0, $("#emailId").text().length / 2);
+	var lastEmailId = $("#emailId").text().substr($("#emailId").text().length / 2);
+	newEmailId + '***' + lastEmailId; */
+	
+	// 고객명 표시
+    var userName = $("#userName").data("username");
+    $("#userName").text(userName.replace(userName.substr(1,1), '*'));
+	
 	var step = window.location.href.substr(17); 
 	
 	if (step == 'step7' || step == 'step7#') {
@@ -55,11 +64,9 @@
 		$("#email").hide();
 	}
 	
-	if (step == 'step2' || step == 'step3') 
+	if (step == 'step2' || step == 'step3' || step == 'step2#' || step == 'step3#') 
 		$("#selectPlan").hide();
 	else 
 		$("#selectPlan").show();
-	
-		
 		
 </script>	

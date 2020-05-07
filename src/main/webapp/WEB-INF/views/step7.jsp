@@ -17,22 +17,6 @@
 		<div id="container" class="step">
 	        <form id="sForm" action="/step8" method="POST">
 	        	<input type="hidden" name="custNm" value="${userInfo.custNm}">
-	        	<input type="hidden" name="birthday" value="${userInfo.birthday}">
-				<input type="hidden" name="age" value="${userInfo.age}">
-				<input type="hidden" name="gender" value="${userInfo.gender}">
-				<input type="hidden" name="job" value="${userInfo.job}">
-				<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
-				<input type="hidden" name="emailId" value="${userInfo.emailId }">
-				<input type="hidden" name="emailType" value="${userInfo.emailType }">
-				<input type="hidden" name="planName" value="${planInfo.planName }">
-				<input type="hidden" name="totalPrice" value="${planInfo.totalPrice }">
-				<input type="hidden" id="selArcTrm" name="selArcTrm" value="${planInfo.selArcTrm }">
-				<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="${planInfo.pymMtdCd }">
-				<input type="hidden" id="isDriving" name="qtnd10repYn6" value="${userInfo.qtnd10repYn6}">
-				<input type="hidden" id="isDrinking" name="qtnd14repYn17" value="${userInfo.qtnd14repYn17}">
-				<input type="hidden" id="isSmoking" name="qtnd14repYn18" value="${userInfo.qtnd14repYn18}">
-				<input type="hidden" id="stature" name="qtnd11repVal10" value="${userInfo.qtnd11repVal10}">
-				<input type="hidden" id="weight" name="qtnd12repVal11" value="${userInfo.qtnd12repVal11}">
 
 	            <%@ include file="common/subbar.jsp" %>
 	            <div id="contents">
@@ -45,7 +29,7 @@
                                 <h4 class="h4_ttl">DB손해보험 다이렉트 암보험</h4>
                                 <dl class="result_list">
                                     <dt>피보험자/계약자</dt>
-                                    <dd>${userInfo.custNm }/${userInfo.custNm }</dd>
+                                    <dd id="custNm" data-custNm="${userInfo.custNm }"></dd>
                                 </dl>
                                 <dl class="result_list">
                                     <dt>직업</dt>
@@ -57,7 +41,9 @@
                                 </dl>
                                 <dl class="result_list">
                                     <dt>보험기간</dt>
-                                    <dd><fmt:formatDate value="${today}" pattern="yyyy.MM.dd" /> ~ 2030.04.22</dd>
+                                    <dd><fmt:formatDate value="${today}" pattern="yyyy.MM.dd" /> ~ 
+                                    	<span id="endDate"></span>
+                                    </dd>
                                 </dl>
                                 <dl class="result_list">
                                     <dt>납입기간/납입주기</dt>  
@@ -65,12 +51,11 @@
                                 </dl>
                                 <dl class="result_list">
                                     <dt>예상만기환급률</dt>
-                                    <dd>0.2%(공시이율에 따라 변동)</dd>
+                                    <dd>0.2% (공시이율에 따라 변동)</dd>
                                 </dl>
                                 <dl class="result_sum">
                                     <dt><strong class="txt_gray4">보험료</strong></dt>
-                                    <dd>
-                                   		<strong>${planInfo.totalPrice }</strong>원</dd>
+                                    <dd><strong>${planInfo.totalPrice }원</strong></dd>
                                 </dl>
                                 <div class="ico_people ico_woman">
                                     <img src="/resources/img/여자.PNG">
@@ -195,15 +180,59 @@
 							</a>
 						</div>
                     </div>
-                </form>
-            </div>
+            	</div>
+        	</form>
         </div>
     </div>
 </body>
 </html>
 <script>
     $(".error_txt").hide();
-
+    
+    $(".btn_foot a").click(function () {
+		
+    	var isNext = $(this).hasClass("btn_next");
+    	
+    	if(isNext) {
+    		
+		    // 상품설명서 및 보험약관 확인, 최종 동의 예외처리
+	    	if(!$("#pdcExprLayer").hasClass("watched") || !$("#yakgwanLayer").hasClass("watched")) {
+	            $("#elb_confirm1").show();
+	            $(this).focus();
+	
+	            return false;
+	        }
+	
+	        if($("#confirm_chk02").prop("checked") == false) {
+	            $("#elb_confirm2").show();
+	            $(this).focus();
+	
+	            return false
+	        }
+    		
+		    $("#sForm").submit();
+    	} else 
+    		$("#sForm").attr({"action":"/step6"}).submit();
+	});
+    
+    // 고객명 표시
+    var custNm = $("#custNm").data("custnm");
+    var newCustNm = custNm.replace(custNm.substr(1,1), '*');
+    
+    $("#custNm").text(newCustNm + "/" + newCustNm);
+    
+    // 만기일자 표시
+    var endYear = new Date().getFullYear() + 10;
+    var endMonth = new Date().getMonth() +1;
+    var endDate = new Date().getDate();
+    
+    if (10 - endMonth > 0) 
+    	endMonth = '0' + endMonth;
+    if (10 - endDate > 0)
+    	endDate = '0' + endDate;
+    
+    $("#endDate").text(endYear + "." + endMonth + "." + endDate);
+    
     // 상품설명서 및 보험약관 확인 이벤트
     $("#pdcExprLayer").click(function() {
         $(this).addClass("watched"); 
@@ -212,24 +241,7 @@
     $("#yakgwanLayer").click(function() {
         $(this).addClass("watched"); 
     });
-
-    // 상품설명서 및 보험약관 확인, 최종 동의 예외처리
-    $(".btn_next.btn_active").click(function() {
-        if(!$("#pdcExprLayer").hasClass("watched") || !$("#yakgwanLayer").hasClass("watched")) {
-            $("#elb_confirm1").show();
-            $(this).focus();
-
-            return false;
-        }
-
-        if($("#confirm_chk02").prop("checked") == false) {
-            $("#elb_confirm2").show();
-            $(this).focus();
-
-            return false
-        }
-    });
-
+    
     // 상품설명서 및 보험약관 확인 시 error_txt 숨기기
     $(".btns.btn_line_gray.w200").click(function() {
         if($("#pdcExprLayer").hasClass("watched") && $("#yakgwanLayer").hasClass("watched")) {

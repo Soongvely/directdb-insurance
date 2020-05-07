@@ -15,6 +15,7 @@
 		    	<input type="hidden" name="age" value="${userInfo.age}">
 				<input type="hidden" name="gender" value="${userInfo.gender}">
 				<input type="hidden" name="job" value="${userInfo.job}">
+				<input type="hidden" name="phoneNum" value="${userInfo.phoneNum}">
 				<input type="hidden" name="emailId" value="${userInfo.emailId }">
 				<input type="hidden" name="emailType" value="${userInfo.emailType }">
 				<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
@@ -525,8 +526,8 @@
 							</a>
 						</div>
 					</div>
-				</form>
-			</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </body>

@@ -24,4 +24,12 @@ public class UserInfo {
 	private String qtnd14repYn18;	// 흡연여부
 	private double qtnd11repVal10;	// 키
 	private double qtnd12repVal11;	// 몸무게
+	
+	// step4 checkbox
+	private int qtnd1repYn;
+	private int qtnd2repYn;
+	private int qtnd3repYn;
+	private int qtnd4repYn;
+	private int qtnd5repYn;
+	
 }

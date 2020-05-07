@@ -4,28 +4,34 @@
 <%@ include file="common/header.jsp" %>
 <link href="<c:url value="/resources/css/step2.css" />" rel="stylesheet"> 
 <link href="<c:url value="/resources/css/step4.css" />" rel="stylesheet"> 
-
-    <form id="tagForm" action="/step5" method="POST">
-    	<input type="hidden" name="birthday" value="${userInfo.birthday}">
-    	<input type="hidden" name="age" value="${userInfo.age}">
+	
+	<form id="tagForm" action="/step3" method="POST">
+		<input type="hidden" name="birthday" value="${userInfo.birthday}">
+		<input type="hidden" name="age" value="${userInfo.age}">
 		<input type="hidden" name="gender" value="${userInfo.gender}">
 		<input type="hidden" name="job" value="${userInfo.job}">
 		<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
 		<input type="hidden" name="planName" value="${planInfo.planName }">
 		<input type="hidden" name="totalPrice" value="${planInfo.totalPrice }">
 		<input type="hidden" id="selArcTrm" name="selArcTrm" value="${planInfo.selArcTrm }">
-  		<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="${planInfo.pymMtdCd }">
-		<input type="hidden" id="isDriving" name="qtnd10repYn6" value="">
-		<input type="hidden" id="isSmoking" name="qtnd14repYn18" value="">
-		<input type="hidden" id="isDrinking" name="qtnd14repYn17" value="">
-		<input type="hidden" id="stature" name="qtnd11repVal10" value="">
-		<input type="hidden" id="weight" name="qtnd12repVal11" value="">
-    </form>
+		<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="${planInfo.pymMtdCd }">
+	</form>
+	
     <div id="wrap" class="wrap_sub insurance">
     	<div id="container" class="step">
-            <%@ include file="common/subbar.jsp" %>
-            <div id="contents">
-                <form id="sForm" action="/step5" method="POST">
+			<form id="sForm" action="/step5" method="POST">
+				<input type="hidden" name="birthday" value="${userInfo.birthday}">
+				<input type="hidden" name="age" value="${userInfo.age}">
+				<input type="hidden" name="gender" value="${userInfo.gender}">
+				<input type="hidden" name="job" value="${userInfo.job}">
+				<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
+				<input type="hidden" name="planName" value="${planInfo.planName }">
+				<input type="hidden" name="totalPrice" value="${planInfo.totalPrice }">
+				<input type="hidden" id="selArcTrm" name="selArcTrm" value="${planInfo.selArcTrm }">
+				<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="${planInfo.pymMtdCd }">
+				
+	            <%@ include file="common/subbar.jsp" %>
+	            <div id="contents">
                     <div class="wrap_contents" style="min-height: 230px;padding-bottom: 126px;">
                         <div class="head_area">
                             <h3 class="h3_ttl">계약전 알릴 사항입니다.<br>
@@ -45,14 +51,14 @@
 												<br>의심소견, 치료, 입원, 수술(제왕절개 포함), 투약 받은 사실이 있습니까?</p>
 										</dt>
 										<dd class="ico_ox yes">
-											<label for="qtnd1repYn9_1" class="input_radio rad">
+											<label for="qtnd1repYn9_1" class="input_radio rad ${userInfo.qtnd1repYn == 1 ? 'chk_on' : '' }">
 												<input id="qtnd1repYn9_1" name="qtnd1repYn" class="dev_underWriting" type="radio" value="1">
 												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd1repYn9_2" class="input_radio rad">
-												<input id="qtnd1repYn9_2" name="qtnd1repYn" class="dev_underWriting" type="radio" value="0">
+											<label for="qtnd1repYn9_2" class="input_radio rad ${userInfo.qtnd1repYn == 2 ? 'chk_on' : '' }">
+												<input id="qtnd1repYn9_2" name="qtnd1repYn" class="dev_underWriting" type="radio" value="2">
 												<span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span> 
 											</label>
 										</dd>
@@ -68,14 +74,14 @@
 												<br>각성제(흥분제), 진통제를 상시 복용한 사실이 있습니까?</p>
 										</dt>
 										<dd class="ico_ox yes">
-											<label for="qtnd2repYn11_1" class="input_radio rad">
+											<label for="qtnd2repYn11_1" class="input_radio rad ${userInfo.qtnd2repYn == 1 ? 'chk_on' : '' }">
 												<input id="qtnd2repYn11_1" name="qtnd2repYn" class="dev_underWriting" type="radio" value="1">
 												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd2repYn11_2" class="input_radio rad">
-												<input id="qtnd2repYn11_2" name="qtnd2repYn" class="dev_underWriting" type="radio" value="0">
+											<label for="qtnd2repYn11_2" class="input_radio rad ${userInfo.qtnd2repYn == 2 ? 'chk_on' : '' }">
+												<input id="qtnd2repYn11_2" name="qtnd2repYn" class="dev_underWriting" type="radio" value="2">
 												<span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span>
 											</label>
 										</dd>
@@ -91,14 +97,14 @@
 												<br>추가검사(재검사)를 받은 사실이 있습니까?</p>
 										</dt>
 										<dd class="ico_ox yes">
-											<label for="qtnd3repYn12_1" class="input_radio rad">
+											<label for="qtnd3repYn12_1" class="input_radio rad ${userInfo.qtnd3repYn == 1 ? 'chk_on' : '' }">
 												<input id="qtnd3repYn12_1" name="qtnd3repYn" class="dev_underWriting" type="radio" value="1">
 												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd3repYn12_2" class="input_radio rad">
-												<input id="qtnd3repYn12_2" name="qtnd3repYn" class="dev_underWriting" type="radio" value="0">
+											<label for="qtnd3repYn12_2" class="input_radio rad ${userInfo.qtnd3repYn == 2 ? 'chk_on' : '' }">
+												<input id="qtnd3repYn12_2" name="qtnd3repYn" class="dev_underWriting" type="radio" value="2">
                                                 <span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span>
 											</label>
 										</dd>
@@ -114,14 +120,14 @@
 												<br>투약 받은 사실이 있습니까?</p>
 										</dt>
 										<dd class="ico_ox yes">
-											<label for="qtnd4repYn10_1" class="input_radio rad">
+											<label for="qtnd4repYn10_1" class="input_radio rad ${userInfo.qtnd4repYn == 1 ? 'chk_on' : '' }">
 												<input id="qtnd4repYn10_1" name="qtnd4repYn" class="dev_underWriting" type="radio" value="1">
 												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd4repYn10_2" class="input_radio rad">
-												<input id="qtnd4repYn10_2" name="qtnd4repYn" class="dev_underWriting" type="radio" value="0">
+											<label for="qtnd4repYn10_2" class="input_radio rad ${userInfo.qtnd4repYn == 2 ? 'chk_on' : '' }">
+												<input id="qtnd4repYn10_2" name="qtnd4repYn" class="dev_underWriting" type="radio" value="2">
 												<span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span>
 											</label>
 										</dd>
@@ -138,14 +144,14 @@
 												<br>투약 받은 사실이 있습니까?</p>
 										</dt>
 										<dd class="ico_ox yes">
-											<label for="qtnd5repYn3_1" class="input_radio rad">
+											<label for="qtnd5repYn3_1" class="input_radio rad ${userInfo.qtnd5repYn == 1 ? 'chk_on' : '' }">
 												<input id="qtnd5repYn3_1" name="qtnd5repYn" class="dev_underWriting" type="radio" value="1">
 												<span><i class="far fa-check-circle"></i><span class="hide_txt">예</span></span>
 											</label>
 										</dd>
 										<dd class="ico_ox no">
-											<label for="qtnd5repYn3_2" class="input_radio rad">
-												<input id="qtnd5repYn3_2" name="qtnd5repYn" class="dev_underWriting" type="radio" value="0">
+											<label for="qtnd5repYn3_2" class="input_radio rad ${userInfo.qtnd5repYn == 2 ? 'chk_on' : '' }">
+												<input id="qtnd5repYn3_2" name="qtnd5repYn" class="dev_underWriting" type="radio" value="2">
 												<span><i class="far fa-times-circle"></i><span class="hide_txt">아니오</span></span>
 											</label>
 										</dd>
@@ -168,13 +174,13 @@
 									<div class="box_bgg" id="driverInfo">
 										<ul class="label_horizental clfix">
 											<li>
-												<label for="qtnd10repYn6_1" class="input_radio rad">
+												<label for="qtnd10repYn6_1" class="input_radio rad ${userInfo.qtnd10repYn6 == 'Y' ?  'chk_on' : ''}">
 													<input name="qtnd10repYn6" type="radio" value="Y">
 													<span>운전</span>
 												</label>
 											</li>
 											<li>
-												<label for="qtnd10repYn6_2" class="input_radio rad">
+												<label for="qtnd10repYn6_2" class="input_radio rad ${userInfo.qtnd10repYn6 == 'N' ?  'chk_on' : ''}">
 													<input name="qtnd10repYn6" type="radio" value="N">
 													<span>운전안함</span>
 												</label>
@@ -202,7 +208,8 @@
 												</div>
 												<div class="tb_td_cell inp-box">
 													<span class="wrap_inp" style="width:150px;">
-														<input id="qtnd11repVal10" name="qtnd11repVal10" style="width: 150px;" class="txt_inp" type="text">
+														<input id="qtnd11repVal10" name="qtnd11repVal10" class="txt_inp" 
+															value="${userInfo.qtnd11repVal10 != 0.0 ? userInfo.qtnd11repVal10 : ''}" type="text" style="width: 150px;" >
 													</span>
 												</div>
 												<div class="tb_td_cell w50" style="margin-right: 80px;">
@@ -213,7 +220,8 @@
 												</div>
 												<div class="tb_td_cell inp-box">
 													<span class="wrap_inp" style="width:140px;">
-														<input id="qtnd12repVal11" name="qtnd12repVal11" style="width: 150px;" class="txt_inp" type="text">
+														<input id="qtnd12repVal11" name="qtnd12repVal11" class="txt_inp" 
+															value="${userInfo.qtnd12repVal11 != 0.0 ? userInfo.qtnd12repVal11 : ''}" type="text" style="width: 150px;">
 													</span>
 												</div>
 												<div class="tb_td_cell w50" style="margin-left: 10px;">
@@ -233,13 +241,13 @@
                                                 <div class="tb_td_cell inp-box">
 													<ul class="label_horizental clfix">
 														<li>
-															<label for="qtnd14repYn17_1" class="input_radio rad">
+															<label for="qtnd14repYn17_1" class="input_radio rad ${userInfo.qtnd14repYn17 == 'Y' ? 'chk_on' : ''}">
 																<input name="qtnd14repYn17" id="qtnd14repYn17_1" type="radio" value="Y">
 																<span>예</span>
 															</label>
 														</li>
 														<li>
-															<label for="qtnd14repYn17_2" class="input_radio rad">
+															<label for="qtnd14repYn17_2" class="input_radio rad ${userInfo.qtnd14repYn17 == 'N' ? 'chk_on' : ''}">
 																<input name="qtnd14repYn17" id="qtnd14repYn17_2" type="radio" value="N">
 																<span>아니오</span>
 															</label>
@@ -257,13 +265,13 @@
 												<div class="tb_td_cell inp-box">
 													<ul class="label_horizental clfix">
 														<li>
-															<label for="qtnd14repYn17_3" class="input_radio rad">
+															<label for="qtnd14repYn17_3" class="input_radio rad ${userInfo.qtnd14repYn18 == 'Y' ? 'chk_on' : ''}">
 																<input id="qtnd14repYn17_3" name="qtnd14repYn18" type="radio" value="Y">
 																<span>예</span>
 															</label>
 														</li>
 														<li>
-															<label for="qtnd14repYn17_4" class="input_radio rad">
+															<label for="qtnd14repYn17_4" class="input_radio rad ${userInfo.qtnd14repYn18 == 'N' ? 'chk_on' : ''}">
 																<input id="qtnd14repYn17_4" name="qtnd14repYn18" type="radio" value="N">
 																<span>아니오</span>
 															</label>
@@ -344,14 +352,22 @@
 	                        </div>
 	                    </div>
 	                </div>
-                </form>
-            </div>
+           		 </div>
+        	</form>
         </div>
-    </div>
+	</div>
 </body>
 </html>
 <script>
-	$("#notOblLayer").hide();
+	$(function () {
+		$("#notOblLayer").hide();
+		
+		$(".input_radio.rad").each(function (i, item) {
+			if($(item).hasClass("chk_on"))
+				$(item).children("input").attr("checked", "checked");
+		});
+	});
+	
    	
 	var $stature = $("#sForm input[name=qtnd11repVal10]");
 	var $weight = $("#sForm input[name=qtnd12repVal11]");
@@ -360,21 +376,17 @@
 	$(".btn_foot a").click(function() {
 	    	
     	var isNext = $(this).hasClass("btn_next");
-    	
+    /* 	
 	   	var isDriving = $("#sForm input[name=qtnd10repYn6]:checked").val();
 	   	var isSmoking = $("#sForm input[name=qtnd14repYn18]:checked").val();
 	   	var isDrinking = $("#sForm input[name=qtnd14repYn17]:checked").val();
-	   	var stature = $("#sForm input[name=qtnd11repVal10]").val();
-	   	var weight = $("#sForm input[name=qtnd12repVal11]").val();
-
-	   	$("#isDriving").val(isDriving);
-    	$("#isSmoking").val(isSmoking);
-    	$("#isDrinking").val(isDrinking);
-    	$("#stature").val(stature);
-    	$("#weight").val(weight);
-    	
+ */
     	if(isNext) {
     		
+		/*    	$("#isDriving").val(isDriving);
+	    	$("#isSmoking").val(isSmoking);
+	    	$("#isDrinking").val(isDrinking); */
+	    	
     		// yes에 체크되어 있는 경우
     		if($(".ico_ox.yes label").hasClass("chk_on")) {
     			$("#notOblLayer").show();
@@ -401,6 +413,7 @@
     			$(this).focus();
 
     			return false;
+    			
     		} else $("#elb_notice_chk02").hide();
 
     		// 키 입력 여부
@@ -447,12 +460,11 @@
     			$(this).focus();
 
     			return false;
-    		} else 
-    			$("#elb_notice_chk04").hide();
+    		} 
     		
-    		$("#tagForm").submit();
+    		$("#sForm").submit();
     	} else {
-    		$("#tagForm").attr({"action":"/step3"}).submit();
+    		$("#tagForm").submit();
     	}
     });
 	

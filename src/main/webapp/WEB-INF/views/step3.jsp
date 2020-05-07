@@ -11,10 +11,10 @@
 		<input type="hidden" name="gender" value="${userInfo.gender}">
 		<input type="hidden" name="job" value="${userInfo.job}">
 		<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
-		<input type="hidden" id="planName" name="planName" value="">
-		<input type="hidden" id="totalPrice" name="totalPrice" value="">
-		<input type="hidden" id="selArcTrm" name="selArcTrm" value="">
-  		<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="">
+		<input type="hidden" id="planName" name="planName" value="${planInfo.planName }">
+		<input type="hidden" id="totalPrice" name="totalPrice" value="${planInfo.totalPrice }">
+		<input type="hidden" id="selArcTrm" name="selArcTrm" value="${planInfo.selArcTrm }">
+  		<input type="hidden" id="pymMtdCd" name="pymMtdCd" value="${planInfo.pymMtdCd }">
     </form>
     <div id="wrap" class="wrap_sub insurance">
     	<div id="container" class="step">

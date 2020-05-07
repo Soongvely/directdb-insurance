@@ -121,7 +121,7 @@
 	                <div class="wrap_cont_sc">
 	                    <div class="wrap_pop_cont">
 	                        <div class="wrap_sc_box note_join_list">
-	                            <ol style="padding-left: 12px;">
+	                            <ol style="padding-left: 12px; list-style: decimal;">
 	                                <li>보험계약을 체결하기 전에 보험약관 및 상품설명서를 반드시 확인하시기 바랍니다.</li>
 	                                <li>기존에 체결했던 보험계약을 해지하고 다른 보험계약을 체결하는 경우 보험인수조건이 변경되거나 보험료가 인상될 수 있으며 보장내용이
 	                                    달라질 수 있으니 사전에 충분히 확인하시기 바랍니다.</li>

@@ -41,7 +41,7 @@
 		        <div class="wrap_contents clfix" style="min-height: 199px; padding-bottom: 126px; margin-left: 35px;">
 		            <div class="box_bg_cont m500">
 		                <div class="box_info_form all complete">
-		                    <h5 class="h5_ttl"><span class="txt_green">이숭숭 </span>고객님, 감사합니다.</h5>
+		                    <h5 class="h5_ttl"><span class="txt_green">${userInfo.custNm } </span>고객님, 감사합니다.</h5>
 		                    <dl class="result_complete">
 		                        <dt><strong class="txt_gray4"><span class="txt_green">다이렉트 암보험</span><br>가입이 완료되었습니다.</strong></dt>
 		                    </dl>
@@ -52,9 +52,9 @@
 		                        <p>기타 문의 사항은 온라인 고객지원센터<span class="txt_green"> ☎ 1600-0100</span> 으로<br>연락주시기 바랍니다.</p>
 		                    </div>
 		                </div>
-		               <div class="btn_home" style="display: table; bottom: 0px; margin: 70px 0 0 205px;">
+		               <div class="btn_home" style="display: table; bottom: 0px; margin: 40px 0 0 205px;">
 		                    <a href="https://www.directdb.co.kr/main.do" id="btnHome" class="btns btn_next">
-		                        <span>홈 화면으로 이동</span>
+		                        <span>메인으로 이동</span>
 		                    </a>
 		                </div>
 		            </div>
