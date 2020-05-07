@@ -27,22 +27,25 @@ public class InsuranceController {
 	public String step2(Model model, UserInfo userInfo) {
 		
 		// 만 나이 계산
-		int birthYear = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(0, 4));
-		int birthMonth = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(4, 6));
-		int birthDay = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(6, 8));
-		
-	     Calendar current = Calendar.getInstance();
-	     int currentYear  = current.get(Calendar.YEAR);
-	     int currentMonth = current.get(Calendar.MONTH) + 1;
-	     int currentDay   = current.get(Calendar.DAY_OF_MONTH);
-	   
-	     int age = currentYear - birthYear;
-	     
-	     // 생일 안 지난 경우 -1
-	     if (birthMonth * 100 + birthDay > currentMonth * 100 + currentDay) 
-	         age--;
-	     
-	     userInfo.setAge(age);
+		if(userInfo.getBirthday() != 0) {
+			int birthYear = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(0, 4));
+			int birthMonth = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(4, 6));
+			int birthDay = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(6, 8));
+			
+			
+			Calendar current = Calendar.getInstance();
+			int currentYear  = current.get(Calendar.YEAR);
+			int currentMonth = current.get(Calendar.MONTH) + 1;
+			int currentDay   = current.get(Calendar.DAY_OF_MONTH);
+			
+			int age = currentYear - birthYear;
+			
+			// 생일 안 지난 경우 -1
+			if (birthMonth * 100 + birthDay > currentMonth * 100 + currentDay) 
+				age--;
+			
+			userInfo.setAge(age);
+		}
 	     model.addAttribute("userInfo", userInfo);
 		
 		return "step2";
@@ -76,9 +79,7 @@ public class InsuranceController {
 	@PostMapping("/step5")
 	public String step5(Model model, UserInfo userInfo, PlanInfo planInfo) {
 		
-		model.addAttribute("userInfo", userInfo);
-		model.addAttribute("planInfo", planInfo);
-		
+
 		return "step5";
 	}
 	

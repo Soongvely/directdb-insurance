@@ -28,6 +28,9 @@
 	        <li>
 	            <p class="step_ttl">3. 피보험자/계약자 정보</p>
 	            <ul id="email">
+                   	<li>
+                    	<p class="step_ctt">- 연락처 : <span id="newPhone">${userInfo.phoneNum }</span></p>
+                   	</li>
                     <li>
                     	<p class="step_ctt">- 이메일 : <span id="newEmailId">${userInfo.emailId }</span>@${userInfo.emailType }</p>
                    	</li>
@@ -43,30 +46,48 @@
 	    <div id="cocmDiv" class="mgt20"></div>
 	</div>
 <script>
-/* 	var newEmailId = $("#emailId").text().substr(0, $("#emailId").text().length / 2);
-	var lastEmailId = $("#emailId").text().substr($("#emailId").text().length / 2);
-	newEmailId + '***' + lastEmailId; */
-	
-	// 고객명 표시
+	// 고객명 일부 표시
     var userName = $("#userName").data("username");
     $("#userName").text(userName.replace(userName.substr(1,1), '*'));
 	
+    // 고객 연락처 & 이메일 일부 표시
+    var phoneNum = $("#newPhone").text().split("-");
+    var emailId = $("#newEmailId").text();
+    
+    var phoneStar = '';
+    var emailIdStar = '';
+    
+    for (var i = 0; i < phoneNum[2].length; i ++) {
+    	phoneStar += '*';
+    }
+    for (var i = 3; i <= emailId.length; i ++) {
+    	emailIdStar += '*';
+    }
+    
+	$("#newPhone").text(phoneNum[0] + "-" + phoneStar + "-" + phoneNum[2]);
+	$("#newEmailId").text(emailId.substr(0, 3) + emailIdStar);
+    
+	/****************** url에 따라 step 과정 표시 ******************/
 	var step = window.location.href.substr(17); 
 	
-	if (step == 'step7' || step == 'step7#') {
+	// 선택한 플랜
+	if (step.indexOf("step2") != -1 || step.indexOf("step3") != -1) 
+		$("#selectPlan").hide();
+	else 
+		$("#selectPlan").show();
+	
+	// 고객명, 고객 기본 정보	
+	if (step.indexOf("step7") != -1) {
 		$("#userName").show();
-		$("#email").show();
 		$("#userInfo").hide();	
 	}
 	else {
 		$("#userInfo").show();		
 		$("#userName").hide();
-		$("#email").hide();
 	}
 	
-	if (step == 'step2' || step == 'step3' || step == 'step2#' || step == 'step3#') 
-		$("#selectPlan").hide();
-	else 
-		$("#selectPlan").show();
-		
+	// 고객 연락처 & 이메일
+	if (step.indexOf("step7") != -1 || step.indexOf("step6") != -1) {
+		$("#email").show();
+	}
 </script>	

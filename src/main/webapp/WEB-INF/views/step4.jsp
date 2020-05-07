@@ -320,7 +320,7 @@
                         </div>
 					</div>
 					<!-- 인수불가 팝업 창-->
-					<div id="notOblLayer" class="wrap_popup" style="z-index: 215;left: 250px;top: 80px;position: absolute;display: block;">
+					<div id="notOblLayer" class="wrap_popup" style="z-index: 215;left: 250px;top: 80px;position: absolute;display: none;">
 	                    <div style="display: block; z-index: 214;" class="dimm"></div>
 	                    <div class="wrap_container w600" tabindex="0" style="z-index: 215; margin-left: 0px; top: 0px; left: 0px; position: relative;">
 	                        <div class="wrap_pop">
@@ -360,8 +360,6 @@
 </html>
 <script>
 	$(function () {
-		$("#notOblLayer").hide();
-		
 		$(".input_radio.rad").each(function (i, item) {
 			if($(item).hasClass("chk_on"))
 				$(item).children("input").attr("checked", "checked");
