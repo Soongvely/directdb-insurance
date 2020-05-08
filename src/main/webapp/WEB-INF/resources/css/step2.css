@@ -70,7 +70,6 @@
         background-color: #fff;
         text-align: left;
     }
-    
     .wrap_kind_select li.on a {
         z-index: 2;
         padding: 49px 0 49px 102px;
@@ -107,6 +106,9 @@
     .process_step li li {
 	    padding: 0;
    		font-size: 12px;
+	}
+	.step_ctt span {
+		font-size: 12px;
 	}
     .wrap_cancer {
         margin: 0 70px;

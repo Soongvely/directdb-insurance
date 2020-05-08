@@ -28,7 +28,6 @@
 					<input type="hidden" id="isSmoking" name="qtnd14repYn18" value="${userInfo.qtnd14repYn18}">
 					<input type="hidden" id="stature" name="qtnd11repVal10" value="${userInfo.qtnd11repVal10}">
 					<input type="hidden" id="weight" name="qtnd12repVal11" value="${userInfo.qtnd12repVal11}">
-					
 					<input type="hidden" id="chk1" name="qtnd1repYn" value="${userInfo.qtnd1repYn}">
 					<input type="hidden" id="chk2" name="qtnd2repYn" value="${userInfo.qtnd2repYn}">
 					<input type="hidden" id="chk3" name="qtnd3repYn" value="${userInfo.qtnd3repYn}">
@@ -115,8 +114,7 @@
                                         <p>보험증권 및 약관 전송 시 사용되오니, 정확히 입력해 주세요.</p>
                                         <p id="elb_email">
                                             <p id="email-error" class="error_txt hidden" style="display: block;">
-                                                <i class="fas fa-exclamation-circle"></i>
-                                                이메일을 정확히 입력해 주세요.
+                                                <i class="fas fa-exclamation-circle"></i> 이메일을 정확히 입력해 주세요.
                                             </p>
                                         </p>
                                     </dd>
@@ -129,17 +127,13 @@
                                         <label for="plyIseTpcd1" class="input_radio rad ">
                                             <input id="plyIseTpcd1" name="plyIseTpcd" checked="checked" type="radio"
                                                 value="04">
-                                            <span>
-                                                <span>휴대폰/이메일</span>
-                                            </span>
+                                            <span><span>휴대폰/이메일</span></span>
                                         </label>
                                     </li>
                                     <li>
                                         <label for="plyIseTpcd2" class="input_radio rad">
                                             <input id="plyIseTpcd2" name="plyIseTpcd" type="radio" value="01">
-                                            <span>
-                                                <span>우편</span>
-                                            </span>
+                                            <span><span>우편</span></span>
                                         </label>
                                     </li>
                                 </ul>
@@ -152,17 +146,13 @@
                                         <label for="realOwnrYn1" class="input_radio rad">
                                             <input id="realOwnrYn1" name="realOwnrYn" type="radio" value="1"
                                                 checked="checked">
-                                            <span>
-                                                <span>예</span>
-                                            </span>
+                                            <span><span>예</span></span>
                                         </label>
                                     </li>
                                     <li>
                                         <label for="realOwnrYn2" class="input_radio rad">
                                             <input id="realOwnrYn2" name="realOwnrYn" type="radio" value="0">
-                                            <span>
-                                                <span>아니오</span>
-                                            </span>
+                                            <span><span>아니오</span></span>
                                         </label>
                                     </li>
                                 </ul>
@@ -178,9 +168,7 @@
                                         <br>보험가입 후 직업이 변경되는 경우 반드시 고객센터를 통해서 알려주셔야 합니다.</strong></span>
                                 <label for="jobChk01" class="input_checkbox chk">
                                     <input type="checkbox" id="jobChk01" name="jobChk01">
-                                    <span>
-                                        <span>동의</span>
-                                    </span>
+                                    <span><span>동의</span></span>
                                 </label>
                             </div>
                             <div class="add_comment">
@@ -214,27 +202,28 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- ************************ btn_foot **************************** -->
+                        <!-- s:btn_foot -->
                         <div class="btn_foot" style="display: table; bottom: 0px; margin-top: 63px;">
                             <a href="#" class="btns btn_pre">
                                 <i class="fas fa-chevron-left"></i>
                                 <span>이전</span>
                             </a>
-                            <!--.btn_active :: 활성화 클래스-->
                             <a href="#" class="btns btn_next btn_active">
                                 <span>다음</span>
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </div>
-                        <!-- ************************ btn_end **************************** -->
+                        <!-- e:btn_foot -->
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </body>
+</html>
 <script>
 	$(function () {
+		
 		var registNum1 = $("input[name=birthday]").val();
 		$("#registNum1").val(registNum1.substring(2));
 	});
@@ -258,6 +247,7 @@
 	
 	        if ($name.val() != '' && $registNum2.val().length < 6) {
 	            alert("주민번호 뒤 6자리를 정확히 입력해주세요.");
+	            
 	            $registNum2.focus();
 	            
 	            return false;
@@ -295,7 +285,6 @@
 			
 	        // 실제 계약자 여부 버튼
 	        if ($("input[name=realOwnrYn]").val() == 0) {
-	        	
 	        	$("input[name=realOwnrYn]").focus();
 	        	
 	        	return false;
@@ -313,9 +302,8 @@
 	            $("#elb_confirm").removeClass("hidden");
 	            
 	            return false;
-	        } else {
+	        } else 
 	            $("#elb_confirm").addClass("hidden");
-	        }
     		
     		$("#sForm").submit();
     	} else 
@@ -344,6 +332,7 @@
 
     // 핸드폰번호 하이픈 추가
     $("#phoneNum").on("keyup", function () {
+    	
         $(this).val(
             $(this).val().replace(/[^0-9]/g, "")
             .replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})/, "$1-$2-$3")
@@ -352,10 +341,10 @@
 
     // 핸드폰번호 예외처리    
     $("#phoneNum").blur(function () {
+    	
         if ($(this).val().trim().length < 12 || $(this).val().trim().length > 13) {
             $("#clpNo-error").removeClass("hidden");
             $(this).addClass("error_txt");
-
         } else {
             $("#clpNo-error").addClass("hidden");
             $(this).removeClass("error_txt");
@@ -364,6 +353,7 @@
 
     // 이메일 예외처리
     $("#emailId").blur(function () {
+    	
         if ($(this).val() == '') {
             $("#email-error").removeClass("hidden");
             $(this).addClass("error_txt");
@@ -373,26 +363,15 @@
         }
     });
 
-   /*  $("#emailType").change(function () {
-        if ($(this).val() == '') {
-            $("#email-error").removeClass("hidden");
-            $(this).addClass("error_txt");
-        } else {
-            $("#email-error").addClass("hidden");
-            $(this).removeClass("error_txt");
-        }
-    }); */
-
     // 이메일 도메인 change 이벤트
     $("#domain").change(function () {
         
         var $domain = $("#domain option:selected").text();
 
-        if ($("#domain option:selected").val() == 99) {
-           $("#emailType").val('');
-        } else {
-            $("#emailType").val($domain);
-        }
+        if ($("#domain option:selected").val() == 99)
+        	$("#emailType").val('');
+        else 
+        	$("#emailType").val($domain);
         
         if ($(this).val() == '') {
             $("#email-error").removeClass("hidden");
@@ -405,11 +384,11 @@
 
     // radio 버튼 예외처리
     $("input[name=realOwnrYn]").change(function () {
-        if ($("input[name=realOwnrYn]:checked").val() == 0) {
+    	
+        if ($("input[name=realOwnrYn]:checked").val() == 0) 
             $("#realOwnrYn-error").removeClass("hidden");
-        } else {
+        else 
             $("#realOwnrYn-error").addClass("hidden");
-        }
     });
+    
 </script>
-</html>

@@ -10,7 +10,7 @@
 	        <li style="padding: 20px 10px 20px 0;">
 	            <p class="step_ttl">1. 고객정보 </p>
 	            <p class="step_ctt" id="userInfo" data-age="${userInfo.age }">- 만 ${userInfo.age }세 / ${userInfo.gender == "1" ? "남자" : "여자"}</p>
-	            <p class="step_ctt">- <span id="userName" style="font-size: 12px;" data-username="${userInfo.custNm }"></span> (만 ${userInfo.age }세)
+	            <p class="step_ctt">- <span id="userName" data-username="${userInfo.custNm }"></span> (만 ${userInfo.age }세)
 	            </p>
 	            <p class="step_ctt" id="userJob" data-jobcd="${userInfo.jobCd}">- 직업 : ${userInfo.job }</p>
 	        </li>
@@ -46,32 +46,16 @@
 	    <div id="cocmDiv" class="mgt20"></div>
 	</div>
 <script>
+
 	// 고객명 일부 표시
     var userName = $("#userName").data("username");
     $("#userName").text(userName.replace(userName.substr(1,1), '*'));
 	
-    // 고객 연락처 & 이메일 일부 표시
-    var phoneNum = $("#newPhone").text().split("-");
-    var emailId = $("#newEmailId").text();
-    
-    var phoneStar = '';
-    var emailIdStar = '';
-    
-    for (var i = 0; i < phoneNum[2].length; i ++) {
-    	phoneStar += '*';
-    }
-    for (var i = 3; i <= emailId.length; i ++) {
-    	emailIdStar += '*';
-    }
-    
-	$("#newPhone").text(phoneNum[0] + "-" + phoneStar + "-" + phoneNum[2]);
-	$("#newEmailId").text(emailId.substr(0, 3) + emailIdStar);
-    
-	/****************** url에 따라 step 과정 표시 ******************/
+	/****************** 각 step에 고객 정보 표시 ******************/
 	var step = window.location.href.substr(17); 
 	
 	// 선택한 플랜
-	if (step.indexOf("step2") != -1 || step.indexOf("step3") != -1) 
+	if (step.indexOf("step2") == 0 || step.indexOf("step3") == 0) 
 		$("#selectPlan").hide();
 	else 
 		$("#selectPlan").show();
@@ -86,8 +70,27 @@
 		$("#userName").hide();
 	}
 	
-	// 고객 연락처 & 이메일
-	if (step.indexOf("step7") != -1 || step.indexOf("step6") != -1) {
+	// 고객 연락처, 이메일 표시
+	if (step.indexOf("step7") == 0 || step.indexOf("step6") == 0) {
+		
+	    var phoneNum = $("#newPhone").text().split("-");
+	    var emailId = $("#newEmailId").text();
+	    
+	    var phoneStar = '';
+	    var emailIdStar = '';
+	    
+	    for (var i = 0; i < phoneNum[2].length; i ++) {
+	    	phoneStar += '*';
+	    }
+	    for (var i = 3; i <= emailId.length; i ++) {
+	    	emailIdStar += '*';
+	    }
+	    
+		$("#newPhone").text(phoneNum[0] + "-" + phoneStar + "-" + phoneNum[2]);
+		$("#newEmailId").text(emailId.substr(0, 3) + emailIdStar);
+		
 		$("#email").show();
-	}
+	} else 
+		$("#email").hide();
+	
 </script>	

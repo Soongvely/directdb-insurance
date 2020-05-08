@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>DB 손해보험</title>
+    <title>DB 손해보험 다이렉트</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,7 +31,7 @@
 		    <div class="wrap_header">
 		        <div class="main_logo">
 		            <a href="/main">
-		                <img src="/resources/img/동부.png" style="width: 200px; height: 35px;" />
+		                <img src="/resources/img/동부.png" style="width: 200px; height: 35px;"/>
 		            </a>
 		        </div>
 		    </div>

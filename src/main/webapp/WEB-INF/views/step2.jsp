@@ -4,13 +4,13 @@
 <%@ include file="common/header.jsp" %>
 <link href="<c:url value="/resources/css/step2.css" />" rel="stylesheet"> 
      
-	<form id="tagForm" action="/step3" method="POST">
-		<input type="hidden" name="birthday" value="${userInfo.birthday}">
-		<input type="hidden" name="age" value="${userInfo.age}">
-		<input type="hidden" name="gender" value="${userInfo.gender}">
-		<input type="hidden" name="job" value="${userInfo.job}">
-		<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
-	</form>
+		<form id="tagForm" action="/step3" method="POST">
+			<input type="hidden" name="birthday" value="${userInfo.birthday}">
+			<input type="hidden" name="age" value="${userInfo.age}">
+			<input type="hidden" name="gender" value="${userInfo.gender}">
+			<input type="hidden" name="job" value="${userInfo.job}">
+			<input type="hidden" id="jobCd" name="jobCd" value="${userInfo.jobCd }">
+		</form>
         <div id="wrap" class="wrap_sub insurance">
 	    	<div id="container" class="step">
 		        <%@ include file="common/subbar.jsp" %>
@@ -43,6 +43,7 @@
 	                            </li>
 	                        </ul>
 	                    </div>
+	                    <!-- s:btn_foot -->
 	                    <div class="btn_foot" style="display: table; bottom: 0px;">
 	                        <a href="#" class="btns btn_pre">
 	                            <i class="fas fa-chevron-left"></i>
@@ -53,6 +54,7 @@
 	                            <i class="fas fa-chevron-right"></i>
 	                        </a>
 	                    </div>
+	                    <!-- e:btn_foot -->
 	                </div>
 		        </div>
 		    </div>
@@ -79,5 +81,6 @@
     	}
     	
     });
+    
 </script>
 </html>

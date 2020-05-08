@@ -32,7 +32,7 @@
                             <div class="plan_txt_box">
                                 <strong>플랜과 보험기간, 납입기간, 납입주기를 선택해 주세요.</strong>
                             </div>
-                            <div class="plan_select ui_plan_select">
+                            <ul class="plan_select ui_plan_select">
                                 <li class="plan_name" style="overflow: initial;">
                                     <dl>
                                         <dt>
@@ -407,8 +407,8 @@
                                         </dd>
                                     </dl>
                                 </li>
+                                <!-- 플랜선택시 class : on -->
                                 <li class="plan02 fixed on">
-                                    <!-- 플랜선택시 class : on -->
                                     <dl>
                                         <dt>
                                             <span class="best"></span>
@@ -689,8 +689,8 @@
                                         </dd>
                                     </dl>
                                 </li>
+                                <!-- 플랜선택시 class : on -->
                                 <li class="plan03">
-                                    <!-- 플랜선택시 class : on -->
                                     <dl>
                                         <dt>
                                             <div>
@@ -973,7 +973,7 @@
                                         </dd>
                                     </dl>
                                 </li>
-                            </div>
+                            </ul>
                             <div class="plan_total ui_plan_slider">
                                 <!--선택 갯수에 따라 2개일때 plan_num02 ~ 6개일때 plan_num06까지-->
                                 <input type="hidden" id="arcTrmCd" name="arcTrmCd" value="Y010">
@@ -1038,19 +1038,18 @@
                                 <!--e:다시 계산 영역-->
                             </div>
                         </div>
-                        <!-- ************************ btn_foot **************************** -->
+                        <!-- s:btn_foot -->
                         <div class="btn_foot" style="display: table; bottom: 0px; margin-top: 63px;">
                             <a href="#" class="btns btn_pre">
                                 <i class="fas fa-chevron-left"></i>
                                 <span>이전</span>
                             </a>
-                            <!--.btn_active :: 활성화 클래스-->
                             <a href="#" class="btns btn_next btn_active">
                                 <span>다음</span>
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </div>
-                        <!-- ************************ btn_end **************************** -->
+                        <!-- e:btn_foot -->
                     </div>
                 </form>
             </div>
@@ -1140,9 +1139,8 @@
 				else if (age >= 30) 
 					 $(price).data("default", smPrm + 4800 + thirty);
 				
-				if (jobCd == 'risk') {
+				if (jobCd == 'risk') 
 					 $(price).data("default", $(price).data("default") + 1700);				
-				}
 				
 				$(price).text(numberWithCommas($(price).data("default")) + " 원");			
 			});
@@ -1207,12 +1205,14 @@
 	
 	// 납입기간에 따른 보험료 계산
 	$("input[name=selArcTrm]").change(function () {
+		
 		 outputPrice2();
 		 eachPrice();
 	});
 	
 	// 납입주기에 따른 보험료 계산
 	$("input[name=pymMtdCd]").change(function () {		
+		
 		if($("input[name=pymMtdCd]:checked").val() == '월납')
 			$("#totPrmPymMtdTxt").text("월 보험료");
 	 	else 
@@ -1252,4 +1252,5 @@
     		$("#tagForm").attr({"action":"/step2"}).submit();
     	}
     });
+	
 </script>

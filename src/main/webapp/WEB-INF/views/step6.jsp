@@ -169,18 +169,14 @@
 													<label for="persCollectAgree1" class="input_radio rad">
 														<input id="persSrchAgree1" name="persSrchAgree1" type="radio"
 															value="Y" class="vaild">
-														<span>
-															<em>동의</em>
-														</span>
+														<span><em>동의</em></span>
 													</label>
 												</li>
 												<li>
 													<label for="persCollectAgree2" class="input_radio rad">
 														<input id="persCollectAgree2" name="persSrchAgree1" type="radio"
 															value="N">
-														<span>
-															<em>비동의</em>
-														</span>
+														<span><em>비동의</em></span>
 													</label>
 												</li>
 											</ul>
@@ -243,8 +239,7 @@
 																<dt>⊙ 조회동의 유효 기간 및 조회자(제공받는 자)의 개인(신용)정보의 보유•이용 기간</dt>
 																<dd>
 																	<ul class="dash_list">
-																		<li><strong class="txt15">동의일로부터 보험계약의
-																				청약시까지(최대1년)</strong></li>
+																		<li><strong class="txt15">동의일로부터 보험계약의 청약시까지(최대1년)</strong></li>
 																	</ul>
 																</dd>
 															</dl>
@@ -304,18 +299,14 @@
 													<label for="persSrchAgree1" class="input_radio rad">
 														<input id="persSrchAgree1" name="persSrchAgree2" type="radio"
 															value="Y" class="vaild">
-														<span>
-															<em>동의</em>
-														</span>
+														<span><em>동의</em></span>
 													</label>
 												</li>
 												<li>
 													<label for="persSrchAgree2" class="input_radio rad">
 														<input id="persCollectAgree2" name="persSrchAgree2" type="radio"
 															value="N">
-														<span>
-															<em>비동의</em>
-														</span>
+														<span><em>비동의</em></span>
 													</label>
 												</li>
 											</ul>
@@ -385,8 +376,7 @@
 																<dt>⊙ 제공받는 자의 개인(신용)정보 보유 • 이용기간</dt>
 																<dd>
 																	<ul class="dash_list">
-																		<li><strong class="txt15">수집 • 이용 동의일로부터
-																				1년까지</strong></li>
+																		<li><strong class="txt15">수집 • 이용 동의일로부터 1년까지</strong></li>
 																	</ul>
 																</dd>
 															</dl>
@@ -479,18 +469,14 @@
 													<label for="persOfferAgree1" class="input_radio rad">
 														<input id="persSrchAgree1" name="persSrchAgree3" type="radio"
 															value="Y" class="vaild">
-														<span>
-															<em>동의</em>
-														</span>
+														<span><em>동의</em></span>
 													</label>
 												</li>
 												<li>
 													<label for="persOfferAgree2" class="input_radio rad">
 														<input id="persCollectAgree2" name="persSrchAgree3" type="radio"
 															value="0">
-														<span>
-															<em>비동의</em>
-														</span>
+														<span><em>비동의</em></span>
 													</label>
 												</li>
 											</ul>
@@ -513,25 +499,24 @@
 								</div>
 							</div>
 						</div>
-						<!-- btn_foot star-->
+						<!-- s:btn_foot -->
 						<div class="btn_foot" style="display: table; bottom: 0px; margin-top: 63px;">
 							<a href="#" class="btns btn_pre">
 								<i class="fas fa-chevron-left"></i>
 								<span>이전</span>
 							</a>
-							<!--.btn_active :: 활성화 클래스-->
 							<a href="#" class="btns btn_next btn_active">
 								<span>다음</span>
 								<i class="fas fa-chevron-right"></i>
 							</a>
 						</div>
+						<!-- e:btn_foot -->
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
 </body>
-
 </html>
 <script>
 	$(".error_txt").hide();
@@ -563,12 +548,14 @@
 
 	// 이용약관 전체동의 체크 이벤트
 	$(".all_agree button").click(function () {
+		
 		$(".vaild").prop("checked", true);
 		$(".vaild").parent().addClass("chk_on");
 	});
 
 	// 이용약관 체크 이벤트
 	$(".input_radio input").click(function () {
+		
 		var radios = $("input:radio[value='Y']");
 
 		for (var i = 0; i < radios.length; i++) {
@@ -577,7 +564,6 @@
 			if ($this.prop("checked") == true) {
 				$this.parents("ul").find("label").removeClass("chk_on");
 				$this.parent().addClass("chk_on");
-
 				$this.parents("dd").find(".error_txt").hide();
 			} else {
 				$this.parents("ul").find("label").removeClass("chk_on");
@@ -585,4 +571,5 @@
 			}
 		}
 	});
+	
 </script>

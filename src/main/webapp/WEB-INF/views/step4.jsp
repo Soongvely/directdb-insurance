@@ -360,12 +360,14 @@
 </html>
 <script>
 	$(function () {
+		
+		// 체크박스 checked == .chk_on
 		$(".input_radio.rad").each(function (i, item) {
+			
 			if($(item).hasClass("chk_on"))
 				$(item).children("input").attr("checked", "checked");
 		});
 	});
-	
    	
 	var $stature = $("#sForm input[name=qtnd11repVal10]");
 	var $weight = $("#sForm input[name=qtnd12repVal11]");
@@ -374,17 +376,8 @@
 	$(".btn_foot a").click(function() {
 	    	
     	var isNext = $(this).hasClass("btn_next");
-    /* 	
-	   	var isDriving = $("#sForm input[name=qtnd10repYn6]:checked").val();
-	   	var isSmoking = $("#sForm input[name=qtnd14repYn18]:checked").val();
-	   	var isDrinking = $("#sForm input[name=qtnd14repYn17]:checked").val();
- */
     	if(isNext) {
     		
-		/*    	$("#isDriving").val(isDriving);
-	    	$("#isSmoking").val(isSmoking);
-	    	$("#isDrinking").val(isDrinking); */
-	    	
     		// yes에 체크되어 있는 경우
     		if($(".ico_ox.yes label").hasClass("chk_on")) {
     			$("#notOblLayer").show();
@@ -393,8 +386,10 @@
     		// OX 체크가 안돼있는 경우
     		var isChecked = true;
     		$(".ico_ox.no input").each((i, item) => {
+    			
     			if(!$(item).is(":checked")) {
     				$("#elb_notice_chk01").show();
+    				
     				$(item).focus();
     				
     				isChecked = false;
@@ -408,6 +403,7 @@
     		// 운전여부 체크 여부
     		if ($("#driverInfo input[name='qtnd10repYn6']").is(":checked") == false) {
     			$("#elb_notice_chk02").show();
+    			
     			$(this).focus();
 
     			return false;
@@ -436,8 +432,8 @@
     		
     		// 음주여부 체크 여부
     		if ($("#sForm input[name=qtnd14repYn17]").is(":checked") == false) {
-    			
     			$("#elb_qtnd11A13").show();
+    			
     			$(this).focus();
 
     			return false;
@@ -445,8 +441,8 @@
     		
     		// 흡연여부 체크 여부
     		if ($("#sForm input[name=qtnd14repYn18]").is(":checked") == false) {
-    			
     			$("#elb_qtnd11A14").show();
+    			
     			$(this).focus();
 
     			return false;
@@ -455,6 +451,7 @@
     		// 확인란 체크 여부
     		if ($("#notice_chk01").prop("checked") == false) {
     			$("#elb_notice_chk04").show();
+    			
     			$(this).focus();
 
     			return false;
@@ -469,14 +466,15 @@
 	/***************** 체크란 입력 시 에러메세지 숨기기 *******************/
 	// 1. 운전 여부
 	$("#driverInfo input[name='qtnd10repYn6']").click(function() {
+		
 		if($(this).prop("checked") == true) 
 			$("#elb_notice_chk02").hide();
-		
 	});
 
 	// 2-1. 키 입력 여부
 	$stature.keyup(function () {
-		if ($stature.val() != '') {
+		
+		if($stature.val() != '') {
 			$("#elb_qtnd11A12").hide();
 			$stature.removeClass("error_txt");
 		}
@@ -484,7 +482,8 @@
 	
 	// 2-2. 몸무게 입력 여부
 	 $weight.keyup(function () {
-		if ( $weight.val() != '') {
+		 
+		if($weight.val() != '') {
 			$("#elb_qtnd11B12").hide();
 			$weight.removeClass("error_txt");			
 		}
@@ -492,24 +491,28 @@
 	
 	// 3. 음주여부 체크 여부
 	$("#sForm input[name=qtnd14repYn17]").click(function () {
+		
 		if($(this).prop("checked") == true) 
 			$("#elb_qtnd11A13").hide();
 	});
 	
 	// 4. 흡연여부 체크 여부
 	$("#sForm input[name=qtnd14repYn18]").click(function () {
+		
 		if($(this).prop("checked") == true) 
 			$("#elb_qtnd11A14").hide();		
 	});
 	
 	// 5. 확인 체크
 	$("#notice_chk01").click(function() {
+		
 		if($(this).prop("checked") == true) 
 		$("#elb_notice_chk04").hide();
 	});
 
 	// OX 버튼 클릭 시 에러메세지 이벤트
 	$(".before_list li .ico_ox").click(function() {
+		
 		if($(this).hasClass("chk_on")) {
 			$("#elb_notice_chk01").hide();
 		}
@@ -522,9 +525,9 @@
 
 	// radio버튼 체크 이벤트
 	$("[class^='before'] input").click(function () {
+		
 		$('input[name='+ $(this).attr('name') +']').parent('label').removeClass('chk_on');
 		$(this).parent("label").addClass("chk_on");
 	});
-	
 	
 </script>

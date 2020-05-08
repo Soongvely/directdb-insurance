@@ -41,8 +41,7 @@
                                 </dl>
                                 <dl class="result_list">
                                     <dt>보험기간</dt>
-                                    <dd><fmt:formatDate value="${today}" pattern="yyyy.MM.dd" /> ~ 
-                                    	<span id="endDate"></span>
+                                    <dd><fmt:formatDate value="${today}" pattern="yyyy.MM.dd" /> ~ <span id="endDate"></span>
                                     </dd>
                                 </dl>
                                 <dl class="result_list">
@@ -141,12 +140,11 @@
                                 <dd><fmt:formatDate value="${today}" pattern="yyyy년 MM월 dd일" /></dd>
                             </dl>
                             <p class="add_comment txt_orange txt_bold">위 청약내용은 보험계약의 기본사항만을 요약한 것이므로 자세한 내용은 아래 버튼을 눌러 확인해 주세요.</p>
-	                            <a href="/resources/pdf/상품설명서.pdf" class="btns btn_line_gray w200" id="pdcExprLayer" target="_blank" style="margin-right: 5px;">
-	                                <span>상품설명서</span>
-	                            </a>
-                                <a href="https://www.directdb.co.kr/doc/pdf/terms/ltm_direct_cancer2004.pdf" target="_blank" id="yakgwanLayer" class="btns btn_line_gray w200">
-                                    <span>보험약관</span>
-                                </a>
+                            <a href="/resources/pdf/상품설명서.pdf" class="btns btn_line_gray w200" id="pdcExprLayer" target="_blank" style="margin-right: 5px;">
+                                <span>상품설명서</span>
+                            </a>
+                            <a href="https://www.directdb.co.kr/doc/pdf/terms/ltm_direct_cancer2004.pdf" target="_blank" id="yakgwanLayer" class="btns btn_line_gray w200">
+                                <span>보험약관</span>
                             </a>
                         </div>
                         <p id="elb_confirm1" class="error_txt">
@@ -168,7 +166,7 @@
                         <p id="elb_confirm2" class="error_txt">
                             <i class="fas fa-exclamation-circle"></i>확인에 체크하셔야 다음단계 진행이 가능합니다.
                         </p>
-                        <!-- btn_foot -->
+                        <!-- s:btn_foot -->
                         <div class="btn_foot" style="display: table; bottom: 0px; margin-top: 63px;">
 							<a href="#" class="btns btn_pre">
 								<i class="fas fa-chevron-left"></i>
@@ -179,6 +177,7 @@
 								<i class="fas fa-chevron-right"></i>
 							</a>
 						</div>
+                        <!-- e:btn_foot -->
                     </div>
             	</div>
         	</form>
@@ -207,7 +206,7 @@
 	            $("#elb_confirm2").show();
 	            $(this).focus();
 	
-	            return false
+	            return false;
 	        }
     		
 		    $("#sForm").submit();
@@ -244,16 +243,16 @@
     
     // 상품설명서 및 보험약관 확인 시 error_txt 숨기기
     $(".btns.btn_line_gray.w200").click(function() {
-        if($("#pdcExprLayer").hasClass("watched") && $("#yakgwanLayer").hasClass("watched")) {
+    	
+        if($("#pdcExprLayer").hasClass("watched") && $("#yakgwanLayer").hasClass("watched")) 
             $("#elb_confirm1").hide();
-        }
     });
 
     // 최종동의 체크 시 error_txt 숨기기
     $("#confirm_chk02").click(function() {
-        if($("#confirm_chk02").prop("checked") == true) {
+    	
+        if($("#confirm_chk02").prop("checked") == true) 
             $("#elb_confirm2").hide();
-        }
     });
 
 </script>

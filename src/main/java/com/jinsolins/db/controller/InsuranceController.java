@@ -4,13 +4,11 @@ import java.util.Calendar;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.jinsolins.db.model.PlanInfo;
 import com.jinsolins.db.model.UserInfo;
-
 
 @Controller
 public class InsuranceController {
@@ -31,7 +29,6 @@ public class InsuranceController {
 			int birthYear = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(0, 4));
 			int birthMonth = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(4, 6));
 			int birthDay = Integer.parseInt(String.valueOf(userInfo.getBirthday()).substring(6, 8));
-			
 			
 			Calendar current = Calendar.getInstance();
 			int currentYear  = current.get(Calendar.YEAR);
@@ -62,7 +59,7 @@ public class InsuranceController {
 	@PostMapping("/step4")
 	public String step4(Model model, UserInfo userInfo, PlanInfo planInfo) {
 		
-		// 플랜명
+		// 플랜명 설정
 		if (planInfo.getPlanName().equals("pdcPanCd1"))
 			planInfo.setPlanName("실속형");
 		else if (planInfo.getPlanName().equals("pdcPanCd2"))
@@ -79,7 +76,9 @@ public class InsuranceController {
 	@PostMapping("/step5")
 	public String step5(Model model, UserInfo userInfo, PlanInfo planInfo) {
 		
-
+		model.addAttribute("userInfo", userInfo);
+		model.addAttribute("planInfo", planInfo);
+		
 		return "step5";
 	}
 	
